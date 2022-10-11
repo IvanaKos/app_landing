@@ -88,6 +88,18 @@ button {
 	cursor: pointer;
 }
 
+.color_1 {
+	color: #f55767;
+}
+
+.color_2 {
+	color: #2563ff;
+}
+
+.color_3 {
+	color: #40975f;
+}
+
 /*START HEADER*/
 
 header {
@@ -179,7 +191,6 @@ header p {
 	background-image: url(Photos/features_03.jpg);
 	background-repeat: no-repeat;
 	padding: 30px 0 40px 0;
-
 }
 
 .features .wraper {
@@ -197,37 +208,8 @@ header p {
 	margin-top: 90px;
 }
 
-.color_1 {
-	color: #f55767;
-}
-
-.color_2 {
-	color: #2563ff;
-}
-
-.color_3 {
-	color: #40975f;
-}
-
-.icon_container {
-
-    /*width: 80px;
-    height: 80px;
-    background: #ffecef;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;*/
-}
-
-.icon_container img {
-	/*width: 95px;
-	height: 95px;*/
-}
-
 .features_description {
 	width: 285px;
-	/*margin-bottom: 60px;*/
 }
 
 .features_description p {
@@ -250,7 +232,7 @@ header p {
 	padding-right: 15px;
 }
 
-.features_container_horizontal {
+.features_container {
 	display: flex;
 	width: 100%;
 	flex-wrap: wrap;
@@ -361,7 +343,6 @@ header p {
     line-height: 1.5;
     font-size: 1rem;
     font-weight: 400;
-
 }
 
 .pricing_card p {
@@ -498,6 +479,7 @@ header p {
 .user_info {
 	margin-left: 25px;
 }
+
 .user_info p {
 	margin: 0;
 }
@@ -562,7 +544,6 @@ details p {
  	background-position: 820px bottom;
  	margin-top: 0;
  	padding: 90px 0 100px 0;
-
  }
 
  .download h2 {
