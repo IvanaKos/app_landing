@@ -143,7 +143,7 @@ nav a {
 .header_content {
 	width: 100%;
 	/* TODO: When you are using multiple images as background images it is always a good idea to make them into separate lines. It will be more readable */
-	background: url(Photos/header_phone.png) 85% no-repeat, url(Photos/buildings_background_02.jpg) bottom no-repeat;
+	background: url(../assets/images/header_phone.png) 85% no-repeat, url(../assets/images/buildings_background_02.jpg) bottom no-repeat;
 	/* TODO: You could attach the size to the above definition as well and then you can easily destinguish which declaration is for which image */
 	background-size: contain, contain;
 	padding: 250px 200px 235px 200px;
@@ -162,7 +162,7 @@ nav a {
 .header_content h4::before {
 	content: "";
 	/* TODO: Extract the color value upwards into colour classes. */
-	background: #feaa25 url(Photos/svg/badge_check_icon.svg) no-repeat center;
+	background: #feaa25 url(../assets/svg/badge_check_icon.svg) no-repeat center;
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 10px;
@@ -201,7 +201,7 @@ header p {
 /*START features*/
 
 .features {
-	background-image: url(Photos/features_03.jpg);
+	background-image: url(../assets/images/features_03.jpg);
 	/* TODO: you can add the "no-repeat" to the background definition */
 	background-repeat: no-repeat;
 	padding: 30px 0 40px 0;
@@ -268,7 +268,7 @@ header p {
 /*START app_design*/
 
 .app_design {
-	background-image: url(Photos/designed_03.jpg);
+	background-image: url(../assets/images/designed_03.jpg);
 	background-repeat: no-repeat;
 	background-position-x: 100px;
 	padding: 150px 0;
@@ -303,7 +303,7 @@ header p {
 /*START additional_services*/
 
 .additional_services {
-	background-image: url(Photos/planning_03.jpg);
+	background-image: url(../assets/images/planning_03.jpg);
 	background-repeat: no-repeat;
 	/* TODO: We have to check positioning as it is not working good on big screens */
 	background-position-x: 840px;
@@ -440,7 +440,7 @@ header p {
 /*START testimonials*/
 
 .testimonials {
-	background-image: url(Photos/people_map.jpg);
+	background-image: url(../assets/images/people_map.jpg);
 	background-repeat: no-repeat;
 	/* TODO: Extract the colour */
 	/* TODO: border-width 1.8px */
@@ -473,7 +473,7 @@ header p {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background-image: url(Photos/svg/arrow-right-solid-blue.svg);
+	background-image: url(../assets/svg/arrow-right-solid-blue.svg);
 	/* TODO: Extract the colour */
 	background-color: #eff3f8;
 	border: 2px solid #eff3f8;
@@ -500,14 +500,14 @@ header p {
 }
 
 .inactive_arrow {
-	background-image: url(Photos/svg/arrow-left-solid-grey.svg);
+	background-image: url(../assets/svg/arrow-left-solid-grey.svg);
 	background-color: white;
 	/* TODO: Extract the colour */
 	border: 2px solid #eff3f8;
 }
 
 .user_photo {
-	background-image: url(Photos/adult-beard-boy-220453.jpg);
+	background-image: url(../assets/images/adult-beard-boy-220453.jpg);
 	background-size: cover;
 	display: block;
 	background-repeat: no-repeat;
@@ -589,7 +589,7 @@ details p {
  /*START download*/
 
  .download {
- 	background-image: url(Photos/download_photo_03.jpg);
+ 	background-image: url(../assets/images/download_photo_03.jpg);
  	background-repeat: no-repeat;
  	background-size: contain;
 	/* TODO: We need to fix the background positioning here as well */
@@ -612,13 +612,13 @@ details p {
 
 #google_play {
 	/* TODO: I would move the image to HTML, please check the comment about this in HTML */
-	background-image: url(Photos/google-play-badge.jpg);
+	background-image: url(../assets/images/google-play-badge.jpg);
 	margin-right: 30px;	
 }
 
 #apple_store {
 	/* TODO: I would move the image to HTML, please check the comment about this in HTML */
-	background-image: url(Photos/svg/App_Store_Badge.svg);
+	background-image: url(../assets/svg/App_Store_Badge.svg);
 }
 
 /*START footer*/
