@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>App Landing</title>
+	<!-- TODO: Move the reset.css and style.css towards the end of the <head> tag. That way we can potentially load the fonts before we use them in CSS -->
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta charset="utf-8">
@@ -22,6 +23,8 @@
 
 			<nav>
 				<ul>
+					<!-- TODO: You can already link those to the sections below. Just make sure you have IDs on each section and then you can link to them here like: #features -->
+					<!-- TODO: We can also add smooth scrolling, I will show you how -->
 					<li><a href="">Home</a></li>
 					<li><a href="">Key Features</a></li>
 					<li><a href="">Pricing</a></li>
@@ -34,8 +37,10 @@
 			
 		</div>
 
+		<!-- TODO: I would move this one to its own section and out of the header -->
 		<div class="wraper">
 			<div class="header_content">
+				<!-- TODO: Prettier would help here as well. Be consistent with class="header_content" vs class = "description col_50" -->
 				<div class = "description col_50">
 					<h4>#1 Editors Choice App of 2020</h4>
 					<h1>Best app for your modern lifestyle</h1>
@@ -66,9 +71,12 @@
 		<div class="wraper">
 			<div class="col_50">
 				<h2>Awesome apps<br>features</h2>
+				<!-- TODO: Shouldn't "app for managing ..." be "App for managing ..." -->
 				<p>Increase productivity with a simple to-do app. app for managing your personal budgets.</p>
 				<div class="side_icon_unit">
+					<!-- TODO: Get into a habit of always providing an "alt" tag for images. https://www.w3schools.com/tags/att_img_alt.asp -->
 					<img src="Photos/svg/gauge-solid.svg">
+					<!-- TODO: I think you can use singular form here for the class name: "feature_description" instead of "features_description" -->
 					<div class="features_description">
 						<h3 class="color_1">Fast Performance</h3>
 						<p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
@@ -94,13 +102,16 @@
 
 	<section class="additional_features">
 		<div class="wraper">
+			<!-- TODO: I would call this one something like: additional_features_title -->
 			<div class="section_side_title">
 				<h2>Smart jackpots that you may love this anytime & anywhere</h2>
 				<p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.</p>
 			</div>
 			<div class="features_container">
 				<div class="top-left-icon_unit">
+					<!-- TODO: Get into a habit of always providing an "alt" tag for images. https://www.w3schools.com/tags/att_img_alt.asp -->
 					<img class="feature_icon" src="Photos/svg/file-invoice-dollar-solid.svg">
+					<!-- TODO: I think you can use singular form here for the class name: "feature_description" instead of "features_description" -->
 					<div class="features_description">
 						<h3 class="color_1">Automatic Payouts</h3>
 						<p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
@@ -126,6 +137,7 @@
 
 	<section class="app_design">
 		<div class="wraper">
+			<!-- TODO: You have unnecessary space here, Prettier code formatter will easily take care of these for you. -->
 			<div class="col_40 ">
 				<h2>Designed & built by the latest code integration</h2>
 				<p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook. </p>
@@ -141,10 +153,13 @@
 				<p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.</p>
 			</div>
 			<div class="features_container">
+				<!-- TODO: There are basically three variations of this component. I think we can simplify it -->
 				<div class="top-center-icon_unit">
 					<div class="icon_container">
+						<!-- TODO: alt text -->
 						<img class="feature_icon" src="Photos/svg/file-code-regular.svg">
 					</div>
+					<!-- TODO: singular form -->
 					<div class="features_description">
 						<h3>App Development</h3>
 						<p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
@@ -208,9 +223,12 @@
 				</div>
 				<div class="features_container">
 					<div class="top-left-icon_unit">
+						<!-- TODO: Looks like this container is not serving any purpose, why did you add it? -->
 						<div class="icon_container">
+							<!-- TODO: Alt tag -->
 							<img class="feature_icon" src="Photos/svg/file-code-regular.svg">
 						</div>
+						<!-- TODO: Singular form -->
 						<div class="features_description">
 							<h3>App Development</h3>
 							<p>Get your blood tests delivered at home collect a sample from the news your blood tests.</p>
@@ -245,6 +263,7 @@
 					</div>
 				</div>
 					<button type="button">See all</button>
+				<!-- TODO: This closing </div> tag is one too much -->
 				</div>
 			</div>
 		</div>				
@@ -252,12 +271,14 @@
 
 	<section class="pricing">
 		<div class="wraper">
+			<!-- I like how you did this whole section -->
 			<div class="section_title">
 				<h2>Get awesome features, without extra charges</h2>
 				<p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.</p>
 			</div>
 			<div class="period_selector">
 				<button type="button">Monthly</button>
+				<!-- TODO: It makes more sense to add the "active" class to the button above than adding an "inactive" class here. What if you add another period, idk, quarterly? -->
 				<button class="inactive" type="button">Annually</button>
 			</div>
 			<div class="pricing_card_container">
@@ -303,6 +324,8 @@
 			<div class="col_50">
 				<h2>Meet Client Satisfaction by using product</h2>
 				<p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.</p>
+				<!-- TODO: Slider element container should start here -->
+				<!-- TODO: Slider element single slide should start here -->
 				<div class="stars">
 					<img class="star" src="Photos/svg/star-solid.svg">
 					<img class="star" src="Photos/svg/star-solid.svg">
@@ -313,6 +336,7 @@
 				<h3>User friendly & Customizable</h3>
 				<p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud 
 				<div class="slider_footer">
+					<!-- TODO: I would use an actual <img /> here and crop the image to a square instead of the background image -->
 					<div class="user_photo">
 					</div>
 					<div class="user_info">
@@ -320,6 +344,8 @@
 						<p>CEO of Pixler Lab</p>
 					</div>
 					<div class="slider_arrows">
+						<!-- TODO: Use active instead of inactive class -->
+						<!-- TODO: Add ids of "next" and "previous". We will need them in the next step when we implement the actual slider -->
 						<button class="arrow inactive_arrow" type="button"></button>
 						<button class="arrow" type="button"></button>
 					</div>
@@ -328,6 +354,7 @@
 		</div>	
 	</section>
 
+	<!-- TODO: Try to keep naming consistent: "faq" -->
 	<section class="FAQ">
 		<div class="wraper">
 			<div class="section_title">
@@ -364,6 +391,7 @@
 			<div class="col_60">
 				<h2>Download our App now !</h2>
 				<p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.</p>
+				<!-- TODO: I would use normal <a> here with <img /> inside -->
 				<button id="google_play" class="download_button" type="button"></button>
 				<button id="apple_store" class="download_button" type="button"></button>
 			</div>
@@ -372,9 +400,11 @@
 
 
 	<footer>
+		<!-- TODO: Alt tag -->
 		<img class="logo" src="Photos/logos/logo_white.png">
 		<nav>
 			<ul>
+				<!-- TODO: You can link those as well already -->
 				<li><a href="">Home</a></li>
 				<li><a href="">Key Features</a></li>
 				<li><a href="">Pricing</a></li>
@@ -385,6 +415,7 @@
 		<div class="social">
 			<a href=""><img src="Photos/svg/facebook-f.svg"></a>
 			<a href=""><img src="Photos/svg/twitter.svg"></a>
+			<!-- TODO: This style is basically a hover state, so this one as well should be the same colour as others -->
 			<a href=""><img src="Photos/svg/hashtag-solid.svg"></a>
 			<a href=""><img src="Photos/svg/github.svg"></a>				
 		</div>
@@ -393,6 +424,7 @@
 
 	</footer>
 
+	<!-- TODO: Please remove this white space. It comes for free when you use a code formatter like Prettier. -->
 
 
 

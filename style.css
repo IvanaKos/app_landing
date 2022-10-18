@@ -1,3 +1,4 @@
+/* TODO: font-family and in general typography styles should be inheritable, so I do not think you need button in the CSS selector here. */
 body, button {
 	font-family: 'Poppins', sans-serif;
 	box-sizing: border-box;
@@ -22,6 +23,7 @@ body, button {
 .wraper {
 	display: flex;
     flex-wrap: wrap;
+	/* TODO: 1025px look rather custom value. Was it like this in the design? I think we can go the same as in the header_nav: 1200px. */
     width: 1025px;
 	margin: auto;
 }
@@ -33,6 +35,7 @@ section {
 	margin-top: 110px;
 }
 
+/* TODO: this looks like it is used in <header> only, so maybe you can move it to the header section of CSS */
 .description {
 	display: flex;
     flex-direction: column;
@@ -88,6 +91,8 @@ button {
 	cursor: pointer;
 }
 
+/* TODO: I would rename the color naming a bit here. Some examples: https://css-tricks.com/what-do-you-name-color-variables/ */
+/* TODO: Also, I think this is the right time to introduce you to: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 .color_1 {
 	color: #f55767;
 }
@@ -103,6 +108,7 @@ button {
 /*START HEADER*/
 
 header {
+	/* TODO: I guess you can remove the comment below, you should already know what it does. */
 	overflow: hidden; /*Removes the horizontal scroll*/
 }
 
@@ -124,6 +130,7 @@ nav li {
 }
 
 nav a {
+	/* TODO: You could extract this colour upwards to the colours classes, as I guess we will have a hover as well. And it is always a good idea to tokenize the colours as you can easily have an overview of how many colours your project uses. */
 	color: #242f51;
 }
 
@@ -135,13 +142,17 @@ nav a {
 
 .header_content {
 	width: 100%;
+	/* TODO: When you are using multiple images as background images it is always a good idea to make them into separate lines. It will be more readable */
 	background: url(Photos/header_phone.png) 85% no-repeat, url(Photos/buildings_background_02.jpg) bottom no-repeat;
+	/* TODO: You could attach the size to the above definition as well and then you can easily destinguish which declaration is for which image */
 	background-size: contain, contain;
-	padding: 250px 200px 235px 200px; 
+	padding: 250px 200px 235px 200px;
+	/* TODO: Why the negative margin. I think we can get rid of this. */
     margin: 0 -200px;
 }
 
 .header_content h4 {
+	/* TODO: Extract the color value upwards into colour classes. */
     background: #e2eaed;
     border-radius: 50px;
     width: 360px;
@@ -150,6 +161,7 @@ nav a {
 
 .header_content h4::before {
 	content: "";
+	/* TODO: Extract the color value upwards into colour classes. */
 	background: #feaa25 url(Photos/svg/badge_check_icon.svg) no-repeat center;
 	display: inline-block;
 	vertical-align: middle;
@@ -164,6 +176,7 @@ header p {
 }
 
 #video {
+	/* TODO: Extract the color value upwards into colour classes. */
 	color: #2500f9;
 	margin-left: 30px;
 }
@@ -189,11 +202,13 @@ header p {
 
 .features {
 	background-image: url(Photos/features_03.jpg);
+	/* TODO: you can add the "no-repeat" to the background definition */
 	background-repeat: no-repeat;
 	padding: 30px 0 40px 0;
 }
 
 .features .wraper {
+	/* TODO: Maybe we can do this more elegantly */
 	justify-content: flex-end;
 }
 
@@ -209,6 +224,7 @@ header p {
 }
 
 .features_description {
+	/* TODO: We should get rid of this */
 	width: 285px;
 }
 
@@ -224,6 +240,7 @@ header p {
 
 .section_side_title p {
 	padding: 40px 50px;
+	/* TODO: Browsers can't make borders on half a pixel. It looks the same as if you added 1px of border-width */
 	border-left: 0.5px solid #b9b9b8;
 }
 
@@ -255,6 +272,7 @@ header p {
 	background-repeat: no-repeat;
 	background-position-x: 100px;
 	padding: 150px 0;
+	/* TODO: there is no point in doing borders as a decimal of a pixel. Rounding is not guaranteed and the visual effect is really subtle. */
 	border-bottom: 1.8px solid #f4f4f4;
 }
 
@@ -287,6 +305,7 @@ header p {
 .additional_services {
 	background-image: url(Photos/planning_03.jpg);
 	background-repeat: no-repeat;
+	/* TODO: We have to check positioning as it is not working good on big screens */
 	background-position-x: 840px;
 	padding-bottom: 50px;
 }
@@ -308,8 +327,10 @@ header p {
     align-items: center;
     justify-content: center;
 	margin: 40px 0;
+	/* TODO: I think we can get rid of this width and rely on the width of the buttons inside instead */
 	width: 280px;
 	height: 55px;
+	/* TODO: Same thing I mentioned about border width being a fraction of a pixel before */
 	border: 1.8px solid #ebebeb;
 	border-radius: 50px;
 }
@@ -320,6 +341,7 @@ header p {
 }
 
 .inactive {
+	/* TODO: Let's extract the colour value */
 	color: #929396;
 	background: white;
 	font-weight: 400;
@@ -327,25 +349,31 @@ header p {
 
 .pricing_card {
 	width: 300px;
+	/* TODO: We can get rid of the height here and rely on the height of the elements inside instead */
 	height: 550px;
 	text-align: center;
+	/* TODO: We can also extract the colour value here as well, using CSS variables, linked somewhere above */
 	-webkit-box-shadow: 0px 34px 31px 9px #F6F8FA; 
 	box-shadow: 0px 34px 31px 9px #F6F8FA;
 }
 
 .pricing_card_active {
 	width: 300px;
+	/* TODO: Same here, elements inside should govern the height of the element */
 	height: 600px;
 }
 
 .subscription_period {
+	/* TODO: Extract the colour */
 	color: #999ca5;
+	/* TODO: Make sure you know what this value (1.5) refers to: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height */
     line-height: 1.5;
     font-size: 1rem;
     font-weight: 400;
 }
 
 .pricing_card p {
+	/* TODO: Extract the colour */
 	color: #999ca5;
 	margin-bottom: 0;
 }
@@ -364,6 +392,7 @@ header p {
 }
 
 .pricing_card li {
+	/* TODO: Extract the colour */
 	color: #999ca5;
 	margin-bottom: 28px;
 }
@@ -373,6 +402,7 @@ header p {
 }
 
 .pricing_card_header {
+	/* TODO: Extract the colour */
 	-webkit-box-shadow: inset 0px -25px 24px -1px #F6F8FA; 
 	box-shadow: inset 0px -25px 24px -1px #F6F8FA;
 	padding: 60px 50px 35px 50px;
@@ -385,26 +415,35 @@ header p {
 
 .pricing_card a {
 	text-decoration: none;
+	/* TODO: Extract the colour */
 	color: #2500f9;
 	margin: 30px 0;
 }
 
 .active_card {
 	box-shadow: none;
+	/* TODO: Extract the colour */
+	/* TODO: Same about the border-width property */
 	border: 1.8px solid #ebebeb;
 	border-radius: 10px;
+	/* TODO: We can get rid of the height here as well */
 	height: 600px;
 }
 
 .active_header {
+	/* TODO: Extract the colour */
 	background: #f4f7f9;
 }
+
+/* TODO: Extract the colours, I think we can simplify these shades and use one or maybe two here as they are all so similar */
 
 /*START testimonials*/
 
 .testimonials {
 	background-image: url(Photos/people_map.jpg);
 	background-repeat: no-repeat;
+	/* TODO: Extract the colour */
+	/* TODO: border-width 1.8px */
 	border-top: 1.8px solid #f4f4f4;
 	background-size: 700px;
     background-position-y: center;
@@ -419,6 +458,7 @@ header p {
 .star {
 	width: 20px;
 	height: 20px;
+	/* TODO: You can transfer the margin to the wrapping <div class="stars"> */
 	margin-bottom: 25px;
 }
 
@@ -434,18 +474,22 @@ header p {
 	height: 50px;
 	border-radius: 50%;
 	background-image: url(Photos/svg/arrow-right-solid-blue.svg);
+	/* TODO: Extract the colour */
 	background-color: #eff3f8;
 	border: 2px solid #eff3f8;
+	/* TODO: Try to keep the declarations that are relevant to the same thing colocated closely together. For example, all the background definitions should be close together */
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
+/* TODO: For a divider like this feel free to use a decorative div element instead of a pseudo element */
 .arrow:after {
   content: '';
   position: relative;
   display: inline-block;
   left: 35px;
   top: 5px;
+  /* TODO: Extract the colour */
   border-left: 1px solid #e7e7e7;
   height: 25px;
 
@@ -458,6 +502,7 @@ header p {
 .inactive_arrow {
 	background-image: url(Photos/svg/arrow-left-solid-grey.svg);
 	background-color: white;
+	/* TODO: Extract the colour */
 	border: 2px solid #eff3f8;
 }
 
@@ -497,17 +542,21 @@ header p {
 .FAQ {
 	margin-top: 90px;
 	padding-bottom: 110px;
+	/* TODO: Extract the colour */
+	/* TODO: border-width, whole pixel value */
 	border-bottom: 1.8px solid #f4f4f4;
 }
 
 details {
 	width: 940px;
 	margin-bottom: 10px;
+	/* TODO: Extract the colour */
 	background-color: #f5f7fa;
 	cursor: pointer;
 	box-sizing: border-box;
 	padding: 22px 30px;
 	font-size: 20px;
+	/* TODO: Extract the colour */
 	color: #242f51;
 }
 
@@ -517,6 +566,7 @@ summary {
 
 summary:after {
 	content: "+";
+	/* TODO: Extract the colour */
 	color: #242f51;
 	font-size: 26px;
 	float: right;
@@ -527,6 +577,7 @@ details p {
 	margin-top: 35px;
 }
 
+/* TODO: Indentation seems off until the end of this secion. Prettier will fix this */
  details[open] summary:after {
  content: "-";
  }
@@ -541,6 +592,7 @@ details p {
  	background-image: url(Photos/download_photo_03.jpg);
  	background-repeat: no-repeat;
  	background-size: contain;
+	/* TODO: We need to fix the background positioning here as well */
  	background-position: 820px bottom;
  	margin-top: 0;
  	padding: 90px 0 100px 0;
@@ -559,11 +611,13 @@ details p {
  }
 
 #google_play {
+	/* TODO: I would move the image to HTML, please check the comment about this in HTML */
 	background-image: url(Photos/google-play-badge.jpg);
 	margin-right: 30px;	
 }
 
 #apple_store {
+	/* TODO: I would move the image to HTML, please check the comment about this in HTML */
 	background-image: url(Photos/svg/App_Store_Badge.svg);
 }
 
@@ -571,6 +625,7 @@ details p {
 
 footer {
 	height: 525px;
+	/* TODO: Extract the colour */
 	background-color: #09142e;
 	display: flex;
 	justify-content: center;
