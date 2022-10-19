@@ -26,10 +26,12 @@ TODO: I would rename the Photos folder to assets (mind the casing of the folder 
 DONE
 
 TODO: Please add a .prettierrc configuration file for the automatic code formatting: https://prettier.io/
+DONE
 
 TODO: I noticed some images have duplicate versions JPG and PNG. Please keep only the ones you need to use and delete the rest.
 DONE
 
 TODO: If you haven't please run all the JPGs and PNGs through an optimizer tool such as: https://tinypng.com/ to reduce the filesize.
+DONE
 
 TODO: We need to improve the section background images placement. I will show you how.

@@ -1,6 +1,7 @@
 /* TODO: font-family and in general typography styles should be inheritable, so I do not think you need button in the CSS selector here. */
-body, button {
-	font-family: 'Poppins', sans-serif;
+body,
+button {
+	font-family: "Poppins", sans-serif;
 	box-sizing: border-box;
 }
 
@@ -22,9 +23,9 @@ body, button {
 
 .wraper {
 	display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 	/* TODO: 1025px look rather custom value. Was it like this in the design? I think we can go the same as in the header_nav: 1200px. */
-    width: 1025px;
+	width: 1025px;
 	margin: auto;
 }
 
@@ -38,22 +39,24 @@ section {
 /* TODO: this looks like it is used in <header> only, so maybe you can move it to the header section of CSS */
 .description {
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
+	flex-direction: column;
+	justify-content: center;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	font-weight: 600;
 	color: #242f51;
 	line-height: 1.2;
 }
 
 h1 {
-	font-size: 58px;	
+	font-size: 58px;
 	margin-bottom: 35px;
 }
 
-h2 {	
+h2 {
 	font-size: 36px;
 	margin-bottom: 25px;
 }
@@ -64,7 +67,7 @@ h3 {
 }
 
 h4 {
-    font-size: 18px;
+	font-size: 18px;
 }
 
 p {
@@ -112,7 +115,7 @@ header {
 	overflow: hidden; /*Removes the horizontal scroll*/
 }
 
-.header_nav {	
+.header_nav {
 	display: flex;
 	gap: 20px;
 	align-items: center;
@@ -143,20 +146,21 @@ nav a {
 .header_content {
 	width: 100%;
 	/* TODO: When you are using multiple images as background images it is always a good idea to make them into separate lines. It will be more readable */
-	background: url(../assets/images/header_phone.png) 85% no-repeat, url(../assets/images/buildings_background_02.jpg) bottom no-repeat;
+	background: url(../assets/images/header_phone.png) 85% no-repeat,
+		url(../assets/images/buildings_background_02.jpg) bottom no-repeat;
 	/* TODO: You could attach the size to the above definition as well and then you can easily destinguish which declaration is for which image */
 	background-size: contain, contain;
 	padding: 250px 200px 235px 200px;
 	/* TODO: Why the negative margin. I think we can get rid of this. */
-    margin: 0 -200px;
+	margin: 0 -200px;
 }
 
 .header_content h4 {
 	/* TODO: Extract the color value upwards into colour classes. */
-    background: #e2eaed;
-    border-radius: 50px;
-    width: 360px;
-    margin-bottom: 30px;
+	background: #e2eaed;
+	border-radius: 50px;
+	width: 360px;
+	margin-bottom: 30px;
 }
 
 .header_content h4::before {
@@ -167,8 +171,8 @@ nav a {
 	vertical-align: middle;
 	margin-right: 10px;
 	height: 35px;
-    width: 38px;
-    border-radius: 50px;
+	width: 38px;
+	border-radius: 50px;
 }
 
 header p {
@@ -320,12 +324,12 @@ header p {
 	display: flex;
 	gap: 35px;
 	justify-content: center;
-    width: 100%;
+	width: 100%;
 }
 .period_selector {
 	display: inline-flex;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 	margin: 40px 0;
 	/* TODO: I think we can get rid of this width and rely on the width of the buttons inside instead */
 	width: 280px;
@@ -353,8 +357,8 @@ header p {
 	height: 550px;
 	text-align: center;
 	/* TODO: We can also extract the colour value here as well, using CSS variables, linked somewhere above */
-	-webkit-box-shadow: 0px 34px 31px 9px #F6F8FA; 
-	box-shadow: 0px 34px 31px 9px #F6F8FA;
+	-webkit-box-shadow: 0px 34px 31px 9px #f6f8fa;
+	box-shadow: 0px 34px 31px 9px #f6f8fa;
 }
 
 .pricing_card_active {
@@ -367,9 +371,9 @@ header p {
 	/* TODO: Extract the colour */
 	color: #999ca5;
 	/* TODO: Make sure you know what this value (1.5) refers to: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height */
-    line-height: 1.5;
-    font-size: 1rem;
-    font-weight: 400;
+	line-height: 1.5;
+	font-size: 1rem;
+	font-weight: 400;
 }
 
 .pricing_card p {
@@ -403,8 +407,8 @@ header p {
 
 .pricing_card_header {
 	/* TODO: Extract the colour */
-	-webkit-box-shadow: inset 0px -25px 24px -1px #F6F8FA; 
-	box-shadow: inset 0px -25px 24px -1px #F6F8FA;
+	-webkit-box-shadow: inset 0px -25px 24px -1px #f6f8fa;
+	box-shadow: inset 0px -25px 24px -1px #f6f8fa;
 	padding: 60px 50px 35px 50px;
 }
 
@@ -446,7 +450,7 @@ header p {
 	/* TODO: border-width 1.8px */
 	border-top: 1.8px solid #f4f4f4;
 	background-size: 700px;
-    background-position-y: center;
+	background-position-y: center;
 	margin-bottom: 90px;
 	padding: 150px 0 90px 0;
 }
@@ -484,19 +488,18 @@ header p {
 
 /* TODO: For a divider like this feel free to use a decorative div element instead of a pseudo element */
 .arrow:after {
-  content: '';
-  position: relative;
-  display: inline-block;
-  left: 35px;
-  top: 5px;
-  /* TODO: Extract the colour */
-  border-left: 1px solid #e7e7e7;
-  height: 25px;
-
+	content: "";
+	position: relative;
+	display: inline-block;
+	left: 35px;
+	top: 5px;
+	/* TODO: Extract the colour */
+	border-left: 1px solid #e7e7e7;
+	height: 25px;
 }
 
 .arrow:last-child:after {
-  display: none;
+	display: none;
 }
 
 .inactive_arrow {
@@ -578,42 +581,42 @@ details p {
 }
 
 /* TODO: Indentation seems off until the end of this secion. Prettier will fix this */
- details[open] summary:after {
- content: "-";
- }
+details[open] summary:after {
+	content: "-";
+}
 
- details[open] summary {
- 	font-weight: 600;
- }
+details[open] summary {
+	font-weight: 600;
+}
 
- /*START download*/
+/*START download*/
 
- .download {
- 	background-image: url(../assets/images/download_photo_03.jpg);
- 	background-repeat: no-repeat;
- 	background-size: contain;
+.download {
+	background-image: url(../assets/images/download_photo_03.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
 	/* TODO: We need to fix the background positioning here as well */
- 	background-position: 820px bottom;
- 	margin-top: 0;
- 	padding: 90px 0 100px 0;
- }
+	background-position: 820px bottom;
+	margin-top: 0;
+	padding: 90px 0 100px 0;
+}
 
- .download h2 {
- 	font-size: 48px;
- }
+.download h2 {
+	font-size: 48px;
+}
 
- .download_button {
- 	background-repeat: no-repeat;
+.download_button {
+	background-repeat: no-repeat;
 	background-size: contain;
 	border-radius: 5px;
 	height: 55px;
 	width: 185px;
- }
+}
 
 #google_play {
 	/* TODO: I would move the image to HTML, please check the comment about this in HTML */
 	background-image: url(../assets/images/google-play-badge.jpg);
-	margin-right: 30px;	
+	margin-right: 30px;
 }
 
 #apple_store {
