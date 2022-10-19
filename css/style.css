@@ -536,13 +536,13 @@ header p {
 	font-weight: 600;
 }
 
-/*START FAQ*/
+/*START faq*/
 
-.FAQ .wraper {
+.faq .wraper {
 	justify-content: center;
 }
 
-.FAQ {
+.faq {
 	margin-top: 90px;
 	padding-bottom: 110px;
 	/* TODO: Extract the colour */
