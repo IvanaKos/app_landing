@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 /* TODO: font-family and in general typography styles should be inheritable, so I do not think you need button in the CSS selector here. */
 body,
 button {
