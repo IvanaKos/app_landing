@@ -115,10 +115,9 @@ button {
 
 /*START HEADER*/
 
-header {
-	/* TODO: I guess you can remove the comment below, you should already know what it does. */
-	overflow: hidden; /*Removes the horizontal scroll*/
-}
+/* TODO: I guess you can remove the comment below, you should already know what it does. */
+/*DONE: I know, I wrote it for you. :P I wanted to ask if this is the right way to remove the horizontal scroll, or I should check what exactly inside of header is making the problem and try to solve it differently. I removed it now completely because since I separated header in two sections I don't need it anymore.*/
+/*overflow: hidden;*/
 
 .header_nav {
 	display: flex;
