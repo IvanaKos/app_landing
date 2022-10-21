@@ -611,23 +611,18 @@ details[open] summary {
 	font-size: 48px;
 }
 
-.download_button {
-	background-repeat: no-repeat;
-	background-size: contain;
-	border-radius: 5px;
-	height: 55px;
+#download a {
+	cursor: pointer;
+}
+
+#download a img {
 	width: 185px;
+	height: 55px;
+	border-radius: 5px;
 }
 
-#google_play {
-	/* TODO: I would move the image to HTML, please check the comment about this in HTML */
-	background-image: url(../assets/images/google-play-badge.jpg);
-	margin-right: 30px;
-}
-
-#apple_store {
-	/* TODO: I would move the image to HTML, please check the comment about this in HTML */
-	background-image: url(../assets/svg/App_Store_Badge.svg);
+#download a img:first-of-type {
+	margin-right: 35px;
 }
 
 /*START footer*/
