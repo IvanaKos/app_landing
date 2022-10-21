@@ -211,9 +211,9 @@ nav a {
 /*START features*/
 
 #features {
-	background-image: url(../assets/images/features_03.jpg);
+	background: url(../assets/images/features_03.jpg) no-repeat;
 	/* TODO: you can add the "no-repeat" to the background definition */
-	background-repeat: no-repeat;
+	/*DONE*/
 	padding: 30px 0 40px 0;
 }
 
