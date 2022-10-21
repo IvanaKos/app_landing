@@ -233,28 +233,28 @@ nav a {
 	margin-top: 90px;
 }
 
-.features_description {
+.feature_description {
 	/* TODO: We should get rid of this */
 	width: 285px;
 }
 
-.features_description p {
+.feature_description p {
 	margin-bottom: 0;
 }
 
 /*START additional_features*/
 
-.section_side_title {
+.additional_features_title {
 	display: flex;
 }
 
-.section_side_title p {
+.additional_features_title p {
 	padding: 40px 50px;
 	/* TODO: Browsers can't make borders on half a pixel. It looks the same as if you added 1px of border-width */
 	border-left: 0.5px solid #b9b9b8;
 }
 
-.section_side_title h2 {
+.additional_features_title h2 {
 	font-size: 40px;
 	padding-right: 15px;
 }
