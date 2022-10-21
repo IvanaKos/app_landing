@@ -3,8 +3,8 @@ html {
 }
 
 /* TODO: font-family and in general typography styles should be inheritable, so I do not think you need button in the CSS selector here. */
-body,
-button {
+/*DONE: but I had to add "font: inherit" to button selector, because it is not inheriting font family automatically*/
+body {
 	font-family: "Poppins", sans-serif;
 	box-sizing: border-box;
 }
@@ -96,6 +96,7 @@ button {
 	border: none;
 	border-radius: 35px;
 	cursor: pointer;
+	font-family: inherit;
 }
 
 /* TODO: I would rename the color naming a bit here. Some examples: https://css-tricks.com/what-do-you-name-color-variables/ */
