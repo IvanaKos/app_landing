@@ -516,10 +516,7 @@ nav a {
 }
 
 .user_photo {
-	background-image: url(../assets/images/adult-beard-boy-220453.jpg);
-	background-size: cover;
 	display: block;
-	background-repeat: no-repeat;
 	width: 90px;
 	height: 90px;
 	border-radius: 50%;
