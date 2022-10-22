@@ -28,8 +28,9 @@ body {
 .wraper {
 	display: flex;
 	flex-wrap: wrap;
-	/* TODO: 1025px look rather custom value. Was it like this in the design? I think we can go the same as in the header_nav: 1200px. */
-	width: 1025px;
+	/*TODO: 1025px look rather custom value. Was it like this in the design? I think we can go the same as in the header_nav: 1200px. */
+	/*DONE*/
+	width: 1200px;
 	margin: auto;
 }
 
@@ -37,7 +38,8 @@ section {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-top: 110px;
+	margin-top: 110px auto 0 auto;
+	width: 1200px;
 }
 
 /* TODO: this looks like it is used in <header> only, so maybe you can move it to the header section of CSS */
