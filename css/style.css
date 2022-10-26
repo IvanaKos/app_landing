@@ -29,7 +29,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	/* TODO: 1025px look rather custom value. Was it like this in the design? I think we can go the same as in the header_nav: 1200px. */
-	width: 1200px;
+	width: 1025px;
 	margin: auto;
 }
 
