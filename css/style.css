@@ -28,26 +28,17 @@ body {
 .wraper {
 	display: flex;
 	flex-wrap: wrap;
-	/*TODO: 1025px look rather custom value. Was it like this in the design? I think we can go the same as in the header_nav: 1200px. */
-	/*DONE*/
+	/* TODO: 1025px look rather custom value. Was it like this in the design? I think we can go the same as in the header_nav: 1200px. */
 	width: 1200px;
 	margin: auto;
 }
 
 section {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-top: 110px auto 0 auto;
-	width: 1200px;
+	margin-top: 110px;
 }
 
 /* TODO: this looks like it is used in <header> only, so maybe you can move it to the header section of CSS */
-.description {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
+/*DONE*/
 
 h1,
 h2,
@@ -147,7 +138,7 @@ nav a {
 	margin-right: auto;
 }
 
-/*START header_content*/
+/*START main_content*/
 
 #main_content {
 	/* TODO: When you are using multiple images as background images it is always a good idea to make them into separate lines. It will be more readable */
@@ -161,6 +152,12 @@ nav a {
 	margin-top: 0;
 	/* TODO: Why the negative margin. I think we can get rid of this. */
 	/*DONE*/
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 #main_content h4 {
@@ -221,6 +218,7 @@ nav a {
 
 #features .wraper {
 	/* TODO: Maybe we can do this more elegantly */
+	/*QUESTION: I can add one empty <div class=col_50> in html, or I can set margin-left to .features .col_50*/
 	justify-content: flex-end;
 }
 
@@ -479,42 +477,33 @@ nav a {
 	gap: 20px;
 	flex-grow: 3;
 	justify-content: flex-end;
+	align-items: center;
 }
 
 .arrow {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
+	background-image: url(../assets/svg/arrow-left-solid-grey.svg);
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 2px solid #eff3f8;
+	/* TODO: Try to keep the declarations that are relevant to the same thing colocated closely together. For example, all the background definitions should be close together */
+	/*DONE*/
+}
+
+.active_arrow {
 	background-image: url(../assets/svg/arrow-right-solid-blue.svg);
 	/* TODO: Extract the colour */
 	background-color: #eff3f8;
-	border: 2px solid #eff3f8;
-	/* TODO: Try to keep the declarations that are relevant to the same thing colocated closely together. For example, all the background definitions should be close together */
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
 /* TODO: For a divider like this feel free to use a decorative div element instead of a pseudo element */
-.arrow:after {
-	content: "";
-	position: relative;
-	display: inline-block;
-	left: 35px;
-	top: 5px;
-	/* TODO: Extract the colour */
-	border-left: 1px solid #e7e7e7;
+/*DONE*/
+.divider {
 	height: 25px;
-}
-
-.arrow:last-child:after {
-	display: none;
-}
-
-.inactive_arrow {
-	background-image: url(../assets/svg/arrow-left-solid-grey.svg);
-	background-color: white;
-	/* TODO: Extract the colour */
-	border: 2px solid #eff3f8;
+	border-right: 1px solid #e7e7e7;
 }
 
 .user_photo {

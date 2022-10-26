@@ -28,7 +28,7 @@
 				<nav>
 					<ul>
 						<!-- TODO: You can already link those to the sections below. Just make sure you have IDs on each section and then you can link to them here like: #features -->
-						<!-- DONE: But, does this links make sence since there are more sections than links in menu? How should I link Home? Put #id on header or change .header_nav to id instead of class? -->
+						<!-- DONE: But, does this links make sence since there are more sections than links in the menu? How should I link Home? Put #id on header or change .header_nav to id instead of class? -->
 						<!-- TODO: We can also add smooth scrolling, I will show you how -->
 						<!-- DONE: But only with CSS. -->
 						<li><a href="">Home</a></li>
@@ -509,9 +509,16 @@
 						</div>
 						<div class="slider_arrows">
 							<!-- TODO: Use active instead of inactive class -->
+							<!-- DONE -->
 							<!-- TODO: Add ids of "next" and "previous". We will need them in the next step when we implement the actual slider -->
-							<button class="arrow inactive_arrow" type="button"></button>
-							<button class="arrow" type="button"></button>
+							<!-- DONE -->
+							<button id="previous" class="arrow" type="button"></button>
+							<div class="divider"></div>
+							<button
+								id="next"
+								class="arrow active_arrow"
+								type="button"
+							></button>
 						</div>
 					</div>
 				</div>
@@ -631,6 +638,7 @@
 				/></a>
 				<a href=""><img src="assets/svg/github.svg" alt="Github logo" /></a>
 			</div>
+			<!-- QUESTION: Sohuld this Copyright stay like this? -->
 			<p>Copyright© Arifur Rahman Tushar 2019. All rights reserved</p>
 		</footer>
 		<!-- TODO: Please remove this white space. It comes for free when you use a code formatter like Prettier. -->
