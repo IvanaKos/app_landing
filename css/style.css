@@ -352,7 +352,7 @@ nav a {
 	height: 48px;
 }
 
-.inactive {
+.ghost_button {
 	/* TODO: Let's extract the colour value */
 	color: #929396;
 	background: white;
