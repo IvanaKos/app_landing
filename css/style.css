@@ -344,8 +344,8 @@ width: 285px;
 	justify-content: center;
 	margin: 40px 0;
 	/* TODO: I think we can get rid of this width and rely on the width of the buttons inside instead */
-	width: 280px;
-	height: 55px;
+	/*DONE: I removed height as well. I used it for the space between the button and border, but now I see I can use padding for that.*/
+	padding: 3px;
 	/* TODO: Same thing I mentioned about border width being a fraction of a pixel before */
 	/*DONE*/
 	border: 2px solid #ebebeb;
