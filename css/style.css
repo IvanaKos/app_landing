@@ -29,6 +29,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	/* TODO: 1025px look rather custom value. Was it like this in the design? I think we can go the same as in the header_nav: 1200px. */
+	/*DONE: There are some differences in the design now (headings and paragraphs width). We should look at it together.*/
 	width: 1200px;
 	margin: auto;
 }
@@ -241,11 +242,11 @@ nav a {
 	margin-top: 90px;
 }
 
-.feature_description {
-	/* TODO: We should get rid of this */
-	/*DONE*/
-	/*width: 285px;*/
-}
+/*.feature_description {
+ TODO: We should get rid of this 
+DONE
+width: 285px;
+}*/
 
 .feature_description p {
 	margin-bottom: 0;
@@ -260,7 +261,8 @@ nav a {
 .additional_features_title p {
 	padding: 40px 50px;
 	/* TODO: Browsers can't make borders on half a pixel. It looks the same as if you added 1px of border-width */
-	border-left: 0.5px solid #b9b9b8;
+	/*DONE*/
+	border-left: 1px solid #b9b9b8;
 }
 
 .additional_features_title h2 {
@@ -289,7 +291,8 @@ nav a {
 	background-position-x: 100px;
 	padding: 150px 0;
 	/* TODO: there is no point in doing borders as a decimal of a pixel. Rounding is not guaranteed and the visual effect is really subtle. */
-	border-bottom: 1.8px solid #f4f4f4;
+	/*DONE*/
+	border-bottom: 2px solid #f4f4f4;
 }
 
 #app_design .wraper {
@@ -334,6 +337,7 @@ nav a {
 	justify-content: center;
 	width: 100%;
 }
+
 .period_selector {
 	display: inline-flex;
 	align-items: center;
@@ -343,7 +347,8 @@ nav a {
 	width: 280px;
 	height: 55px;
 	/* TODO: Same thing I mentioned about border width being a fraction of a pixel before */
-	border: 1.8px solid #ebebeb;
+	/*DONE*/
+	border: 2px solid #ebebeb;
 	border-radius: 50px;
 }
 
@@ -436,7 +441,8 @@ nav a {
 	box-shadow: none;
 	/* TODO: Extract the colour */
 	/* TODO: Same about the border-width property */
-	border: 1.8px solid #ebebeb;
+	/*DONE*/
+	border: 2px solid #ebebeb;
 	border-radius: 10px;
 	/* TODO: We can get rid of the height here as well */
 	height: 600px;
@@ -456,7 +462,8 @@ nav a {
 	background-repeat: no-repeat;
 	/* TODO: Extract the colour */
 	/* TODO: border-width 1.8px */
-	border-top: 1.8px solid #f4f4f4;
+	/*DONE*/
+	border-top: 2px solid #f4f4f4;
 	background-size: 700px;
 	background-position-y: center;
 	margin-bottom: 90px;
@@ -543,7 +550,8 @@ nav a {
 	padding-bottom: 110px;
 	/* TODO: Extract the colour */
 	/* TODO: border-width, whole pixel value */
-	border-bottom: 1.8px solid #f4f4f4;
+	/*DONE*/
+	border-bottom: 2px solid #f4f4f4;
 }
 
 details {
@@ -577,6 +585,7 @@ details p {
 }
 
 /* TODO: Indentation seems off until the end of this secion. Prettier will fix this */
+/*DONE*/
 details[open] summary:after {
 	content: "-";
 }
