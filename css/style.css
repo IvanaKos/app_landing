@@ -544,7 +544,7 @@ width: 285px;
 
 /*START faq*/
 
-.faq .wraper {
+#faq .wraper {
 	justify-content: center;
 }
 
