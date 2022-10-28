@@ -367,7 +367,7 @@ width: 285px;
 .pricing_card {
 	width: 300px;
 	/* TODO: We can get rid of the height here and rely on the height of the elements inside instead */
-	/*DONE:  I am not sure about this, but I set the height to fit-content, otherwise both cards will have the same height. I am little confused about the choice between fit-content, min-content and max-content in this case. */
+	/*DONE:  I am not sure about this, but I set the height to fit-content, otherwise both cards will have the same height. I am a little bit confused about the choice between fit-content, min-content and max-content in this case. */
 	height: fit-content;
 	text-align: center;
 	/* TODO: We can also extract the colour value here as well, using CSS variables, linked somewhere above */
@@ -380,6 +380,7 @@ width: 285px;
 	/* TODO: Extract the colour */
 	color: #999ca5;
 	/* TODO: Make sure you know what this value (1.5) refers to: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height */
+	/*DONE: I new this. It's just font size multiplied by this number, isn't it? */
 	line-height: 1.5;
 	font-size: 1rem;
 	font-weight: 400;
@@ -472,11 +473,15 @@ width: 285px;
 	justify-content: flex-end;
 }
 
+.stars {
+	margin-bottom: 25px;
+}
+
 .star {
 	width: 20px;
 	height: 20px;
 	/* TODO: You can transfer the margin to the wrapping <div class="stars"> */
-	margin-bottom: 25px;
+	/*DONE*/
 }
 
 .slider_arrows {
