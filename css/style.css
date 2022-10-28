@@ -367,17 +367,13 @@ width: 285px;
 .pricing_card {
 	width: 300px;
 	/* TODO: We can get rid of the height here and rely on the height of the elements inside instead */
-	height: 550px;
+	/*DONE:  I am not sure about this, but I set the height to fit-content, otherwise both cards will have the same height. I am little confused about the choice between fit-content, min-content and max-content in this case. */
+	height: fit-content;
 	text-align: center;
 	/* TODO: We can also extract the colour value here as well, using CSS variables, linked somewhere above */
 	-webkit-box-shadow: 0px 34px 31px 9px #f6f8fa;
 	box-shadow: 0px 34px 31px 9px #f6f8fa;
-}
-
-.pricing_card_active {
-	width: 300px;
-	/* TODO: Same here, elements inside should govern the height of the element */
-	height: 600px;
+	border-radius: 10px;
 }
 
 .subscription_period {
@@ -428,13 +424,14 @@ width: 285px;
 .pricing_card button {
 	width: 200px;
 	height: 50px;
+	margin-bottom: 30px;
 }
 
 .pricing_card a {
 	text-decoration: none;
 	/* TODO: Extract the colour */
 	color: #2500f9;
-	margin: 30px 0;
+	margin-bottom: 30px;
 }
 
 .active_card {
@@ -443,14 +440,15 @@ width: 285px;
 	/* TODO: Same about the border-width property */
 	/*DONE*/
 	border: 2px solid #ebebeb;
-	border-radius: 10px;
 	/* TODO: We can get rid of the height here as well */
-	height: 600px;
+	/*DONE*/
 }
 
 .active_header {
 	/* TODO: Extract the colour */
 	background: #f4f7f9;
+	/*I added border-radius here, because it's not working only with the one on the .price_card for the header part.*/
+	border-radius: 10px;
 }
 
 /* TODO: Extract the colours, I think we can simplify these shades and use one or maybe two here as they are all so similar */
