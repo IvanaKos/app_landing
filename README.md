@@ -2,17 +2,53 @@
 
 [link]
 
+Project type:
+Landing page.
+_________________
+Webpage name: 
+App Landing
+_________________
+Webpage content: 
+1. header with nav menu
+2. main content
+3. recommendations
+4. features
+5. additional features
+6. services
+7. additional services
+8. pricing
+9. testimonials
+10. faq
+11.download app
+12. footer
+__________________
+
+Folder structure:
+
+applanding_____index.html
+                 I
+                 I_____css ________style.css
+                 I               I________reset.css
+                 I
+                 I_____assets ______icons
+                 I                    I_____images
+                 I                    I_____logos
+                 I                    I_____svg
+                 I
+                 I_____readme.md
+_____________________
+
+COMMENT: If you do not see DONE below TODO, there is something left that I wasn't sure or didn't know how to do.
+
 Very good consistency with spacing in HTML and CSS, I like it.
 
 Things that need to be improved are marked with TODO: comment above them.
-
-
 
 TODO: Please change the file extension to .md. That is Markdown - https://en.wikipedia.org/wiki/Markdown. It is a standard in GitHub repositories and it can be easily parsed by GitHub, and offers some basic styling
 DONE
 
 TODO: In this file please add a brief description of the project. Maybe it would be useful to note down the folder and project structure.
-
+DONE
 TODO: You can delete the .gitignore file as it is empty and not used. Try to always keep only the things you use.
 DONE
 

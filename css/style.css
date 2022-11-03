@@ -119,8 +119,9 @@ button {
 }
 
 /* TODO: I would rename the color naming a bit here. Some examples: https://css-tricks.com/what-do-you-name-color-variables/ */
+/*DONE:  but I am not sure if this is the right choice for naming.*/
 /* TODO: Also, I think this is the right time to introduce you to: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
-
+/*DONE*/
 /*START HEADER*/
 
 /* TODO: I guess you can remove the comment below, you should already know what it does. */
@@ -146,6 +147,7 @@ nav li {
 
 nav a {
 	/* TODO: You could extract this colour upwards to the colours classes, as I guess we will have a hover as well. And it is always a good idea to tokenize the colours as you can easily have an overview of how many colours your project uses. */
+	/*DONE*/
 	color: var(--cloud_burst_blue);
 }
 
