@@ -562,7 +562,7 @@ width: 285px;
 	border-right: 1px solid var(--mercury_gray);
 }
 
-.user_photo {
+#user_photo {
 	display: block;
 	width: 90px;
 	height: 90px;
@@ -574,15 +574,15 @@ width: 285px;
 	align-items: center;
 }
 
-.user_info {
+#user_info {
 	margin-left: 25px;
 }
 
-.user_info p {
+#user_info p {
 	margin: 0;
 }
 
-.user_info p:first-child {
+#user_info p:first-child {
 	font-weight: 600;
 }
 
