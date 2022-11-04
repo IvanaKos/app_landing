@@ -49,7 +49,11 @@ let length = reviews.length;
 
 // Code for listening next button event
 next.addEventListener("click", function () {
+  this.classList.add("active_arrow_right");
+  prev.classList.remove("active_arrow_left");
+
   indexNum++;
+
   if (indexNum > length - 1) {
     indexNum = 0;
     userPhoto.src = reviews[indexNum].img;
@@ -68,6 +72,8 @@ next.addEventListener("click", function () {
 
 // Code for listening previous button event
 prev.addEventListener("click", function () {
+  this.classList.add("active_arrow_left");
+  next.classList.remove("active_arrow_right");
   indexNum--;
   if (indexNum < 0) {
     indexNum = 3;
