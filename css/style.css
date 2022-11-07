@@ -608,7 +608,7 @@ width: 285px;
 	justify-content: center;
 }
 
-.faq {
+#faq {
 	margin-top: 90px;
 	padding-bottom: 110px;
 	/* TODO: Extract the colour */

@@ -51,9 +51,7 @@ let length = reviews.length;
 next.addEventListener("click", function () {
   this.classList.add("active_arrow_right");
   prev.classList.remove("active_arrow_left");
-
   indexNum++;
-
   if (indexNum > length - 1) {
     indexNum = 0;
     userPhoto.src = reviews[indexNum].img;
@@ -89,4 +87,27 @@ prev.addEventListener("click", function () {
     myTitle.innerHTML = reviews[indexNum].title;
     myText.innerHTML = reviews[indexNum].text;
   }
+});
+
+// START PriceCards
+
+const monthly = document.getElementById("monthly");
+const annually = document.getElementById("annually");
+const monthlyCard = document.getElementById("monthly_card");
+const annuallyCard = document.getElementById("annually_card");
+const trialLink = document.querySelector("div.pricing_card_content > a");
+
+monthly.addEventListener("click", function () {
+  annually.classList.add("ghost_button");
+  monthly.classList.remove("ghost_button");
+  monthlyCard.classList.add("active_card");
+  annuallyCard.classList.remove("active_card");
+  trialLink.remove();
+});
+
+annually.addEventListener("click", function () {
+  monthly.classList.add("ghost_button");
+  annually.classList.remove("ghost_button");
+  annuallyCard.classList.add("active_card");
+  monthlyCard.classList.remove("active_card");
 });

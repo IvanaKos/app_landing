@@ -414,13 +414,15 @@
 					</p>
 				</div>
 				<div class="period_selector">
-					<button type="button">Monthly</button>
+					<button id="monthly" type="button">Monthly</button>
 					<!-- TODO: It makes more sense to add the "active" class to the button above than adding an "inactive" class here. What if you add another period, idk, quarterly? -->
 					<!-- DONE: I just changed the class name. -->
-					<button class="ghost_button" type="button">Annually</button>
+					<button id="annually" class="ghost_button" type="button">
+						Annually
+					</button>
 				</div>
 				<div class="pricing_card_container">
-					<div class="pricing_card">
+					<div id="monthly_card" class="pricing_card">
 						<div class="pricing_card_header">
 							<h2>$0<span class="subscription_period">/month</span></h2>
 							<h3>Business Class</h3>
@@ -436,7 +438,7 @@
 							<button type="button">Start free trial</button>
 						</div>
 					</div>
-					<div class="pricing_card active_card">
+					<div id="annually_card" class="pricing_card active_card">
 						<div class="pricing_card_header active_header">
 							<h2>$99<span class="subscription_period">/month</span></h2>
 							<h3>Pro Master</h3>
