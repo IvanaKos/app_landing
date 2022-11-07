@@ -19,7 +19,7 @@ Webpage content:
 8. pricing
 9. testimonials
 10. faq
-11.download app
+11. download app
 12. footer
 __________________
 
