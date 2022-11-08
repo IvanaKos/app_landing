@@ -95,14 +95,28 @@ const monthly = document.getElementById("monthly");
 const annually = document.getElementById("annually");
 const monthlyCard = document.getElementById("monthly_card");
 const annuallyCard = document.getElementById("annually_card");
-const trialLink = document.querySelector("div.pricing_card_content > a");
+// const trialLink = document.querySelector("#monthly_card a");
+
+function addLink(card) {
+  var a = document.createElement("a");
+  a.setAttribute("href", "");
+  a.innerHTML = "Or Start 14 Days Trial";
+  a.id = "link";
+  card.appendChild(a);
+}
+
+function removeLink(card) {
+  var trialLink = document.getElementById("link");
+  card.removeChild(trialLink);
+}
 
 monthly.addEventListener("click", function () {
   annually.classList.add("ghost_button");
   monthly.classList.remove("ghost_button");
   monthlyCard.classList.add("active_card");
   annuallyCard.classList.remove("active_card");
-  trialLink.remove();
+  removeLink(annuallyCard);
+  addLink(monthlyCard);
 });
 
 annually.addEventListener("click", function () {
@@ -110,4 +124,6 @@ annually.addEventListener("click", function () {
   annually.classList.remove("ghost_button");
   annuallyCard.classList.add("active_card");
   monthlyCard.classList.remove("active_card");
+  addLink(annuallyCard);
+  removeLink(monthlyCard);
 });
