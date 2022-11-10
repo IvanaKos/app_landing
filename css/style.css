@@ -161,7 +161,7 @@ nav a {
 	/* TODO: When you are using multiple images as background images it is always a good idea to make them into separate lines. It will be more readable */
 	/*DONE*/
 	background: url(../assets/images/header_phone.png) 85% no-repeat,
-		url(../assets/images/buildings_background_02.jpg) bottom no-repeat;
+		url(../assets/images/buildings_background.jpg) bottom no-repeat;
 	/* TODO: You could attach the size to the above definition as well and then you can easily destinguish which declaration is for which image */
 	/*QUESTIoN: It doesn't work, I don't know why. When it is separated like I wrote it, then it works.*/
 	background-size: contain, contain;
@@ -231,7 +231,7 @@ nav a {
 /*START features*/
 
 #features {
-	background: url(../assets/images/features_03.jpg) no-repeat;
+	background: url(../assets/images/features.jpg) no-repeat;
 	/* TODO: you can add the "no-repeat" to the background definition */
 	/*DONE*/
 	padding: 30px 0 40px 0;
@@ -318,7 +318,7 @@ width: 285px;
 /*START app_design*/
 
 #app_design {
-	background-image: url(../assets/images/designed_03.jpg);
+	background-image: url(../assets/images/designed.jpg);
 	background-repeat: no-repeat;
 	background-position-x: 100px;
 	padding: 150px 0;
@@ -350,7 +350,7 @@ width: 285px;
 /*START additional_services*/
 
 #additional_services {
-	background-image: url(../assets/images/planning_03.jpg);
+	background-image: url(../assets/images/planning.jpg);
 	background-repeat: no-repeat;
 	/* TODO: We have to check positioning as it is not working good on big screens */
 	background-position-x: 840px;
@@ -539,7 +539,7 @@ width: 285px;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background-image: url(../assets/svg/arrow-left-solid-grey.svg);
+	background-image: url(../assets/svg/arrow_left_solid_grey.svg);
 	background-color: white;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -549,7 +549,7 @@ width: 285px;
 }
 
 .active_arrow {
-	background-image: url(../assets/svg/arrow-right-solid-blue.svg);
+	background-image: url(../assets/svg/arrow_right_solid_blue.svg);
 	/* TODO: Extract the colour */
 	/*DONE*/
 	background-color: var(--catskillwhite_gray);
@@ -648,7 +648,7 @@ details[open] summary {
 /*START download*/
 
 #download {
-	background-image: url(../assets/images/download_photo_03.jpg);
+	background-image: url(../assets/images/download_photo.jpg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	/* TODO: We need to fix the background positioning here as well */
