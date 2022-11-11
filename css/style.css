@@ -527,6 +527,10 @@ width: 285px;
 	/*DONE*/
 }
 
+#text {
+	height: 100px;
+}
+
 .slider_arrows {
 	display: flex;
 	gap: 20px;
@@ -540,7 +544,6 @@ width: 285px;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-
 	background-color: white;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -557,15 +560,23 @@ width: 285px;
 	background-image: url(../assets/svg/arrow-left-solid-grey.svg);
 }
 
+.arrow_right:hover,
 .active_arrow_right {
 	background-image: url(../assets/svg/arrow-right-solid-blue.svg);
+}
+
+.arrow_left:hover,
+.active_arrow_left {
+	background-image: url(../assets/svg/arrow-left-solid-blue.svg);
+}
+
+.active_arrow_right {
 	/* TODO: Extract the colour */
 	/*DONE*/
 	background-color: var(--catskillwhite_gray);
 }
 
 .active_arrow_left {
-	background-image: url(../assets/svg/arrow-left-solid-blue.svg);
 	/* TODO: Extract the colour */
 	/*DONE*/
 	background-color: var(--catskillwhite_gray);
