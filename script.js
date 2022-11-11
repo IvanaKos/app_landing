@@ -105,17 +105,40 @@ function addLink(card) {
   card.appendChild(a);
 }
 
+function removeLink(removeLinkCard) {
+  const trialLinkAnnually = document.querySelector("#annually_card a");
+  const trialLinkMonthly = document.querySelector("#monthly_card a");
+
+  if (removeLinkCard === annuallyCard) {
+    trialLinkAnnually.remove();
+  } else {
+    trialLinkMonthly.remove();
+  }
+}
+
+function disbleEnableButton(removeLinkCard) {
+  if (removeLinkCard === annually) {
+    period.disabled = true;
+    document.getElementById("annually").disabled = false;
+  } else {
+    period.disabled = true;
+    document.getElementById("monthly").disabled = false;
+  }
+}
+
+function moveLink(card, removeLinkCard) {
+  addLink(card);
+  removeLink(removeLinkCard);
+  disbleEnableButton(removeLinkCard);
+}
+
 monthly.addEventListener("click", function () {
   annually.classList.add("ghost_button");
   monthly.classList.remove("ghost_button");
   monthlyCard.classList.add("active_card");
   annuallyCard.classList.remove("active_card");
 
-  const trialLinkAnnually = document.querySelector("#annually_card a");
-  addLink(monthlyCard);
-  trialLinkAnnually.remove();
-  this.disabled = true;
-  document.getElementById("annually").disabled = false;
+  moveLink(monthlyCard, annuallyCard);
 });
 
 annually.addEventListener("click", function () {
@@ -124,11 +147,7 @@ annually.addEventListener("click", function () {
   annuallyCard.classList.add("active_card");
   monthlyCard.classList.remove("active_card");
 
-  const trialLinkMonthly = document.querySelector("#monthly_card a");
-  addLink(annuallyCard);
-  trialLinkMonthly.remove();
-  this.disabled = true;
-  document.getElementById("monthly").disabled = false;
+  moveLink(annuallyCard, monthlyCard);
 });
 
 // END PriceCards
