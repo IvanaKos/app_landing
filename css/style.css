@@ -2,8 +2,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-/* TODO: font-family and in general typography styles should be inheritable, so I do not think you need button in the CSS selector here. */
-/*DONE: but I had to add "font: inherit" to button selector, because it is not inheriting font family automatically*/
 body {
 	font-family: "Poppins", sans-serif;
 	box-sizing: border-box;
@@ -19,7 +17,7 @@ body {
 	--chateau_green: #40975f;
 	--oslo_gray: #929396; /*Only in ghost button price period*/
 	--mid_gray: #616368; /*Only paragraph color*/
-	--mystic_gray: #e2eaed; /*Only h4 bg in main_content*/
+	--mystic_gray: #e2eaed; /*Only h4 bg in hero*/
 	--nickel_gray: #b9b9b8; /*Only additional_features_title p*/
 	--galery_gray: #ebebeb;
 	--wild_sand_gray: #f4f4f4;
@@ -62,9 +60,6 @@ body {
 section {
 	margin-top: 110px;
 }
-
-/* TODO: this looks like it is used in <header> only, so maybe you can move it to the header section of CSS */
-/*DONE*/
 
 h1,
 h2,
@@ -120,15 +115,10 @@ button {
 
 /* TODO: I would rename the color naming a bit here. Some examples: https://css-tricks.com/what-do-you-name-color-variables/ */
 /*DONE:  but I am not sure if this is the right choice for naming.*/
-/* TODO: Also, I think this is the right time to introduce you to: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
-/*DONE*/
+
 /*START HEADER*/
 
-/* TODO: I guess you can remove the comment below, you should already know what it does. */
-/*DONE: I know, I wrote it for you. :P I wanted to ask if this is the right way to remove the horizontal scroll, or I should check what exactly inside of header is making the problem and try to solve it differently. I removed it now completely because since I separated header in two sections I don't need it anymore.*/
-/*overflow: hidden;*/
-
-.header_nav {
+#header_nav {
 	display: flex;
 	gap: 20px;
 	align-items: center;
@@ -155,11 +145,9 @@ nav a {
 	margin-right: auto;
 }
 
-/*START main_content*/
+/*START hero*/
 
-#main_content {
-	/* TODO: When you are using multiple images as background images it is always a good idea to make them into separate lines. It will be more readable */
-	/*DONE*/
+#hero {
 	background: url(../assets/images/header_phone.png) 85% no-repeat,
 		url(../assets/images/buildings_background_02.jpg) bottom no-repeat;
 	/* TODO: You could attach the size to the above definition as well and then you can easily destinguish which declaration is for which image */
@@ -167,8 +155,6 @@ nav a {
 	background-size: contain, contain;
 	padding: 250px 200px 235px 200px;
 	margin-top: 0;
-	/* TODO: Why the negative margin. I think we can get rid of this. */
-	/*DONE*/
 }
 
 .description {
@@ -177,19 +163,15 @@ nav a {
 	justify-content: center;
 }
 
-#main_content h4 {
-	/* TODO: Extract the color value upwards into colour classes. */
-	/*DONE*/
+#hero h4 {
 	background: var(--mystic_gray);
 	border-radius: 50px;
 	width: 360px;
 	margin-bottom: 30px;
 }
 
-#main_content h4::before {
+#hero h4::before {
 	content: "";
-	/* TODO: Extract the color value upwards into colour classes. */
-	/*DONE*/
 	background: var(--my_sin_orange) url(../assets/svg/badge_check_icon.svg)
 		no-repeat center;
 	display: inline-block;
@@ -200,13 +182,11 @@ nav a {
 	border-radius: 50px;
 }
 
-#main_content p {
+#hero p {
 	font-size: 18px;
 }
 
 #video {
-	/* TODO: Extract the color value upwards into colour classes. */
-	/*DONE*/
 	color: var(--blue);
 	margin-left: 30px;
 }
@@ -232,8 +212,6 @@ nav a {
 
 #features {
 	background: url(../assets/images/features_03.jpg) no-repeat;
-	/* TODO: you can add the "no-repeat" to the background definition */
-	/*DONE*/
 	padding: 30px 0 40px 0;
 }
 
@@ -262,12 +240,6 @@ nav a {
 	margin-top: 90px;
 }
 
-/*.feature_description {
- TODO: We should get rid of this 
-DONE
-width: 285px;
-}*/
-
 .feature_description p {
 	margin-bottom: 0;
 }
@@ -292,8 +264,6 @@ width: 285px;
 
 .additional_features_title p {
 	padding: 40px 50px;
-	/* TODO: Browsers can't make borders on half a pixel. It looks the same as if you added 1px of border-width */
-	/*DONE*/
 	border-left: 1px solid var(--nickel_gray);
 }
 
@@ -322,8 +292,6 @@ width: 285px;
 	background-repeat: no-repeat;
 	background-position-x: 100px;
 	padding: 150px 0;
-	/* TODO: there is no point in doing borders as a decimal of a pixel. Rounding is not guaranteed and the visual effect is really subtle. */
-	/*DONE*/
 	border-bottom: 2px solid var(--wild_sand_gray);
 }
 
@@ -375,11 +343,7 @@ width: 285px;
 	align-items: center;
 	justify-content: center;
 	margin: 40px 0;
-	/* TODO: I think we can get rid of this width and rely on the width of the buttons inside instead */
-	/*DONE: I removed height as well. I used it for the space between the button and border, but now I see I can use padding for that.*/
 	padding: 3px;
-	/* TODO: Same thing I mentioned about border width being a fraction of a pixel before */
-	/*DONE*/
 	border: 2px solid var(--galery_gray);
 	border-radius: 50px;
 }
@@ -390,8 +354,6 @@ width: 285px;
 }
 
 .ghost_button {
-	/* TODO: Let's extract the colour value */
-	/*DONE*/
 	color: var(--oslo_gray);
 	background: white;
 	font-weight: 400;
@@ -403,27 +365,19 @@ width: 285px;
 	/*DONE:  I am not sure about this, but I set the height to fit-content, otherwise both cards will have the same height. I am a little bit confused about the choice between fit-content, min-content and max-content in this case. */
 	height: fit-content;
 	text-align: center;
-	/* TODO: We can also extract the colour value here as well, using CSS variables, linked somewhere above */
-	/*DONE*/
 	-webkit-box-shadow: 0px 34px 31px 9px var(--aqua_haze_gray);
 	box-shadow: 0px 34px 31px 9px var(--aqua_haze_gray);
 	border-radius: 10px;
 }
 
 .subscription_period {
-	/* TODO: Extract the colour */
-	/*DONE*/
 	color: var(--manatee_gray);
-	/* TODO: Make sure you know what this value (1.5) refers to: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height */
-	/*DONE: I new this. It's just font size multiplied by this number, isn't it? */
 	line-height: 1.5;
 	font-size: 1rem;
 	font-weight: 400;
 }
 
 .pricing_card p {
-	/* TODO: Extract the colour */
-	/*DONE*/
 	color: var(--manatee_gray);
 	margin-bottom: 0;
 }
@@ -442,8 +396,6 @@ width: 285px;
 }
 
 .pricing_card li {
-	/* TODO: Extract the colour */
-	/*DONE*/
 	color: var(--manatee_gray);
 	margin-bottom: 28px;
 }
@@ -453,8 +405,6 @@ width: 285px;
 }
 
 .pricing_card_header {
-	/* TODO: Extract the colour */
-	/*DONE*/
 	-webkit-box-shadow: inset 0px -25px 24px -1px var(--aqua_haze_gray);
 	box-shadow: inset 0px -25px 24px -1px var(--aqua_haze_gray);
 	padding: 60px 50px 35px 50px;
@@ -468,43 +418,25 @@ width: 285px;
 
 .pricing_card a {
 	text-decoration: none;
-	/* TODO: Extract the colour */
-	/*DONE*/
 	color: var(--blue);
 	margin-bottom: 30px;
 }
 
 .active_card {
 	box-shadow: none;
-	/* TODO: Extract the colour */
-	/*DONE*/
-	/* TODO: Same about the border-width property */
-	/*DONE*/
 	border: 2px solid var(--galery_gray);
-	/* TODO: We can get rid of the height here as well */
-	/*DONE*/
 }
 
 .active_header {
-	/* TODO: Extract the colour */
-	/*DONE*/
 	background: var(--aqua_haze_gray);
-	/*I added border-radius here, because it's not working only with the one on the .price_card for the header part.*/
 	border-radius: 10px;
 }
-
-/* TODO: Extract the colours, I think we can simplify these shades and use one or maybe two here as they are all so similar */
-/*DONE*/
 
 /*START testimonials*/
 
 #testimonials {
 	background-image: url(../assets/images/people_map.jpg);
 	background-repeat: no-repeat;
-	/* TODO: Extract the colour */
-	/*DONE*/
-	/* TODO: border-width 1.8px */
-	/*DONE*/
 	border-top: 2px solid var(--wild_sand_gray);
 	background-size: 700px;
 	background-position-y: center;
@@ -523,8 +455,6 @@ width: 285px;
 .star {
 	width: 20px;
 	height: 20px;
-	/* TODO: You can transfer the margin to the wrapping <div class="stars"> */
-	/*DONE*/
 }
 
 .slider_arrows {
@@ -545,8 +475,6 @@ width: 285px;
 	background-repeat: no-repeat;
 	background-position: center;
 	border: 2px solid var(--catskillwhite_gray);
-	/* TODO: Try to keep the declarations that are relevant to the same thing colocated closely together. For example, all the background definitions should be close together */
-	/*DONE*/
 }
 
 .arrow_right {
@@ -559,20 +487,16 @@ width: 285px;
 
 .active_arrow_right {
 	background-image: url(../assets/svg/arrow-right-solid-blue.svg);
-	/* TODO: Extract the colour */
-	/*DONE*/
+
 	background-color: var(--catskillwhite_gray);
 }
 
 .active_arrow_left {
 	background-image: url(../assets/svg/arrow-left-solid-blue.svg);
-	/* TODO: Extract the colour */
-	/*DONE*/
+
 	background-color: var(--catskillwhite_gray);
 }
 
-/* TODO: For a divider like this feel free to use a decorative div element instead of a pseudo element */
-/*DONE*/
 .divider {
 	height: 25px;
 	border-right: 1px solid var(--mercury_gray);
@@ -611,25 +535,20 @@ width: 285px;
 #faq {
 	margin-top: 90px;
 	padding-bottom: 110px;
-	/* TODO: Extract the colour */
-	/*DONE*/
-	/* TODO: border-width, whole pixel value */
-	/*DONE*/
+
 	border-bottom: 2px solid var(--wild_sand_gray);
 }
 
 details {
 	width: 940px;
 	margin-bottom: 10px;
-	/* TODO: Extract the colour */
-	/*DONE*/
+
 	background-color: #f5f7fa;
 	cursor: pointer;
 	box-sizing: border-box;
 	padding: 22px 30px;
 	font-size: 20px;
-	/* TODO: Extract the colour */
-	/*DONE*/
+
 	color: var(--cloud_burst_blue);
 }
 
@@ -639,8 +558,7 @@ summary {
 
 summary:after {
 	content: "+";
-	/* TODO: Extract the colour */
-	/*DONE*/
+
 	color: var(--cloud_burst_blue);
 	font-size: 26px;
 	float: right;
@@ -651,8 +569,6 @@ details p {
 	margin-top: 35px;
 }
 
-/* TODO: Indentation seems off until the end of this secion. Prettier will fix this */
-/*DONE*/
 details[open] summary:after {
 	content: "-";
 }
@@ -695,8 +611,7 @@ details[open] summary {
 
 footer {
 	height: 525px;
-	/* TODO: Extract the colour */
-	/*DONE*/
+
 	background-color: var(--black_pearl_black);
 	display: flex;
 	justify-content: center;
