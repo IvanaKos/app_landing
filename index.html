@@ -2,8 +2,6 @@
 <html>
 	<head>
 		<title>App Landing</title>
-		<!-- TODO: Move the reset.css and style.css towards the end of the <head> tag. That way we can potentially load the fonts before we use them in CSS -->
-		<!-- DONE -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,38 +15,30 @@
 	</head>
 
 	<body>
-		<header>
-			<div class="header_nav">
-				<div class="logo">
-					<a href="">
-						<img src="assets/logos/main_logo.png" alt="Logo" />
-					</a>
-				</div>
-
-				<nav>
-					<ul>
-						<!-- TODO: You can already link those to the sections below. Just make sure you have IDs on each section and then you can link to them here like: #features -->
-						<!-- DONE: But, does this links make sence since there are more sections than links in the menu? How should I link Home? Put #id on header or change .header_nav to id instead of class? -->
-						<!-- TODO: We can also add smooth scrolling, I will show you how -->
-						<!-- DONE: But only with CSS. -->
-						<li><a href="">Home</a></li>
-						<li><a href="#features">Key Features</a></li>
-						<li><a href="#pricing">Pricing</a></li>
-						<li><a href="#testimonials">Testimonial</a></li>
-						<li><a href="#faq">FAQ</a></li>
-					</ul>
-				</nav>
-
-				<button type="button">Try for free</button>
+		<header id="header_nav">
+			<div class="logo">
+				<a href="">
+					<img src="assets/logos/main_logo.png" alt="Logo" />
+				</a>
 			</div>
+
+			<nav>
+				<ul>
+					<!-- TODO: We can also add smooth scrolling, I will show you how -->
+					<!-- DONE: But only with CSS. -->
+					<li><a href="#header_nav">Home</a></li>
+					<li><a href="#features">Key Features</a></li>
+					<li><a href="#pricing">Pricing</a></li>
+					<li><a href="#testimonials">Testimonial</a></li>
+					<li><a href="#faq">FAQ</a></li>
+				</ul>
+			</nav>
+
+			<button type="button">Try for free</button>
 		</header>
 
-		<!-- TODO: I would move this one to its own section and out of the header -->
-		<!-- DONE: id name is probably not good but I don't have better idea. -->
-		<section id="main_content">
+		<section id="hero">
 			<div class="wraper">
-				<!-- TODO: Prettier would help here as well. Be consistent with class="header_content" vs class = "description col_50" -->
-				<!-- DONE-->
 				<div class="description col_50">
 					<h4>#1 Editors Choice App of 2020</h4>
 					<h1>Best app for your modern lifestyle</h1>
@@ -68,11 +58,11 @@
 			<div class="wraper">
 				<p>Trusted by companies like</p>
 				<div class="external_logos">
-					<img src="assets/logos/alonzo.jpg" />
-					<img src="assets/logos/anubis.jpg" />
-					<img src="assets/logos/express.jpg" />
-					<img src="assets/logos/maniac.jpg" />
-					<img src="assets/logos/southwest.jpg" />
+					<img src="assets/logos/alonzo.jpg" alt="Logo Alonzo" />
+					<img src="assets/logos/anubis.jpg" alt="Logo Anubis" />
+					<img src="assets/logos/express.jpg" alt="Logo Express" />
+					<img src="assets/logos/maniac.jpg" alt="Logo Maniac" />
+					<img src="assets/logos/southwest.jpg" alt="Logo Southwest" />
 				</div>
 			</div>
 		</section>
@@ -81,18 +71,12 @@
 			<div class="wraper">
 				<div class="col_50">
 					<h2>Awesome apps<br />features</h2>
-					<!-- TODO: Shouldn't "app for managing ..." be "App for managing ..." -->
-					<!-- DONE: It was "app for managing ..." in the design. -->
 					<p>
 						Increase productivity with a simple to-do app. App for managing your
 						personal budgets.
 					</p>
 					<div class="feature_unit side_icon">
-						<!-- TODO: Get into a habit of always providing an "alt" tag for images. https://www.w3schools.com/tags/att_img_alt.asp -->
-						<!-- DONE -->
-						<img src="assets/svg/gauge_solid.svg" alt="Gauge icon" />
-						<!-- TODO: I think you can use singular form here for the class name: "feature_description" instead of "features_description" -->
-						<!-- DONE -->
+						<img src="assets/svg/gauge-solid.svg" alt="Gauge icon" />
 						<div class="feature_description">
 							<h3 class="subtitle_red">Fast Performance</h3>
 							<p>
@@ -133,8 +117,6 @@
 
 		<section id="additional_features">
 			<div class="wraper">
-				<!-- TODO: I would call this one something like: additional_features_title -->
-				<!-- DONE -->
 				<div class="additional_features_title">
 					<h2>Smart jackpots that you may love this anytime & anywhere</h2>
 					<p>
@@ -144,15 +126,11 @@
 				</div>
 				<div class="features_container_3col">
 					<div class="feature_unit">
-						<!-- TODO: Get into a habit of always providing an "alt" tag for images. https://www.w3schools.com/tags/att_img_alt.asp -->
-						<!-- DONE -->
 						<img
 							class="feature_icon"
 							src="assets/svg/file_invoice_dollar_solid.svg"
 							alt="File invoice dollar icon"
 						/>
-						<!-- TODO: I think you can use singular form here for the class name: "feature_description" instead of "features_description" -->
-						<!-- DONE -->
 						<div class="feature_description">
 							<h3 class="subtitle_red">Automatic Payouts</h3>
 							<p>
@@ -195,8 +173,6 @@
 
 		<section id="app_design">
 			<div class="wraper">
-				<!-- TODO: You have unnecessary space here, Prettier code formatter will easily take care of these for you. -->
-				<!-- DONE: Installed Prettier -->
 				<div class="col_40">
 					<h2>Designed & built by the latest code integration</h2>
 					<p>
@@ -218,19 +194,12 @@
 					</p>
 				</div>
 				<div class="features_container_3col">
-					<!-- TODO: There are basically three variations of this component. I think we can simplify it -->
-					<!-- DONE: I think it's better now, but please check if it is good enough. -->
 					<div class="feature_unit top_center_icon">
-						<!-- TODO: alt text -->
-						<!-- DONE -->
 						<img
 							class="feature_icon"
 							src="assets/svg/file_code_regular.svg"
 							alt="File code icon"
 						/>
-
-						<!-- TODO: singular form -->
-						<!-- DONE -->
 						<div class="feature_description top_center_icon">
 							<h3>App Development</h3>
 							<p>
@@ -330,10 +299,6 @@
 					</div>
 					<div class="features_container_3col">
 						<div class="feature_unit">
-							<!-- TODO: Looks like this container is not serving any purpose, why did you add it? -->
-							<!-- DONE: I think I forgot to delete it when I edited this part. -->
-							<!-- TODO: Alt tag -->
-							<!-- DONE -->
 							<img
 								class="feature_icon"
 								src="assets/svg/file_code_regular.svg"
@@ -396,16 +361,12 @@
 						</div>
 					</div>
 					<button type="button">See all</button>
-					<!-- TODO: This closing </div> tag is one too much -->
-					<!-- DONE: Deleted </div> -->
 				</div>
 			</div>
 		</section>
 
 		<section id="pricing">
 			<div class="wraper">
-				<!-- I like how you did this whole section -->
-				<!-- To nisam ja, to je moja sauma. -->
 				<div class="section_title">
 					<h2>Get awesome features, without extra charges</h2>
 					<p>
@@ -415,8 +376,6 @@
 				</div>
 				<div class="period_selector">
 					<button type="button">Monthly</button>
-					<!-- TODO: It makes more sense to add the "active" class to the button above than adding an "inactive" class here. What if you add another period, idk, quarterly? -->
-					<!-- DONE: I just changed the class name. -->
 					<button class="ghost_button" type="button">Annually</button>
 				</div>
 				<div class="pricing_card_container">
@@ -506,18 +465,13 @@
 								heading towards a streamlined cloud
 							</p>
 							<div class="slider_footer">
-								<!-- TODO: I would use an actual <img /> here and crop the image to a square instead of the background image -->
-								<!-- DONE -->
-								<img class="user_photo" src="assets/images/user_photo.jpg" />
+								<img class="user_photo" src="assets/images/user_photo.jpg" alt="User Photo" />
+
 								<div class="user_info">
 									<p>Zoltan Nemeth</p>
 									<p>CEO of Pixler Lab</p>
 								</div>
 								<div class="slider_arrows">
-									<!-- TODO: Use active instead of inactive class -->
-									<!-- DONE -->
-									<!-- TODO: Add ids of "next" and "previous". We will need them in the next step when we implement the actual slider -->
-									<!-- DONE -->
 									<button id="previous" class="arrow" type="button"></button>
 									<div class="divider"></div>
 									<button
@@ -533,8 +487,6 @@
 			</div>
 		</section>
 
-		<!-- TODO: Try to keep naming consistent: "faq" -->
-		<!-- DONE: renamed to "faq" -->
 		<section id="faq">
 			<div class="wraper">
 				<div class="section_title">
@@ -609,24 +561,20 @@
 						The rise of mobile devices transforms the way we consume information
 						entirely and the world's most elevant channels such as Facebook.
 					</p>
-					<!-- TODO: I would use normal <a> here with <img /> inside -->
-					<!-- DONE -->
-					<a id="google_play"
-						><img src="assets/images/google_play_badge.jpg"
-					/></a>
-					<a id="apple_store"><img src="assets/svg/app_store_badge.svg" /></a>
+					<a id="google_play">
+						<img src="assets/images/google-play-badge.jpg" alt="Google Play Badge" />
+					</a>
+					<a id="apple_store">
+						<img src="assets/svg/App_Store_Badge.svg" alt="App Store Badge"/>
+					</a>
 				</div>
 			</div>
 		</section>
 
 		<footer>
-			<!-- TODO: Alt tag -->
-			<!-- DONE -->
 			<img class="logo" src="assets/logos/logo_white.png" alt="AppLab logo" />
 			<nav>
 				<ul>
-					<!-- TODO: You can link those as well already -->
-					<!-- DONE -->
 					<li><a href="">Home</a></li>
 					<li><a href="#features">Key Features</a></li>
 					<li><a href="#pricing">Pricing</a></li>
@@ -639,17 +587,12 @@
 					><img src="assets/svg/facebook_f.svg" alt="Facebook logo"
 				/></a>
 				<a href=""><img src="assets/svg/twitter.svg" alt="Twitter logo" /></a>
-				<!-- TODO: This style is basically a hover state, so this one as well should be the same colour as others -->
-				<!-- DONE -->
 				<a href=""
 					><img src="assets/svg/hashtag_solid.svg" alt="Hashtag logo"
 				/></a>
 				<a href=""><img src="assets/svg/github.svg" alt="Github logo" /></a>
 			</div>
-			<!-- QUESTION: Sohuld this Copyright stay like this? -->
 			<p>Copyright© Arifur Rahman Tushar 2019. All rights reserved</p>
 		</footer>
-		<!-- TODO: Please remove this white space. It comes for free when you use a code formatter like Prettier. -->
-		<!-- DONE -->
 	</body>
 </html>

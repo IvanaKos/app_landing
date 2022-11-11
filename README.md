@@ -44,7 +44,4 @@ DONE
 TODO: I noticed some images have duplicate versions JPG and PNG. Please keep only the ones you need to use and delete the rest.
 DONE
 
-TODO: If you haven't please run all the JPGs and PNGs through an optimizer tool such as: https://tinypng.com/ to reduce the filesize.
-DONE
-
 TODO: We need to improve the section background images placement. I will show you how.
