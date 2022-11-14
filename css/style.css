@@ -516,7 +516,7 @@ nav a {
 	justify-content: center;
 }
 
-.faq {
+#faq {
 	margin-top: 90px;
 	padding-bottom: 110px;
 	border-bottom: 2px solid var(--wild_sand_gray);
