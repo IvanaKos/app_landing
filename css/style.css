@@ -429,7 +429,7 @@ nav a {
 
 .active_header {
 	background: var(--aqua_haze_gray);
-	border-radius: 10px;
+	border-radius: 10px 10px 0 0;
 }
 
 /*START testimonials*/
