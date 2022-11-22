@@ -4,8 +4,11 @@
 
 Project type:
 Landing page.
-_________________
-Webpage content: 
+
+---
+
+Webpage content:
+
 1. header with nav menu
 2. main content
 3. recommendations
@@ -18,23 +21,30 @@ Webpage content:
 10. faq
 11. download app
 12. footer
-__________________
+
+---
 
 Folder structure:
+
 ```
-applanding_____index.html
-                 I
-                 I_____css ________style.css
-                 I               I________reset.css
-                 I
-                 I_____assets ______icons
-                 I                    I_____images
-                 I                    I_____logos
-                 I                    I_____svg
-                 I
-                 I_____readme.md
+applanding
+        I_____index.html
+        I
+        I_____css
+        I       I______style.css
+        I       I______reset.css
+        I
+        I_____assets
+        I       I_____icons
+        I       I_____images
+        I       I_____logos
+        I       I_____svg
+        I
+        I_____readme.md
 ```
-_____________________
+
+---
+
 TODO: To organize your CSS further, you can utilize @import and decouple your CSS to the sections or logical parts: https://www.w3schools.com/cssref/pr_import_rule.asp
 QUESTION: As far as I informed myself :), this results in additional http request for every @import statement. When does this become a problem and how do you decide when to do it this way or go with one css file? Or have separate css files and combine them some other way? Also, what would be reasonable logical parts in this case (separate sections?, header, content, footer?)? Let's talk about this.
 
