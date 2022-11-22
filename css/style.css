@@ -1,116 +1,116 @@
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	font-family: "Poppins", sans-serif;
-	box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 /*COLORS*/
 
 :root {
-	--carnation_red: #f55767;
-	--blue_ribbon: #2563ff;
-	--blue: #2500f9;
-	--cloud_burst_blue: #242f51;
-	--chateau_green: #40975f;
-	--oslo_gray: #929396; /*Only in ghost button price period*/
-	--mid_gray: #616368; /*Only paragraph color*/
-	--mystic_gray: #e2eaed; /*Only h4 bg in hero*/
-	--nickel_gray: #b9b9b8; /*Only additional_features_title p*/
-	--galery_gray: #ebebeb;
-	--wild_sand_gray: #f4f4f4;
-	--aqua_haze_gray: #f6f8fa;
-	--manatee_gray: #999ca5;
-	--catskillwhite_gray: #eff3f8;
-	--mercury_gray: #e7e7e7;
-	--white: #ffffff; /*Only button color*/
-	--my_sin_orange: #feaa25;
-	--black_pearl_black: #09142e;
+  --carnation_red: #f55767;
+  --blue_ribbon: #2563ff;
+  --blue: #2500f9;
+  --cloud_burst_blue: #242f51;
+  --chateau_green: #40975f;
+  --oslo_gray: #929396; /*Only in ghost button price period*/
+  --mid_gray: #616368; /*Only paragraph color*/
+  --mystic_gray: #e2eaed; /*Only h4 bg in hero*/
+  --nickel_gray: #b9b9b8; /*Only additional_features_title p*/
+  --galery_gray: #ebebeb;
+  --wild_sand_gray: #f4f4f4;
+  --aqua_haze_gray: #f6f8fa;
+  --manatee_gray: #999ca5;
+  --catskillwhite_gray: #eff3f8;
+  --mercury_gray: #e7e7e7;
+  --white: #ffffff; /*Only button color*/
+  --my_sin_orange: #feaa25;
+  --black_pearl_black: #09142e;
 }
 
 /*COLORS END*/
 
 .col_65 {
-	width: 65%;
+  width: 65%;
 }
 
 .col_60 {
-	width: 60%;
+  width: 60%;
 }
 
 .col_50 {
-	width: 50%;
+  width: 50%;
 }
 
 .col_40 {
-	width: 40%;
+  width: 40%;
 }
 
 .wraper {
-	display: flex;
-	flex-wrap: wrap;
-	/* TODO: 1025px look rather custom value. Was it like this in the design? I think we can go the same as in the header_nav: 1200px. */
-	/*DONE: There are some differences in the design now (headings and paragraphs width). We should look at it together.*/
-	width: 1200px;
-	margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* TODO: 1025px look rather custom value. Was it like this in the design? I think we can go the same as in the header_nav: 1200px. */
+  /*DONE: There are some differences in the design now (headings and paragraphs width). We should look at it together.*/
+  width: 1200px;
+  margin: auto;
 }
 
 section {
-	margin-top: 110px;
+  margin-top: 110px;
 }
 
 h1,
 h2,
 h3 {
-	font-weight: 600;
-	color: var(--cloud_burst_blue);
-	line-height: 1.2;
+  font-weight: 600;
+  color: var(--cloud_burst_blue);
+  line-height: 1.2;
 }
 
 h1 {
-	font-size: 58px;
-	margin-bottom: 35px;
+  font-size: 58px;
+  margin-bottom: 35px;
 }
 
 h2 {
-	font-size: 36px;
-	margin-bottom: 25px;
+  font-size: 36px;
+  margin-bottom: 25px;
 }
 
 h3 {
-	font-size: 20px;
-	margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 h4 {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 p {
-	color: var(--mid_gray);
-	line-height: 1.5;
-	font-size: 1rem;
-	margin-bottom: 40px;
+  color: var(--mid_gray);
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-bottom: 40px;
 }
 
 a {
-	text-decoration: none;
-	font-size: 16px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 button {
-	width: 165px;
-	height: 55px;
-	color: var(--white);
-	font-size: 16px;
-	font-weight: 800;
-	background: var(--blue);
-	border: none;
-	border-radius: 35px;
-	cursor: pointer;
-	font-family: inherit;
+  width: 165px;
+  height: 55px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 800;
+  background: var(--blue);
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 /* TODO: I would rename the color naming a bit here. Some examples: https://css-tricks.com/what-do-you-name-color-variables/ */
@@ -119,500 +119,497 @@ button {
 /*START HEADER*/
 
 #header_nav {
-	display: flex;
-	gap: 20px;
-	align-items: center;
-	width: 1200px;
-	margin: auto;
-	padding-top: 90px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 1200px;
+  margin: auto;
+  padding-top: 90px;
 }
 
 nav ul {
-	display: flex;
+  display: flex;
 }
 
 nav li {
-	padding: 0 20px;
+  padding: 0 20px;
 }
 
 nav a {
-	/* TODO: You could extract this colour upwards to the colours classes, as I guess we will have a hover as well. And it is always a good idea to tokenize the colours as you can easily have an overview of how many colours your project uses. */
-	/*DONE*/
-	color: var(--cloud_burst_blue);
+  /* TODO: You could extract this colour upwards to the colours classes, as I guess we will have a hover as well. And it is always a good idea to tokenize the colours as you can easily have an overview of how many colours your project uses. */
+  /*DONE*/
+  color: var(--cloud_burst_blue);
 }
 
 .logo {
-	margin-right: auto;
+  margin-right: auto;
 }
 
 /*START hero*/
 
 #hero {
-	background: url(../assets/images/header_phone.png) 85% no-repeat,
-		url(../assets/images/buildings_background.jpg) bottom no-repeat;
-	/* TODO: You could attach the size to the above definition as well and then you can easily destinguish which declaration is for which image */
-	/*QUESTIoN: It doesn't work, I don't know why. When it is separated like I wrote it, then it works.*/
-	background-size: contain, contain;
-	padding: 250px 200px 235px 200px;
-	margin-top: 0;
+  background: url(../assets/images/header_phone.png) 85% / contain no-repeat,
+    url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
+  padding: 250px 200px 235px 200px;
+  margin-top: 0;
 }
 
 .description {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #hero h4 {
-	background: var(--mystic_gray);
-	border-radius: 50px;
-	width: 360px;
-	margin-bottom: 30px;
+  background: var(--mystic_gray);
+  border-radius: 50px;
+  width: 360px;
+  margin-bottom: 30px;
 }
 
 #hero h4::before {
-	content: "";
-	background: var(--my_sin_orange) url(../assets/svg/badge_check_icon.svg)
-		no-repeat center;
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 10px;
-	height: 35px;
-	width: 38px;
-	border-radius: 50px;
+  content: "";
+  background: var(--my_sin_orange) url(../assets/svg/badge_check_icon.svg)
+    no-repeat center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 35px;
+  width: 38px;
+  border-radius: 50px;
 }
 
 #hero p {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 #video {
-	color: var(--blue);
-	margin-left: 30px;
+  color: var(--blue);
+  margin-left: 30px;
 }
 
 /*START recommendation*/
 
 #recommendation p {
-	margin: 0px auto 40px auto;
+  margin: 0px auto 40px auto;
 }
 
 .external_logos {
-	display: flex;
-	justify-content: space-evenly;
-	width: 100%;
-	margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 30px;
 }
 
 .external_logos img {
-	height: 45px;
+  height: 45px;
 }
 
 /*START features*/
 
 #features {
-	background: url(../assets/images/features.jpg) no-repeat;
-	padding: 30px 0 40px 0;
+  background: url(../assets/images/features.jpg) no-repeat;
+  padding: 30px 0 40px 0;
 }
 
 #features .wraper {
-	/* TODO: Maybe we can do this more elegantly */
-	/*QUESTION: I can add one empty <div class=col_50> in html, or I can set margin-left to .features .col_50, or I can add one more "wraper" div just for alignment?*/
-	justify-content: flex-end;
+  /* TODO: Maybe we can do this more elegantly */
+  /*QUESTION: I can add one empty <div class=col_50> in html, or I can set margin-left to .features .col_50, or I can add one more "wraper" div just for alignment?*/
+  justify-content: flex-end;
 }
 
 .feature_unit {
-	display: flex;
-	flex-direction: column;
-	flex: 1 1 23.3%;
-	margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 23.3%;
+  margin-bottom: 60px;
 }
 
 .side_icon {
-	display: flex;
-	flex-direction: row;
-	gap: 30px;
-	align-items: center;
-	margin: 0 200px 60px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  margin: 0 200px 60px 0;
 }
 
 .side_icon:first-of-type {
-	margin-top: 90px;
+  margin-top: 90px;
 }
 
 .feature_description p {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .subtitle_red {
-	color: var(--carnation_red);
+  color: var(--carnation_red);
 }
 
 .subtitle_blue {
-	color: var(--blue_ribbon);
+  color: var(--blue_ribbon);
 }
 
 .subtitle_green {
-	color: var(--chateau_green);
+  color: var(--chateau_green);
 }
 
 /*START additional_features*/
 
 .additional_features_title {
-	display: flex;
+  display: flex;
 }
 
 .additional_features_title p {
-	padding: 40px 50px;
-	border-left: 1px solid var(--nickel_gray);
+  padding: 40px 50px;
+  border-left: 1px solid var(--nickel_gray);
 }
 
 .additional_features_title h2 {
-	font-size: 40px;
-	padding-right: 15px;
+  font-size: 40px;
+  padding-right: 15px;
 }
 
 .features_container_3col {
-	display: flex;
-	flex-wrap: wrap;
-	column-gap: 120px;
-	width: 100%;
-	margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 120px;
+  width: 100%;
+  margin-top: 60px;
 }
 
 .feature_icon {
-	margin-bottom: 30px;
-	width: 90px;
+  margin-bottom: 30px;
+  width: 90px;
 }
 
 /*START app_design*/
 
 #app_design {
-	background-image: url(../assets/images/designed.jpg);
-	background-repeat: no-repeat;
-	background-position-x: 100px;
-	padding: 150px 0;
-	border-bottom: 2px solid var(--wild_sand_gray);
+  background-image: url(../assets/images/designed.jpg);
+  background-repeat: no-repeat;
+  background-position-x: 100px;
+  padding: 150px 0;
+  border-bottom: 2px solid var(--wild_sand_gray);
 }
 
 #app_design .wraper {
-	justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 /*START services*/
 
 .section_title {
-	text-align: center;
-	margin: 0 190px;
+  text-align: center;
+  margin: 0 190px;
 }
 
 .section_title h2 {
-	margin-bottom: 35px;
+  margin-bottom: 35px;
 }
 
 .top_center_icon {
-	align-items: center;
-	text-align: center;
+  align-items: center;
+  text-align: center;
 }
 
 /*START additional_services*/
 
 #additional_services {
-	background-image: url(../assets/images/planning.jpg);
-	background-repeat: no-repeat;
-	/* TODO: We have to check positioning as it is not working good on big screens */
-	background-position-x: 840px;
-	padding-bottom: 50px;
+  background-image: url(../assets/images/planning.jpg);
+  background-repeat: no-repeat;
+  /* TODO: We have to check positioning as it is not working good on big screens */
+  background-position-x: 840px;
+  padding-bottom: 50px;
 }
 
 /*START pricing*/
 
 #pricing .wraper {
-	justify-content: center;
+  justify-content: center;
 }
 
 .pricing_card_container {
-	display: flex;
-	gap: 35px;
-	justify-content: center;
-	width: 100%;
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  width: 100%;
 }
 
 .period_selector {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	margin: 40px 0;
-	padding: 3px;
-	border: 2px solid var(--galery_gray);
-	border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  padding: 3px;
+  border: 2px solid var(--galery_gray);
+  border-radius: 50px;
 }
 
 .period_selector button {
-	width: 135px;
-	height: 48px;
+  width: 135px;
+  height: 48px;
 }
 
 .ghost_button {
-	color: var(--oslo_gray);
-	background: white;
-	font-weight: 400;
+  color: var(--oslo_gray);
+  background: white;
+  font-weight: 400;
 }
 
 .pricing_card {
-	width: 300px;
-	/* TODO: We can get rid of the height here and rely on the height of the elements inside instead */
-	/*DONE:  I am not sure about this, but I set the height to fit-content, otherwise both cards will have the same height. I am a little bit confused about the choice between fit-content, min-content and max-content in this case. */
-	height: fit-content;
-	text-align: center;
-	-webkit-box-shadow: 0px 34px 31px 9px var(--aqua_haze_gray);
-	box-shadow: 0px 34px 31px 9px var(--aqua_haze_gray);
-	border-radius: 10px;
+  width: 300px;
+  /* TODO: We can get rid of the height here and rely on the height of the elements inside instead */
+  /*DONE:  I am not sure about this, but I set the height to fit-content, otherwise both cards will have the same height. I am a little bit confused about the choice between fit-content, min-content and max-content in this case. */
+  height: fit-content;
+  text-align: center;
+  -webkit-box-shadow: 0px 34px 31px 9px var(--aqua_haze_gray);
+  box-shadow: 0px 34px 31px 9px var(--aqua_haze_gray);
+  border-radius: 10px;
 }
 
 .subscription_period {
-	color: var(--manatee_gray);
-	line-height: 1.5;
-	font-size: 1rem;
-	font-weight: 400;
+  color: var(--manatee_gray);
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .pricing_card p {
-	color: var(--manatee_gray);
-	margin-bottom: 0;
+  color: var(--manatee_gray);
+  margin-bottom: 0;
 }
 
 .pricing_card h2 {
-	font-size: 60px;
+  font-size: 60px;
 }
 
 .pricing_card h3 {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .pricing_card ul {
-	margin: 40px 0;
-	font-weight: 400;
+  margin: 40px 0;
+  font-weight: 400;
 }
 
 .pricing_card li {
-	color: var(--manatee_gray);
-	margin-bottom: 28px;
+  color: var(--manatee_gray);
+  margin-bottom: 28px;
 }
 
 .pricing_card a {
-	display: block;
+  display: block;
 }
 
 .pricing_card_header {
-	-webkit-box-shadow: inset 0px -25px 24px -1px var(--aqua_haze_gray);
-	box-shadow: inset 0px -25px 24px -1px var(--aqua_haze_gray);
-	padding: 60px 50px 35px 50px;
+  -webkit-box-shadow: inset 0px -25px 24px -1px var(--aqua_haze_gray);
+  box-shadow: inset 0px -25px 24px -1px var(--aqua_haze_gray);
+  padding: 60px 50px 35px 50px;
 }
 
 .pricing_card button {
-	width: 200px;
-	height: 50px;
-	margin-bottom: 30px;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 30px;
 }
 
 .pricing_card a {
-	text-decoration: none;
-	color: var(--blue);
-	margin-bottom: 30px;
+  text-decoration: none;
+  color: var(--blue);
+  margin-bottom: 30px;
 }
 
 .active_card {
-	box-shadow: none;
-	border: 2px solid var(--galery_gray);
+  box-shadow: none;
+  border: 2px solid var(--galery_gray);
 }
 
 .active_header {
-	background: var(--aqua_haze_gray);
-	border-radius: 10px;
+  background: var(--aqua_haze_gray);
+  border-radius: 10px;
 }
 
 /*START testimonials*/
 
 #testimonials {
-	background-image: url(../assets/images/people_map.jpg);
-	background-repeat: no-repeat;
-	border-top: 2px solid var(--wild_sand_gray);
-	background-size: 700px;
-	background-position-y: center;
-	margin-bottom: 90px;
-	padding: 150px 0 90px 0;
+  background-image: url(../assets/images/people_map.jpg);
+  background-repeat: no-repeat;
+  border-top: 2px solid var(--wild_sand_gray);
+  background-size: 700px;
+  background-position-y: center;
+  margin-bottom: 90px;
+  padding: 150px 0 90px 0;
 }
 
 #testimonials .wraper {
-	justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .stars {
-	margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .star {
-	width: 20px;
-	height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .slider_arrows {
-	display: flex;
-	gap: 20px;
-	flex-grow: 3;
-	justify-content: flex-end;
-	align-items: center;
+  display: flex;
+  gap: 20px;
+  flex-grow: 3;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .arrow {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background-image: url(../assets/svg/arrow_left_solid_grey.svg);
-	background-color: white;
-	background-repeat: no-repeat;
-	background-position: center;
-	border: 2px solid var(--catskillwhite_gray);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(../assets/svg/arrow_left_solid_grey.svg);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid var(--catskillwhite_gray);
 }
 
 .active_arrow {
-	background-image: url(../assets/svg/arrow_right_solid_blue.svg);
-	background-color: var(--catskillwhite_gray);
+  background-image: url(../assets/svg/arrow_right_solid_blue.svg);
+  background-color: var(--catskillwhite_gray);
 }
 
 .divider {
-	height: 25px;
-	border-right: 1px solid var(--mercury_gray);
+  height: 25px;
+  border-right: 1px solid var(--mercury_gray);
 }
 
 .user_photo {
-	display: block;
-	width: 90px;
-	height: 90px;
-	border-radius: 50%;
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
 }
 
 .slider_footer {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .user_info {
-	margin-left: 25px;
+  margin-left: 25px;
 }
 
 .user_info p {
-	margin: 0;
+  margin: 0;
 }
 
 .user_info p:first-child {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 /*START faq*/
 
 #faq .wraper {
-	justify-content: center;
+  justify-content: center;
 }
 
 #faq {
-	margin-top: 90px;
-	padding-bottom: 110px;
-	border-bottom: 2px solid var(--wild_sand_gray);
+  margin-top: 90px;
+  padding-bottom: 110px;
+  border-bottom: 2px solid var(--wild_sand_gray);
 }
 
 details {
-	width: 940px;
-	margin-bottom: 10px;
-	background-color: #f5f7fa;
-	cursor: pointer;
-	box-sizing: border-box;
-	padding: 22px 30px;
-	font-size: 20px;
-	color: var(--cloud_burst_blue);
+  width: 940px;
+  margin-bottom: 10px;
+  background-color: #f5f7fa;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 22px 30px;
+  font-size: 20px;
+  color: var(--cloud_burst_blue);
 }
 
 summary {
-	list-style: none;
+  list-style: none;
 }
 
 summary:after {
-	content: "+";
-	color: var(--cloud_burst_blue);
-	font-size: 26px;
-	float: right;
-	margin-right: 10px;
+  content: "+";
+  color: var(--cloud_burst_blue);
+  font-size: 26px;
+  float: right;
+  margin-right: 10px;
 }
 
 details p {
-	margin-top: 35px;
+  margin-top: 35px;
 }
 
 details[open] summary:after {
-	content: "-";
+  content: "-";
 }
 
 details[open] summary {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 /*START download*/
 
 #download {
-	background-image: url(../assets/images/download_photo.jpg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	/* TODO: We need to fix the background positioning here as well */
-	background-position: 820px bottom;
-	margin-top: 0;
-	padding: 90px 0 100px 0;
+  background-image: url(../assets/images/download_photo.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* TODO: We need to fix the background positioning here as well */
+  background-position: 820px bottom;
+  margin-top: 0;
+  padding: 90px 0 100px 0;
 }
 
 #download h2 {
-	font-size: 48px;
+  font-size: 48px;
 }
 
 #download a {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 #download a img {
-	width: 185px;
-	height: 55px;
-	border-radius: 5px;
+  width: 185px;
+  height: 55px;
+  border-radius: 5px;
 }
 
 #download a img:first-of-type {
-	margin-right: 35px;
+  margin-right: 35px;
 }
 
 /*START footer*/
 
 footer {
-	height: 525px;
-	background-color: var(--black_pearl_black);
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
+  height: 525px;
+  background-color: var(--black_pearl_black);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer .logo {
-	margin-right: 0;
-	margin-bottom: 50px;
+  margin-right: 0;
+  margin-bottom: 50px;
 }
 
 footer a {
-	color: white;
+  color: white;
 }
 
 .social {
-	display: flex;
-	gap: 15px;
-	margin: 45px 0 90px 0;
+  display: flex;
+  gap: 15px;
+  margin: 45px 0 90px 0;
 }
 
 .social img {
-	height: 30px;
+  height: 30px;
 }
