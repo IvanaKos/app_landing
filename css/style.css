@@ -332,6 +332,7 @@ nav a {
   display: flex;
   gap: 35px;
   justify-content: center;
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -358,9 +359,6 @@ nav a {
 
 .pricing_card {
   width: 300px;
-  /* TODO: We can get rid of the height here and rely on the height of the elements inside instead */
-  /*DONE:  I am not sure about this, but I set the height to fit-content, otherwise both cards will have the same height. I am a little bit confused about the choice between fit-content, min-content and max-content in this case. */
-  height: fit-content;
   text-align: center;
   -webkit-box-shadow: 0px 34px 31px 9px var(--aqua_haze_gray);
   box-shadow: 0px 34px 31px 9px var(--aqua_haze_gray);
