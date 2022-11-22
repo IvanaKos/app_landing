@@ -318,7 +318,7 @@ nav a {
   background-image: url(../assets/images/planning.jpg);
   background-repeat: no-repeat;
   /* TODO: We have to check positioning as it is not working good on big screens */
-  background-position-x: 840px;
+  background-position-x: calc(100% + 120px);
   padding-bottom: 50px;
 }
 
@@ -561,7 +561,7 @@ details[open] summary {
   background-repeat: no-repeat;
   background-size: contain;
   /* TODO: We need to fix the background positioning here as well */
-  background-position: 820px bottom;
+  background-position: calc(100% + 150px) bottom;
   margin-top: 0;
   padding: 90px 0 100px 0;
 }
