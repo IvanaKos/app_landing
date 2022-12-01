@@ -51,10 +51,10 @@ applanding
         I
         I
         I_____assets
-        I       I_____icons
-        I       I_____images
-        I       I_____logos
-        I       I_____svg
+        I       I________icons
+        I       I________images
+        I       I________logos
+        I       I________svg
         I
         I_____readme.md
 ```
