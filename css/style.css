@@ -10,24 +10,21 @@ body {
 /*COLORS*/
 
 :root {
-  --carnation_red: #f55767;
-  --blue_ribbon: #2563ff;
-  --blue: #2500f9;
-  --cloud_burst_blue: #242f51;
-  --chateau_green: #40975f;
-  --oslo_gray: #929396; /*Only in ghost button price period*/
-  --mid_gray: #616368; /*Only paragraph color*/
-  --mystic_gray: #e2eaed; /*Only h4 bg in hero*/
-  --nickel_gray: #b9b9b8; /*Only additional_features_title p*/
-  --galery_gray: #ebebeb;
-  --wild_sand_gray: #f4f4f4;
-  --aqua_haze_gray: #f6f8fa;
-  --manatee_gray: #999ca5;
-  --catskillwhite_gray: #eff3f8;
-  --mercury_gray: #e7e7e7;
-  --white: #ffffff; /*Only button color*/
-  --my_sin_orange: #feaa25;
-  --black_pearl_black: #09142e;
+  --neutral_main: #616368; /*Only paragraph color*/
+  --neutral_main_variant: #999ca5;
+  --neutral_light: #ffffff;
+  --neutral_light_variant: #f4f4f4;
+  --neutral_medium: #929396; /*Only in ghost button price period*/
+  --neutral_medium_variant: #ebebeb; /*pricing card*/
+  --background_dark: #09142e; /*footer background*/
+  --background_neutral: #f6f8fa;
+  --highlight: #2500f9;
+  --highlight_dark: #242f51;
+  --accent_primary: #f55767;
+  --accent_secondary: #2563ff;
+  --accent_tertiary: #40975f;
+  --emphasis: #feaa25;
+  --emphasis_background: #e2eaed; /*Only h4 bg in hero*/
 }
 
 /*COLORS END*/
@@ -65,7 +62,7 @@ h1,
 h2,
 h3 {
   font-weight: 600;
-  color: var(--cloud_burst_blue);
+  color: var(--highlight_dark);
   line-height: 1.2;
 }
 
@@ -89,7 +86,7 @@ h4 {
 }
 
 p {
-  color: var(--mid_gray);
+  color: var(--neutral_main);
   line-height: 1.5;
   font-size: 1rem;
   margin-bottom: 40px;
@@ -103,10 +100,10 @@ a {
 button {
   width: 165px;
   height: 55px;
-  color: var(--white);
+  color: var(--neutral_light);
   font-size: 16px;
   font-weight: 800;
-  background: var(--blue);
+  background: var(--highlight);
   border: none;
   border-radius: 35px;
   cursor: pointer;
@@ -138,7 +135,7 @@ nav li {
 nav a {
   /* TODO: You could extract this colour upwards to the colours classes, as I guess we will have a hover as well. And it is always a good idea to tokenize the colours as you can easily have an overview of how many colours your project uses. */
   /*DONE*/
-  color: var(--cloud_burst_blue);
+  color: var(--highlight_dark);
 }
 
 .logo {
@@ -161,7 +158,7 @@ nav a {
 }
 
 #hero h4 {
-  background: var(--mystic_gray);
+  background: var(--emphasis_background);
   border-radius: 50px;
   width: 360px;
   margin-bottom: 30px;
@@ -169,8 +166,8 @@ nav a {
 
 #hero h4::before {
   content: "";
-  background: var(--my_sin_orange) url(../assets/svg/badge_check_icon.svg)
-    no-repeat center;
+  background: var(--emphasis) url(../assets/svg/badge_check_icon.svg) no-repeat
+    center;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
@@ -184,7 +181,7 @@ nav a {
 }
 
 #video {
-  color: var(--blue);
+  color: var(--highlight);
   margin-left: 30px;
 }
 
@@ -242,15 +239,15 @@ nav a {
 }
 
 .subtitle_red {
-  color: var(--carnation_red);
+  color: var(--accent_primary);
 }
 
 .subtitle_blue {
-  color: var(--blue_ribbon);
+  color: var(--accent_secondary);
 }
 
 .subtitle_green {
-  color: var(--chateau_green);
+  color: var(--accent_tertiary);
 }
 
 /*START additional_features*/
@@ -261,7 +258,7 @@ nav a {
 
 .additional_features_title p {
   padding: 40px 50px;
-  border-left: 1px solid var(--nickel_gray);
+  border-left: 1px solid var(--neutral_medium);
 }
 
 .additional_features_title h2 {
@@ -289,7 +286,7 @@ nav a {
   background-repeat: no-repeat;
   background-position-x: 100px;
   padding: 150px 0;
-  border-bottom: 2px solid var(--wild_sand_gray);
+  border-bottom: 2px solid var(--neutral_light_variant);
 }
 
 #app_design .wraper {
@@ -342,7 +339,7 @@ nav a {
   justify-content: center;
   margin: 40px 0;
   padding: 3px;
-  border: 2px solid var(--galery_gray);
+  border: 2px solid var(--neutral_medium_variant);
   border-radius: 50px;
 }
 
@@ -352,28 +349,28 @@ nav a {
 }
 
 .ghost_button {
-  color: var(--oslo_gray);
-  background: white;
+  color: var(--neutral_medium);
+  background: var(--neutral_light);
   font-weight: 400;
 }
 
 .pricing_card {
   width: 300px;
   text-align: center;
-  -webkit-box-shadow: 0px 34px 31px 9px var(--aqua_haze_gray);
-  box-shadow: 0px 34px 31px 9px var(--aqua_haze_gray);
+  -webkit-box-shadow: 0px 34px 31px 9px var(--background_neutral);
+  box-shadow: 0px 34px 31px 9px var(--background_neutral);
   border-radius: 10px;
 }
 
 .subscription_period {
-  color: var(--manatee_gray);
+  color: var(--neutral_main_variant);
   line-height: 1.5;
   font-size: 1rem;
   font-weight: 400;
 }
 
 .pricing_card p {
-  color: var(--manatee_gray);
+  color: var(--neutral_main_variant);
   margin-bottom: 0;
 }
 
@@ -391,7 +388,7 @@ nav a {
 }
 
 .pricing_card li {
-  color: var(--manatee_gray);
+  color: var(--neutral_main_variant);
   margin-bottom: 28px;
 }
 
@@ -400,8 +397,8 @@ nav a {
 }
 
 .pricing_card_header {
-  -webkit-box-shadow: inset 0px -25px 24px -1px var(--aqua_haze_gray);
-  box-shadow: inset 0px -25px 24px -1px var(--aqua_haze_gray);
+  -webkit-box-shadow: inset 0px -25px 24px -1px var(--background_neutral);
+  box-shadow: inset 0px -25px 24px -1px var(--background_neutral);
   padding: 60px 50px 35px 50px;
 }
 
@@ -413,17 +410,17 @@ nav a {
 
 .pricing_card a {
   text-decoration: none;
-  color: var(--blue);
+  color: var(--highlight);
   margin-bottom: 30px;
 }
 
 .active_card {
   box-shadow: none;
-  border: 2px solid var(--galery_gray);
+  border: 2px solid var(--neutral_medium_variant);
 }
 
 .active_header {
-  background: var(--aqua_haze_gray);
+  background: var(--background_neutral);
   border-radius: 10px;
 }
 
@@ -432,7 +429,7 @@ nav a {
 #testimonials {
   background-image: url(../assets/images/people_map.jpg);
   background-repeat: no-repeat;
-  border-top: 2px solid var(--wild_sand_gray);
+  border-top: 2px solid var(--neutral_light_variant);
   background-size: 700px;
   background-position-y: center;
   margin-bottom: 90px;
@@ -465,20 +462,20 @@ nav a {
   height: 50px;
   border-radius: 50%;
   background-image: url(../assets/svg/arrow_left_solid_grey.svg);
-  background-color: white;
+  background-color: var(--neutral_light);
   background-repeat: no-repeat;
   background-position: center;
-  border: 2px solid var(--catskillwhite_gray);
+  border: 2px solid var(--background_neutral);
 }
 
 .active_arrow {
   background-image: url(../assets/svg/arrow_right_solid_blue.svg);
-  background-color: var(--catskillwhite_gray);
+  background-color: var(--background_neutral);
 }
 
 .divider {
   height: 25px;
-  border-right: 1px solid var(--mercury_gray);
+  border-right: 1px solid var(--neutral_medium_variant);
 }
 
 .user_photo {
@@ -514,7 +511,7 @@ nav a {
 #faq {
   margin-top: 90px;
   padding-bottom: 110px;
-  border-bottom: 2px solid var(--wild_sand_gray);
+  border-bottom: 2px solid var(--neutral_light_variant);
 }
 
 details {
@@ -525,7 +522,7 @@ details {
   box-sizing: border-box;
   padding: 22px 30px;
   font-size: 20px;
-  color: var(--cloud_burst_blue);
+  color: var(--highlight_dark);
 }
 
 summary {
@@ -534,7 +531,7 @@ summary {
 
 summary:after {
   content: "+";
-  color: var(--cloud_burst_blue);
+  color: var(--highlight_dark);
   font-size: 26px;
   float: right;
   margin-right: 10px;
@@ -586,7 +583,7 @@ details[open] summary {
 
 footer {
   height: 525px;
-  background-color: var(--black_pearl_black);
+  background-color: var(--background_dark);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -599,7 +596,7 @@ footer .logo {
 }
 
 footer a {
-  color: white;
+  color: var(--neutral_light);
 }
 
 .social {
