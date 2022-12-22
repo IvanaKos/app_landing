@@ -1,0 +1,26 @@
+.additional_features_title {
+  display: flex;
+}
+
+.additional_features_title p {
+  padding: 40px 50px;
+  border-left: 1px solid var(--neutral_medium);
+}
+
+.additional_features_title h2 {
+  font-size: 40px;
+  padding-right: 15px;
+}
+
+.features_container_3col {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 120px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.feature_icon {
+  margin-bottom: 30px;
+  width: 90px;
+}
