@@ -1,0 +1,75 @@
+#testimonials {
+  background-image: url(../assets/images/people_map.jpg);
+  background-repeat: no-repeat;
+  border-top: 2px solid var(--neutral_light_variant);
+  background-size: 700px;
+  background-position-y: center;
+  margin-bottom: 90px;
+  padding: 150px 0 90px 0;
+}
+
+#testimonials .wraper {
+  justify-content: flex-end;
+}
+
+.stars {
+  margin-bottom: 25px;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+}
+
+.slider_arrows {
+  display: flex;
+  gap: 20px;
+  flex-grow: 3;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(../assets/svg/arrow_left_solid_grey.svg);
+  background-color: var(--neutral_light);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid var(--background_neutral);
+}
+
+.active_arrow {
+  background-image: url(../assets/svg/arrow_right_solid_blue.svg);
+  background-color: var(--background_neutral);
+}
+
+.divider {
+  height: 25px;
+  border-right: 1px solid var(--neutral_medium_variant);
+}
+
+.user_photo {
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.slider_footer {
+  display: flex;
+  align-items: center;
+}
+
+.user_info {
+  margin-left: 25px;
+}
+
+.user_info p {
+  margin: 0;
+}
+
+.user_info p:first-child {
+  font-weight: 600;
+}

@@ -1,0 +1,14 @@
+#recommendation p {
+  margin: 0px auto 40px auto;
+}
+
+.external_logos {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.external_logos img {
+  height: 45px;
+}

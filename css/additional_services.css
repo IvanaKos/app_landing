@@ -1,0 +1,6 @@
+#additional_services {
+  background-image: url(../assets/images/planning.jpg);
+  background-repeat: no-repeat;
+  background-position-x: calc(100% + 120px);
+  padding-bottom: 50px;
+}
