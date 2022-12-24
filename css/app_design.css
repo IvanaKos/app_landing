@@ -1,0 +1,11 @@
+#app_design {
+  background-image: url(../assets/images/designed.jpg);
+  background-repeat: no-repeat;
+  background-position-x: 100px;
+  padding: 150px 0;
+  border-bottom: 2px solid var(--neutral_light_variant);
+}
+
+#app_design .wraper {
+  justify-content: flex-end;
+}

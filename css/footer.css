@@ -1,0 +1,27 @@
+footer {
+  height: 525px;
+  background-color: var(--background_dark);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .logo {
+  margin-right: 0;
+  margin-bottom: 50px;
+}
+
+footer a {
+  color: var(--neutral_light);
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+  margin: 45px 0 90px 0;
+}
+
+.social img {
+  height: 30px;
+}

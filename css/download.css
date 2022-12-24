@@ -1,0 +1,26 @@
+#download {
+  background-image: url(../assets/images/download_photo.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: calc(100% + 150px) bottom;
+  margin-top: 0;
+  padding: 90px 0 100px 0;
+}
+
+#download h2 {
+  font-size: 48px;
+}
+
+#download a {
+  cursor: pointer;
+}
+
+#download a img {
+  width: 185px;
+  height: 55px;
+  border-radius: 5px;
+}
+
+#download a img:first-of-type {
+  margin-right: 35px;
+}

@@ -1,0 +1,102 @@
+#pricing .wraper {
+  justify-content: center;
+}
+
+.pricing_card_container {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.period_selector {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  padding: 3px;
+  border: 2px solid var(--neutral_medium_variant);
+  border-radius: 50px;
+}
+
+.period_selector button {
+  width: 135px;
+  height: 48px;
+}
+
+.ghost_button {
+  color: var(--neutral_medium);
+  background: var(--neutral_light);
+  font-weight: 400;
+}
+
+.pricing_card {
+  width: 300px;
+  text-align: center;
+  -webkit-box-shadow: 0px 34px 31px 9px var(--background_neutral);
+  box-shadow: 0px 34px 31px 9px var(--background_neutral);
+  border-radius: 10px;
+}
+
+.subscription_period {
+  color: var(--neutral_main_variant);
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.pricing_card p {
+  color: var(--neutral_main_variant);
+  margin-bottom: 0;
+}
+
+.pricing_card h2 {
+  font-size: 60px;
+}
+
+.pricing_card h3 {
+  margin-bottom: 0;
+}
+
+.pricing_card ul {
+  margin: 40px 0;
+  font-weight: 400;
+}
+
+.pricing_card li {
+  color: var(--neutral_main_variant);
+  margin-bottom: 28px;
+}
+
+.pricing_card a {
+  display: block;
+}
+
+.pricing_card_header {
+  -webkit-box-shadow: inset 0px -25px 24px -1px var(--background_neutral);
+  box-shadow: inset 0px -25px 24px -1px var(--background_neutral);
+  padding: 60px 50px 35px 50px;
+}
+
+.pricing_card button {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.pricing_card a {
+  text-decoration: none;
+  color: var(--highlight);
+  margin-bottom: 30px;
+}
+
+.active_card {
+  box-shadow: none;
+  border: 2px solid var(--neutral_medium_variant);
+}
+
+.active_header {
+  background: var(--background_neutral);
+  border-radius: 10px;
+}

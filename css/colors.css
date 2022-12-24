@@ -1,0 +1,17 @@
+:root {
+  --neutral_main: #616368; /*Only paragraph color*/
+  --neutral_main_variant: #999ca5;
+  --neutral_light: #ffffff;
+  --neutral_light_variant: #f4f4f4;
+  --neutral_medium: #929396; /*Only in ghost button price period*/
+  --neutral_medium_variant: #ebebeb; /*pricing card*/
+  --background_dark: #09142e; /*footer background*/
+  --background_neutral: #f6f8fa;
+  --highlight: #2500f9;
+  --highlight_dark: #242f51;
+  --accent_primary: #f55767;
+  --accent_secondary: #2563ff;
+  --accent_tertiary: #40975f;
+  --emphasis: #feaa25;
+  --emphasis_background: #e2eaed; /*Only h4 bg in hero*/
+}

@@ -1,0 +1,40 @@
+#hero {
+  background: url(../assets/images/header_phone.png) 85% / contain no-repeat,
+    url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
+  padding: 250px 200px 235px 200px;
+  margin-top: 0;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hero h4 {
+  background: var(--emphasis_background);
+  border-radius: 50px;
+  width: 360px;
+  margin-bottom: 30px;
+}
+
+#hero h4::before {
+  content: "";
+  background: var(--emphasis) url(../assets/svg/badge_check_icon.svg) no-repeat
+    center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 35px;
+  width: 38px;
+  border-radius: 50px;
+}
+
+#hero p {
+  font-size: 18px;
+}
+
+#video {
+  color: var(--highlight);
+  margin-left: 30px;
+}
