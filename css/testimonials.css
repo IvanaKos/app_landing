@@ -63,11 +63,11 @@
 }
 
 .active_arrow_right {
-  background-color: var(--catskillwhite_gray);
+  background-color: var(--background_neutral);
 }
 
 .active_arrow_left {
-  background-color: var(--catskillwhite_gray);
+  background-color: var(--background_neutral);
 }
 
 .divider {
