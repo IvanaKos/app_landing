@@ -7,7 +7,6 @@ const reviews = [
     title: "User friendly & Customizable",
     text: "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud",
     img: "assets/images/user_photo.jpg",
-    stars: "",
   },
   {
     user: "Jassi Sheoran",
@@ -15,7 +14,6 @@ const reviews = [
     title: "Great User Experience",
     text: "Perfect strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud",
     img: "assets/images/user_photo_2.jpg",
-    stars: "",
   },
   {
     user: "Clever Programmer",
@@ -23,7 +21,6 @@ const reviews = [
     title: "User friendly & Customizable",
     text: "You can find awesome programming lessons here! Also, expect programming tips and tricks that will take your coding skills to the next level.",
     img: "assets/images/user_photo.jpg",
-    stars: "",
   },
   {
     user: "Jessa Doe",
@@ -31,7 +28,6 @@ const reviews = [
     title: "Inovative, excellent solution",
     text: "Strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud",
     img: "assets/images/user_photo_2.jpg",
-    stars: "",
   },
 ];
 
