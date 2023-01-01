@@ -41,7 +41,15 @@ const prev = document.getElementById("previous");
 const next = document.getElementById("next");
 
 let indexNum = 0;
-let length = reviews.length;
+const length = reviews.length;
+
+function changeSlideContent(indexNum) {
+  userPhoto.src = reviews[indexNum].img;
+  myUser.innerHTML = reviews[indexNum].user;
+  myJob.innerHTML = reviews[indexNum].job;
+  myTitle.innerHTML = reviews[indexNum].title;
+  myText.innerHTML = reviews[indexNum].text;
+}
 
 // Code for listening next button event
 next.addEventListener("click", function () {
@@ -52,17 +60,9 @@ next.addEventListener("click", function () {
 
   if (indexNum > length - 1) {
     indexNum = 0;
-    userPhoto.src = reviews[indexNum].img;
-    myUser.innerHTML = reviews[indexNum].user;
-    myJob.innerHTML = reviews[indexNum].job;
-    myTitle.innerHTML = reviews[indexNum].title;
-    myText.innerHTML = reviews[indexNum].text;
+    changeSlideContent(indexNum);
   } else {
-    userPhoto.src = reviews[indexNum].img;
-    myUser.innerHTML = reviews[indexNum].user;
-    myJob.innerHTML = reviews[indexNum].job;
-    myTitle.innerHTML = reviews[indexNum].title;
-    myText.innerHTML = reviews[indexNum].text;
+    changeSlideContent(indexNum);
   }
 });
 
@@ -72,17 +72,9 @@ prev.addEventListener("click", function () {
   next.classList.remove("active_arrow_right");
   indexNum--;
   if (indexNum < 0) {
-    indexNum = 3;
-    userPhoto.src = reviews[indexNum].img;
-    myUser.innerHTML = reviews[indexNum].user;
-    myJob.innerHTML = reviews[indexNum].job;
-    myTitle.innerHTML = reviews[indexNum].title;
-    myText.innerHTML = reviews[indexNum].text;
+    indexNum = length - 1;
+    changeSlideContent(indexNum);
   } else {
-    userPhoto.src = reviews[indexNum].img;
-    myUser.innerHTML = reviews[indexNum].user;
-    myJob.innerHTML = reviews[indexNum].job;
-    myTitle.innerHTML = reviews[indexNum].title;
-    myText.innerHTML = reviews[indexNum].text;
+    changeSlideContent(indexNum);
   }
 });
