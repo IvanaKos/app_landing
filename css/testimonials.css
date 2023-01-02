@@ -53,20 +53,20 @@
 }
 
 .arrow_right:hover,
-.active_arrow_right {
+.arrow_right:active {
   background-image: url(../assets/svg/arrow_right_solid_blue.svg);
 }
 
 .arrow_left:hover,
-.active_arrow_left {
+.arrow_left:active {
   background-image: url(../assets/svg/arrow_left_solid_blue.svg);
 }
 
-.active_arrow_right {
+.arrow_right:active {
   background-color: var(--background_neutral);
 }
 
-.active_arrow_left {
+.arrow_left:active {
   background-color: var(--background_neutral);
 }
 
