@@ -12,15 +12,6 @@
   justify-content: flex-end;
 }
 
-.stars {
-  margin-bottom: 25px;
-}
-
-.star {
-  width: 20px;
-  height: 20px;
-}
-
 #text {
   height: 100px;
 }
