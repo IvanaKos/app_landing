@@ -32,13 +32,14 @@ const reviews = [
 ];
 
 // Creating variables to get elements from our DOM.
-const userPhoto = document.getElementById("user_photo");
-const myUser = document.getElementById("author");
-const myJob = document.getElementById("job");
-const myTitle = document.querySelector("div.slide > h3");
-const myText = document.getElementById("text");
-const prev = document.getElementById("previous");
-const next = document.getElementById("next");
+const slide = document.getElementById("slide");
+const userPhoto = slide.querySelector("#user_photo");
+const myUser = slide.querySelector("#author");
+const myJob = slide.querySelector("#job");
+const myTitle = slide.querySelector("#slide_title");
+const myText = slide.querySelector("#text");
+const prev = slide.querySelector("#previous");
+const next = slide.querySelector("#next");
 
 let indexNum = 0;
 const length = reviews.length;
