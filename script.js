@@ -78,61 +78,41 @@ prev.addEventListener("click", function () {
 
 // START PriceCards
 
-const monthly = document.getElementById("monthly");
-const annually = document.getElementById("annually");
-const monthlyCard = document.getElementById("monthly_card");
-const annuallyCard = document.getElementById("annually_card");
+const pricingSection = document.getElementById("pricing");
+const monthly = pricing.querySelector("#monthly");
+const annually = pricing.querySelector("#annually");
+const monthlyCard = pricing.querySelector("#monthly_card");
+const annuallyCard = pricing.querySelector("#annually_card");
+const trialLinkMonthly = pricing.querySelector("#monthly_card .trial_link");
+const trialLinkAnnually = pricing.querySelector("#annually_card .trial_link");
 
-function addLink(card) {
-  var a = document.createElement("a");
-  a.setAttribute("href", "");
-  a.innerHTML = "Or Start 14 Days Trial";
-  card.appendChild(a);
+function moveLink(trialLinkHide, trialLinkDisplay) {
+  trialLinkHide.style.display = "none";
+  trialLinkDisplay.style.display = "block";
 }
 
-function removeLink(removeLinkCard) {
-  const trialLinkAnnually = document.querySelector("#annually_card a");
-  const trialLinkMonthly = document.querySelector("#monthly_card a");
-
-  if (removeLinkCard === annuallyCard) {
-    trialLinkAnnually.remove();
-  } else {
-    trialLinkMonthly.remove();
-  }
+function changeButtonStyle(activeButton, inactiveButton) {
+  activeButton.classList.remove("ghost_button");
+  inactiveButton.classList.add("ghost_button");
 }
 
-function disbleEnableButton(removeLinkCard) {
-  if (removeLinkCard === annually) {
-    period.disabled = true;
-    document.getElementById("annually").disabled = false;
-  } else {
-    period.disabled = true;
-    document.getElementById("monthly").disabled = false;
-  }
+function changeCardStyle(activeCard, inactiveCard) {
+  activeCard.classList.add("active_card");
+  inactiveCard.classList.remove("active_card");
 }
 
-function moveLink(card, removeLinkCard) {
-  addLink(card);
-  removeLink(removeLinkCard);
-  disbleEnableButton(removeLinkCard);
-}
+trialLinkMonthly.style.display = "none";
 
 monthly.addEventListener("click", function () {
-  annually.classList.add("ghost_button");
-  monthly.classList.remove("ghost_button");
-  monthlyCard.classList.add("active_card");
-  annuallyCard.classList.remove("active_card");
-
-  moveLink(monthlyCard, annuallyCard);
+  changeButtonStyle(monthly, annually);
+  changeCardStyle(monthlyCard, annuallyCard);
+  moveLink(trialLinkAnnually, trialLinkMonthly);
 });
 
 annually.addEventListener("click", function () {
-  monthly.classList.add("ghost_button");
-  annually.classList.remove("ghost_button");
-  annuallyCard.classList.add("active_card");
-  monthlyCard.classList.remove("active_card");
-
-  moveLink(annuallyCard, monthlyCard);
+  changeButtonStyle(annually, monthly);
+  changeCardStyle(annuallyCard, monthlyCard);
+  moveLink(trialLinkMonthly, trialLinkAnnually);
 });
 
 // END PriceCards
