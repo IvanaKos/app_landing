@@ -101,16 +101,24 @@ function changeCardStyle(activeCard, inactiveCard) {
   inactiveCard.classList.remove("active_card");
 }
 
+function selectCard(period) {
+  if (period === monthly) {
+    changeButtonStyle(monthly, annually);
+    changeCardStyle(monthlyCard, annuallyCard);
+    moveLink(trialLinkAnnually, trialLinkMonthly);
+  } else {
+    changeButtonStyle(annually, monthly);
+    changeCardStyle(annuallyCard, monthlyCard);
+    moveLink(trialLinkMonthly, trialLinkAnnually);
+  }
+}
+
 monthly.addEventListener("click", function () {
-  changeButtonStyle(monthly, annually);
-  changeCardStyle(monthlyCard, annuallyCard);
-  moveLink(trialLinkAnnually, trialLinkMonthly);
+  selectCard(monthly);
 });
 
 annually.addEventListener("click", function () {
-  changeButtonStyle(annually, monthly);
-  changeCardStyle(annuallyCard, monthlyCard);
-  moveLink(trialLinkMonthly, trialLinkAnnually);
+  selectCard(annually);
 });
 
 // END PriceCards
