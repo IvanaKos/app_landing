@@ -83,12 +83,12 @@ const monthly = pricing.querySelector("#monthly");
 const annually = pricing.querySelector("#annually");
 const monthlyCard = pricing.querySelector("#monthly_card");
 const annuallyCard = pricing.querySelector("#annually_card");
-const trialLinkMonthly = pricing.querySelector("#monthly_card .trial_link");
+const trialLinkMonthly = pricing.querySelector("#monthly_card .hide");
 const trialLinkAnnually = pricing.querySelector("#annually_card .trial_link");
 
 function moveLink(trialLinkHide, trialLinkDisplay) {
-  trialLinkHide.style.display = "none";
-  trialLinkDisplay.style.display = "block";
+  trialLinkHide.classList.add("hide");
+  trialLinkDisplay.classList.remove("hide");
 }
 
 function changeButtonStyle(activeButton, inactiveButton) {
@@ -100,8 +100,6 @@ function changeCardStyle(activeCard, inactiveCard) {
   activeCard.classList.add("active_card");
   inactiveCard.classList.remove("active_card");
 }
-
-trialLinkMonthly.style.display = "none";
 
 monthly.addEventListener("click", function () {
   changeButtonStyle(monthly, annually);
