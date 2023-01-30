@@ -55,7 +55,6 @@ function changeSlideContent(indexNum) {
 // Code for listening next button event
 next.addEventListener("click", function () {
   indexNum++;
-
   if (indexNum > length - 1) {
     indexNum = 0;
     changeSlideContent(indexNum);
@@ -74,3 +73,55 @@ prev.addEventListener("click", function () {
     changeSlideContent(indexNum);
   }
 });
+
+// END Slider
+
+// START PriceCards
+
+const pricingSection = document.getElementById("pricing");
+const monthly = pricing.querySelector("#monthly");
+const annually = pricing.querySelector("#annually");
+const monthlyCard = pricing.querySelector("#monthly_card");
+const annuallyCard = pricing.querySelector("#annually_card");
+const trialLinkMonthly = pricing.querySelector("#monthly_card .hide");
+const trialLinkAnnually = pricing.querySelector("#annually_card .trial_link");
+const hideLink = "hide";
+const ghostButtonStyle = "ghost_button";
+const activeCardStyle = "active_card";
+
+function moveLink(trialLinkHide, trialLinkDisplay) {
+  trialLinkHide.classList.add(hideLink);
+  trialLinkDisplay.classList.remove(hideLink);
+}
+
+function changeButtonStyle(activeButton, inactiveButton) {
+  activeButton.classList.remove(ghostButtonStyle);
+  inactiveButton.classList.add(ghostButtonStyle);
+}
+
+function changeCardStyle(activeCard, inactiveCard) {
+  activeCard.classList.add(activeCardStyle);
+  inactiveCard.classList.remove(activeCardStyle);
+}
+
+function selectCard(period) {
+  if (period === monthly) {
+    changeButtonStyle(monthly, annually);
+    changeCardStyle(monthlyCard, annuallyCard);
+    moveLink(trialLinkAnnually, trialLinkMonthly);
+  } else {
+    changeButtonStyle(annually, monthly);
+    changeCardStyle(annuallyCard, monthlyCard);
+    moveLink(trialLinkMonthly, trialLinkAnnually);
+  }
+}
+
+monthly.addEventListener("click", function () {
+  selectCard(monthly);
+});
+
+annually.addEventListener("click", function () {
+  selectCard(annually);
+});
+
+// END PriceCards

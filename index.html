@@ -371,11 +371,13 @@
           </p>
         </div>
         <div class="period_selector">
-          <button type="button">Monthly</button>
-          <button class="ghost_button" type="button">Annually</button>
+          <button id="monthly" class="ghost_button" type="button">
+            Monthly
+          </button>
+          <button id="annually" type="button">Annually</button>
         </div>
         <div class="pricing_card_container">
-          <div class="pricing_card">
+          <div id="monthly_card" class="pricing_card">
             <div class="pricing_card_header">
               <h2>$0<span class="subscription_period">/month</span></h2>
               <h3>Business Class</h3>
@@ -389,9 +391,10 @@
                 <li>eCommerce Store</li>
               </ul>
               <button type="button">Start free trial</button>
+              <a class="trial_link hide" href="">Or Start 14 Days Trial</a>
             </div>
           </div>
-          <div class="pricing_card active_card">
+          <div id="annually_card" class="pricing_card active_card">
             <div class="pricing_card_header active_header">
               <h2>$99<span class="subscription_period">/month</span></h2>
               <h3>Pro Master</h3>
@@ -405,7 +408,7 @@
                 <li>eCommerce Store</li>
               </ul>
               <button type="button">Subscribe Now</button>
-              <a href="">Or Start 14 Days Trial</a>
+              <a class="trial_link" href="">Or Start 14 Days Trial</a>
             </div>
           </div>
         </div>
@@ -537,7 +540,7 @@
             />
           </a>
           <a id="apple_store">
-            <img src="assets/svg/App_Store_Badge.svg" alt="App Store Badge" />
+            <img src="assets/svg/app_store_badge.svg" alt="App Store Badge" />
           </a>
         </div>
       </div>

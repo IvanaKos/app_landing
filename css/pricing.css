@@ -69,10 +69,6 @@
   margin-bottom: 28px;
 }
 
-.pricing_card a {
-  display: block;
-}
-
 .pricing_card_header {
   -webkit-box-shadow: inset 0px -25px 24px -1px var(--background_neutral);
   box-shadow: inset 0px -25px 24px -1px var(--background_neutral);
@@ -85,10 +81,15 @@
   margin-bottom: 30px;
 }
 
-.pricing_card a {
+.trial_link {
+  display: block;
   text-decoration: none;
   color: var(--highlight);
   margin-bottom: 30px;
+}
+
+.hide {
+  display: none;
 }
 
 .active_card {
