@@ -1,7 +1,7 @@
 #hero {
   background: url(../assets/images/header_phone.png) 85% / contain no-repeat,
     url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
-  padding: 250px 200px 235px 200px;
+
   margin-top: 0;
 }
 
@@ -11,11 +11,15 @@
   justify-content: center;
 }
 
+#hero .description {
+  margin-bottom: 235px;
+}
+
 #hero h4 {
   background: var(--emphasis_background);
   border-radius: 50px;
   width: 360px;
-  margin-bottom: 30px;
+  margin: 250px 0 30px 0;
 }
 
 #hero h4::before {
@@ -37,4 +41,18 @@
 #video {
   color: var(--highlight);
   margin-left: 30px;
+}
+
+@media (max-width: 1400px) {
+  #hero {
+    background: url(../assets/images/header_phone.png) 90% / contain no-repeat,
+      url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
+  }
+}
+
+@media (max-width: 1200px) {
+  #hero {
+    background: url(../assets/images/header_phone.png) 90% / 50% no-repeat,
+      url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
+  }
 }
