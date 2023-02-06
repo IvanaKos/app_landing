@@ -1,14 +1,21 @@
 #header_nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
   width: 1200px;
+  max-width: 90%;
   margin: auto;
   padding-top: 90px;
 }
 
+nav {
+  display: flex;
+}
+
 nav ul {
   display: flex;
+  text-align: center;
 }
 
 nav li {
@@ -21,4 +28,28 @@ nav a {
 
 .logo {
   margin-right: auto;
+}
+
+@media (max-width: 992px) {
+  nav {
+    width: 90%;
+    margin: auto;
+  }
+
+  nav ul {
+    flex: 1;
+  }
+
+  nav li {
+    flex: 1;
+    min-width: fit-content;
+  }
+
+  #header_nav button {
+    margin: 70px auto 0 auto;
+  }
+
+  .logo {
+    margin: 0 auto 50px auto;
+  }
 }
