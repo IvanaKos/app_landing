@@ -58,16 +58,31 @@
 }
 
 @media (max-width: 992px) {
-  #hero h4 {
-    margin-top: 100px;
-  }
-
   #hero {
-    background: url(../assets/images/header_phone.png) top right / 30% no-repeat,
+    background: url(../assets/images/header_phone.png) 92% 10% / 33% no-repeat,
       url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
+    height: 90vh;
   }
 
   #hero .description {
-    width: 65%;
+    width: 60%;
+  }
+
+  #hero h4 {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    background: url(../assets/images/buildings_background.jpg) bottom / contain
+      no-repeat;
+    height: 70vh;
+  }
+
+  #hero .description {
+    width: 100%;
+    align-items: center;
+    text-align: center;
   }
 }
