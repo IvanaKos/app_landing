@@ -1,7 +1,7 @@
 #hero {
   background: url(../assets/images/header_phone.png) 85% / contain no-repeat,
     url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
-
+  height: 100vh;
   margin-top: 0;
 }
 
@@ -9,10 +9,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-#hero .description {
-  margin-bottom: 235px;
 }
 
 #hero h4 {
@@ -52,7 +48,26 @@
 
 @media (max-width: 1200px) {
   #hero {
-    background: url(../assets/images/header_phone.png) 90% / 50% no-repeat,
+    background: url(../assets/images/header_phone.png) 90% / 36% no-repeat,
       url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
+  }
+
+  #hero h4 {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  #hero h4 {
+    margin-top: 100px;
+  }
+
+  #hero {
+    background: url(../assets/images/header_phone.png) top right / 30% no-repeat,
+      url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
+  }
+
+  #hero .description {
+    width: 65%;
   }
 }
