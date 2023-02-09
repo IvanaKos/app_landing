@@ -11,6 +11,7 @@
 
 nav {
   display: flex;
+  justify-content: center;
 }
 
 nav ul {
@@ -24,6 +25,10 @@ nav li {
 
 nav a {
   color: var(--highlight_dark);
+}
+
+.menu-icon {
+  display: none;
 }
 
 .logo {
@@ -55,5 +60,20 @@ nav a {
 
   .logo {
     margin: 0 auto 50px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  nav ul {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
   }
 }

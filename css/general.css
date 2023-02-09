@@ -91,3 +91,9 @@ button {
   cursor: pointer;
   font-family: inherit;
 }
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 52px;
+  }
+}
