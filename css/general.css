@@ -92,7 +92,7 @@ button {
   font-family: inherit;
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   h1 {
     font-size: 52px;
   }

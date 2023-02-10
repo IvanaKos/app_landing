@@ -1,3 +1,7 @@
+#additional_features {
+  overflow: hidden;
+}
+
 .additional_features_title {
   display: flex;
 }

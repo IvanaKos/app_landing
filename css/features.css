@@ -1,6 +1,7 @@
 #features {
   background: url(../assets/images/features.jpg) no-repeat;
   padding: 30px 0 40px 0;
+  overflow: hidden;
 }
 
 #features .wraper {

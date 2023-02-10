@@ -46,14 +46,14 @@
   color: var(--highlight);
 }
 
-@media (max-width: 1400px) {
+@media only screen and (max-width: 1400px) {
   #hero {
     background: url(../assets/images/header_phone.png) 90% / contain no-repeat,
       url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
   }
 }
 
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   #hero {
     background: url(../assets/images/header_phone.png) 90% / 36% no-repeat,
       url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
@@ -68,7 +68,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   #hero {
     background: url(../assets/images/header_phone.png) 92% 10% / 33% no-repeat,
       url(../assets/images/buildings_background.jpg) bottom / contain no-repeat;
@@ -87,7 +87,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   #hero {
     background: url(../assets/images/buildings_background.jpg) bottom / contain
       no-repeat;
@@ -100,7 +100,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   .hero-links {
     flex-direction: column;
   }

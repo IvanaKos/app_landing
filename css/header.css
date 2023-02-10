@@ -35,7 +35,7 @@ nav a {
   margin-right: auto;
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   #header_nav {
     padding-top: 7%;
   }
@@ -63,13 +63,13 @@ nav a {
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   nav {
     width: 100%;
   }
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   nav ul {
     display: none;
   }
