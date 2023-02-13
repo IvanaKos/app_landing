@@ -1,14 +1,22 @@
 #header_nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
   width: 1200px;
+  max-width: 90%;
   margin: auto;
   padding-top: 90px;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+}
+
 nav ul {
   display: flex;
+  text-align: center;
 }
 
 nav li {
@@ -19,6 +27,53 @@ nav a {
   color: var(--highlight_dark);
 }
 
+.menu-icon {
+  display: none;
+}
+
 .logo {
   margin-right: auto;
+}
+
+@media only screen and (max-width: 992px) {
+  #header_nav {
+    padding-top: 7%;
+  }
+
+  nav {
+    width: 90%;
+    margin: auto;
+  }
+
+  nav ul {
+    flex: 1;
+  }
+
+  nav li {
+    flex: 1;
+    min-width: fit-content;
+  }
+
+  #header_nav button {
+    display: none;
+  }
+
+  .logo {
+    margin: 0 auto 50px auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  nav ul {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
 }

@@ -1,4 +1,5 @@
 #testimonials {
+  overflow: hidden;
   background-image: url(../assets/images/people_map.jpg);
   background-repeat: no-repeat;
   border-top: 2px solid var(--neutral_light_variant);

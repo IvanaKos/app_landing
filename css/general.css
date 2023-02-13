@@ -4,6 +4,11 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -27,6 +32,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 1200px;
+  max-width: 85%;
   margin: auto;
 }
 
@@ -84,4 +90,10 @@ button {
   border-radius: 35px;
   cursor: pointer;
   font-family: inherit;
+}
+
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 52px;
+  }
 }

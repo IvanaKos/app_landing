@@ -1,3 +1,7 @@
+#pricing {
+  overflow: hidden;
+}
+
 #pricing .wraper {
   justify-content: center;
 }

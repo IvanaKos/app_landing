@@ -1,4 +1,5 @@
 #app_design {
+  overflow: hidden;
   background-image: url(../assets/images/designed.jpg);
   background-repeat: no-repeat;
   background-position-x: 100px;

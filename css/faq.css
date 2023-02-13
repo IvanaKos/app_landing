@@ -6,6 +6,7 @@
   margin-top: 90px;
   padding-bottom: 110px;
   border-bottom: 2px solid var(--neutral_light_variant);
+  overflow: hidden;
 }
 
 details {
