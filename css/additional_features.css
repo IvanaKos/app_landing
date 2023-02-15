@@ -15,11 +15,6 @@
   margin-right: 40px;
 }
 
-.feature_icon {
-  margin-bottom: 30px;
-  width: 90px;
-}
-
 @media only screen and (max-width: 1200px) {
   .additional_features_title h2 {
     font-size: 36px;
@@ -40,10 +35,6 @@
 @media only screen and (max-width: 768px) {
   .additional_features_title h2 {
     font-size: 28px;
-  }
-
-  #additional_features .feature_description {
-    text-align: center;
   }
 }
 
