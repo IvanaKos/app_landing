@@ -1,7 +1,6 @@
 #features {
   background: url(../assets/images/features.jpg) no-repeat;
   padding: 30px 0 40px 0;
-  overflow: hidden;
 }
 
 #features .wraper {
@@ -18,4 +17,59 @@
 
 .subtitle_green {
   color: var(--accent_tertiary);
+}
+
+@media only screen and (max-width: 1400px) {
+  #features {
+    background-size: 40%;
+  }
+  .side_icon {
+    margin-right: 60px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .side_icon {
+    margin-right: 0;
+  }
+
+  #features {
+    background-position: left center;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #features {
+    background-position: -12% center;
+    background-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #features {
+    background-image: none;
+  }
+
+  #features .wraper {
+    justify-content: center;
+  }
+
+  .features-content {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .features-content {
+    width: 90%;
+  }
+
+  .side_icon {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .side_icon:first-of-type {
+    margin-top: 50px;
+  }
 }
