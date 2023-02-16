@@ -34,6 +34,18 @@
   margin-bottom: 0;
 }
 
+@media only screen and (max-width: 1400px) {
+  .side_icon {
+    margin-right: 60px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .side_icon {
+    margin-right: 0;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   .features_container_3col {
     column-gap: 70px;
@@ -58,5 +70,12 @@
 
   #additional_features .feature_description {
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .side_icon {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
