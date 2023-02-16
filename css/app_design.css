@@ -1,12 +1,34 @@
 #app_design {
   overflow: hidden;
-  background-image: url(../assets/images/designed.jpg);
-  background-repeat: no-repeat;
-  background-position-x: 100px;
-  padding: 150px 0;
+  background: 5% url(../assets/images/designed.jpg) no-repeat;
+  padding: 20% 0;
   border-bottom: 2px solid var(--neutral_light_variant);
 }
 
 #app_design .wraper {
   justify-content: flex-end;
+}
+
+@media only screen and (max-width: 1400px) {
+  #app_design {
+    background-size: 47%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #app_design {
+    background-size: 40%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #app_design .wraper {
+    justify-content: center;
+  }
+
+  #app_design {
+    padding-top: 50%;
+    background-position: center -2%;
+    background-size: 47%;
+  }
 }
