@@ -7,6 +7,10 @@
   justify-content: flex-end;
 }
 
+.features-content {
+  width: 50%;
+}
+
 .subtitle_red {
   color: var(--accent_primary);
 }
