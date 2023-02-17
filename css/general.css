@@ -97,6 +97,14 @@ button {
     width: 50%;
   }
 
+  .col_60 {
+    width: 80%;
+  }
+
+  .col_65 {
+    width: 75%;
+  }
+
   h1 {
     font-size: 52px;
   }
@@ -106,6 +114,11 @@ button {
   .col_40 {
     width: 80%;
     text-align: center;
+  }
+
+  .col_60,
+  .col_65 {
+    width: 90%;
   }
 }
 
