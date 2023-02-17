@@ -1,6 +1,6 @@
 .section_title {
   text-align: center;
-  margin: 0 190px;
+  margin: 0 15%;
 }
 
 .section_title h2 {
@@ -10,4 +10,10 @@
 .top_center_icon {
   align-items: center;
   text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .section_title {
+    margin: 0 10%;
+  }
 }
