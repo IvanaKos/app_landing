@@ -124,4 +124,18 @@ annually.addEventListener("click", function () {
   selectCard(annually);
 });
 
+const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+if (mediaQuery.matches) {
+  monthly.addEventListener("click", function () {
+    annuallyCard.style.display = "none";
+    monthlyCard.style.display = "block";
+  });
+
+  annually.addEventListener("click", function () {
+    annuallyCard.style.display = "block";
+    monthlyCard.style.display = "none";
+  });
+}
+
 // END PriceCards
