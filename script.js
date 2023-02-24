@@ -126,16 +126,22 @@ annually.addEventListener("click", function () {
 
 const mediaQuery = window.matchMedia("(max-width: 768px)");
 
-if (mediaQuery.matches) {
-  monthly.addEventListener("click", function () {
-    annuallyCard.style.display = "none";
-    monthlyCard.style.display = "block";
-  });
+function handleChange(event) {
+  if (event.matches) {
+    monthly.addEventListener("click", function () {
+      annuallyCard.style.display = "none";
+      monthlyCard.style.display = "block";
+    });
 
-  annually.addEventListener("click", function () {
-    annuallyCard.style.display = "block";
-    monthlyCard.style.display = "none";
-  });
+    annually.addEventListener("click", function () {
+      annuallyCard.style.display = "block";
+      monthlyCard.style.display = "none";
+    });
+  }
 }
+
+mediaQuery.addEventListener("change", handleChange);
+
+handleChange(mediaQuery);
 
 // END PriceCards
