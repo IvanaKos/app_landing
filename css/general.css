@@ -97,6 +97,10 @@ button {
     width: 50%;
   }
 
+  .col_50 {
+    width: 80%;
+  }
+
   .col_60 {
     width: 80%;
   }
