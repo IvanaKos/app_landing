@@ -1,16 +1,18 @@
-#faq .wraper {
-  justify-content: center;
-}
-
 #faq {
   margin-top: 90px;
   padding-bottom: 110px;
   border-bottom: 2px solid var(--neutral_light_variant);
-  overflow: hidden;
+}
+
+#faq .wraper {
+  justify-content: center;
+}
+
+.accordion {
+  width: 80%;
 }
 
 details {
-  width: 940px;
   margin-bottom: 10px;
   background-color: #f5f7fa;
   cursor: pointer;
@@ -22,14 +24,17 @@ details {
 
 summary {
   list-style: none;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5;
 }
 
 summary:after {
   content: "+";
   color: var(--highlight_dark);
   font-size: 26px;
-  float: right;
-  margin-right: 10px;
 }
 
 details p {
@@ -42,4 +47,24 @@ details[open] summary:after {
 
 details[open] summary {
   font-weight: 600;
+}
+
+@media only screen and (max-width: 1200px) {
+  details {
+    font-size: 18px;
+  }
+
+  summary:after {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  details {
+    font-size: 14px;
+  }
+
+  summary:after {
+    font-size: 14px;
+  }
 }
