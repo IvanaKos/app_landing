@@ -111,6 +111,10 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
+  .wraper {
+    justify-content: center;
+  }
+
   .col_40 {
     width: 80%;
     text-align: center;
@@ -119,6 +123,12 @@ button {
   .col_60,
   .col_65 {
     width: 90%;
+    text-align: center;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
   }
 }
 

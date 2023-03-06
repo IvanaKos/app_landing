@@ -5,7 +5,7 @@
 
 .additional_features_title p {
   width: 50%;
-  padding: 40px 50px;
+  padding: 40px 0 40px 50px;
   border-left: 1px solid var(--neutral_medium);
 }
 
@@ -28,13 +28,17 @@
   }
 
   .additional_features_title p {
-    padding: 20px 35px;
+    padding: 20px 0 20px 35px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .additional_features_title h2 {
     font-size: 28px;
+  }
+
+  .additional_features_title p {
+    text-align: center;
   }
 }
 
