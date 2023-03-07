@@ -1,6 +1,37 @@
 #additional_services {
-  background-image: url(../assets/images/planning.jpg);
-  background-repeat: no-repeat;
-  background-position-x: calc(100% + 120px);
+  background: calc(100% + 120px) top url(../assets/images/planning.jpg)
+    no-repeat;
   padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 1400px) {
+  #additional_services {
+    background-position: calc(100% + 220px) top;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #additional_services {
+    background-size: 55%;
+    background-position-x: calc(100% + 160px);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #additional_services {
+    background-position-x: calc(100% + 180px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #additional_services {
+    background: none;
+  }
+
+  #additional_services .wraper {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 567px) {
 }
