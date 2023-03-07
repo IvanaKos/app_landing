@@ -56,12 +56,4 @@
   .side_icon:first-of-type {
     margin-top: 50px;
   }
-
-  #features .feature_description > h3 {
-    text-align: center;
-  }
-
-  #features .feature_description > p {
-    text-align: center;
-  }
 }
