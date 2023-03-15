@@ -124,24 +124,66 @@ annually.addEventListener("click", function () {
   selectCard(annually);
 });
 
-const mediaQuery = window.matchMedia("(max-width: 768px)");
+//@media only screen and (max-width: 768px)
+
+const mediaQuery = "only screen and (max-width: 768px)";
+const mediaQueryList = window.matchMedia(mediaQuery);
+
+function showMonthlyCard() {
+  annuallyCard.style.display = "none";
+  monthlyCard.style.display = "block";
+}
+
+function showAnnuallyCard() {
+  annuallyCard.style.display = "block";
+  monthlyCard.style.display = "none";
+}
 
 function handleChange(event) {
   if (event.matches) {
-    monthly.addEventListener("click", function () {
-      annuallyCard.style.display = "none";
-      monthlyCard.style.display = "block";
-    });
-
-    annually.addEventListener("click", function () {
-      annuallyCard.style.display = "block";
-      monthlyCard.style.display = "none";
-    });
+    monthlyCard.style.display = "none";
+    annuallyCard.style.display = "block";
+    monthly.addEventListener("click", showMonthlyCard);
+    annually.addEventListener("click", showAnnuallyCard);
+  } else {
+    monthlyCard.style.display = "block";
+    annuallyCard.style.display = "block";
+    monthly.removeEventListener("click", showMonthlyCard);
+    annually.removeEventListener("click", showAnnuallyCard);
   }
 }
 
-mediaQuery.addEventListener("change", handleChange);
+mediaQueryList.addEventListener("change", handleChange);
 
-handleChange(mediaQuery);
+handleChange(mediaQueryList);
 
 // END PriceCards
+
+// function handleChange() {
+//   if (window.innerWidth <= 768) {
+//     monthly.addEventListener("click", function () {
+//       annuallyCard.style.display = "none";
+//       monthlyCard.style.display = "block";
+//     });
+
+//     annually.addEventListener("click", function () {
+//       annuallyCard.style.display = "block";
+//       monthlyCard.style.display = "none";
+//     });
+//     // document.body.style.backgroundColor = "coral";
+//   } else {
+//     monthly.removeEventListener("click", function () {
+//       annuallyCard.style.display = "none";
+//       monthlyCard.style.display = "block";
+//     });
+//     annually.removeEventListener("click", function () {
+//       annuallyCard.style.display = "block";
+//       monthlyCard.style.display = "none";
+//     });
+//     document.body.style.backgroundColor = "white";
+//   }
+// }
+
+// window.addEventListener("resize", handleChange);
+
+// handleChange();
