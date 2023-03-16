@@ -88,6 +88,7 @@ const trialLinkAnnually = pricing.querySelector("#annually_card .trial_link");
 const hideLink = "hide";
 const ghostButtonStyle = "ghost_button";
 const activeCardStyle = "active_card";
+var monthlyButtonClicked = false;
 
 function moveLink(trialLinkHide, trialLinkDisplay) {
   trialLinkHide.classList.add(hideLink);
@@ -118,10 +119,12 @@ function selectCard(period) {
 
 monthly.addEventListener("click", function () {
   selectCard(monthly);
+  monthlyButtonClicked = true;
 });
 
 annually.addEventListener("click", function () {
   selectCard(annually);
+  monthlyButtonClicked = false;
 });
 
 //@media only screen and (max-width: 768px)
@@ -139,17 +142,36 @@ function showAnnuallyCard() {
   monthlyCard.style.display = "none";
 }
 
+function switchToMonthly() {
+  monthlyCard.style.display = "block";
+  annuallyCard.style.display = "none";
+  monthly.addEventListener("click", showMonthlyCard);
+  annually.addEventListener("click", showAnnuallyCard);
+}
+
+function switchToAnnually() {
+  monthlyCard.style.display = "none";
+  annuallyCard.style.display = "block";
+  monthly.addEventListener("click", showMonthlyCard);
+  annually.addEventListener("click", showAnnuallyCard);
+}
+
+function showAllCards() {
+  monthlyCard.style.display = "block";
+  annuallyCard.style.display = "block";
+  monthly.removeEventListener("click", showMonthlyCard);
+  annually.removeEventListener("click", showAnnuallyCard);
+}
+
 function handleChange(event) {
   if (event.matches) {
-    monthlyCard.style.display = "none";
-    annuallyCard.style.display = "block";
-    monthly.addEventListener("click", showMonthlyCard);
-    annually.addEventListener("click", showAnnuallyCard);
+    if (monthlyButtonClicked === false) {
+      switchToAnnually();
+    } else {
+      switchToMonthly();
+    }
   } else {
-    monthlyCard.style.display = "block";
-    annuallyCard.style.display = "block";
-    monthly.removeEventListener("click", showMonthlyCard);
-    annually.removeEventListener("click", showAnnuallyCard);
+    showAllCards();
   }
 }
 
