@@ -158,32 +158,3 @@ mediaQueryList.addEventListener("change", handleChange);
 handleChange(mediaQueryList);
 
 // END PriceCards
-
-// function handleChange() {
-//   if (window.innerWidth <= 768) {
-//     monthly.addEventListener("click", function () {
-//       annuallyCard.style.display = "none";
-//       monthlyCard.style.display = "block";
-//     });
-
-//     annually.addEventListener("click", function () {
-//       annuallyCard.style.display = "block";
-//       monthlyCard.style.display = "none";
-//     });
-//     // document.body.style.backgroundColor = "coral";
-//   } else {
-//     monthly.removeEventListener("click", function () {
-//       annuallyCard.style.display = "none";
-//       monthlyCard.style.display = "block";
-//     });
-//     annually.removeEventListener("click", function () {
-//       annuallyCard.style.display = "block";
-//       monthlyCard.style.display = "none";
-//     });
-//     document.body.style.backgroundColor = "white";
-//   }
-// }
-
-// window.addEventListener("resize", handleChange);
-
-// handleChange();
