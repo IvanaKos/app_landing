@@ -175,8 +175,10 @@ function handleChange(event) {
   }
 }
 
-mediaQueryList.addEventListener("change", handleChange);
+document.addEventListener("DOMContentLoaded", () => {
+  mediaQueryList.addEventListener("change", handleChange);
 
-handleChange(mediaQueryList);
+  handleChange(mediaQueryList);
+});
 
 // END PriceCards
