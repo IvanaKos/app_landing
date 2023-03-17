@@ -24,3 +24,25 @@
 #download a img:first-of-type {
   margin-right: 35px;
 }
+
+@media only screen and (max-width: 1200px) {
+  #download {
+    background-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #download {
+    background-position: calc(100% + 50px) bottom;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  #download {
+    background-size: 63%;
+  }
+
+  #download h2 {
+    font-size: 32px;
+  }
+}
