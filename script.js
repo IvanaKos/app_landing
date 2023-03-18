@@ -88,6 +88,7 @@ const trialLinkAnnually = pricing.querySelector("#annually_card .trial_link");
 const hideLink = "hide";
 const ghostButtonStyle = "ghost_button";
 const activeCardStyle = "active_card";
+var monthlyButtonClicked = false;
 
 function moveLink(trialLinkHide, trialLinkDisplay) {
   trialLinkHide.classList.add(hideLink);
@@ -118,30 +119,66 @@ function selectCard(period) {
 
 monthly.addEventListener("click", function () {
   selectCard(monthly);
+  monthlyButtonClicked = true;
 });
 
 annually.addEventListener("click", function () {
   selectCard(annually);
+  monthlyButtonClicked = false;
 });
 
-const mediaQuery = window.matchMedia("(max-width: 768px)");
+//@media only screen and (max-width: 768px)
+
+const mediaQuery = "only screen and (max-width: 768px)";
+const mediaQueryList = window.matchMedia(mediaQuery);
+
+function showMonthlyCard() {
+  annuallyCard.style.display = "none";
+  monthlyCard.style.display = "block";
+}
+
+function showAnnuallyCard() {
+  annuallyCard.style.display = "block";
+  monthlyCard.style.display = "none";
+}
+
+function switchToMonthly() {
+  monthlyCard.style.display = "block";
+  annuallyCard.style.display = "none";
+  monthly.addEventListener("click", showMonthlyCard);
+  annually.addEventListener("click", showAnnuallyCard);
+}
+
+function switchToAnnually() {
+  monthlyCard.style.display = "none";
+  annuallyCard.style.display = "block";
+  monthly.addEventListener("click", showMonthlyCard);
+  annually.addEventListener("click", showAnnuallyCard);
+}
+
+function showAllCards() {
+  monthlyCard.style.display = "block";
+  annuallyCard.style.display = "block";
+  monthly.removeEventListener("click", showMonthlyCard);
+  annually.removeEventListener("click", showAnnuallyCard);
+}
 
 function handleChange(event) {
   if (event.matches) {
-    monthly.addEventListener("click", function () {
-      annuallyCard.style.display = "none";
-      monthlyCard.style.display = "block";
-    });
-
-    annually.addEventListener("click", function () {
-      annuallyCard.style.display = "block";
-      monthlyCard.style.display = "none";
-    });
+    if (monthlyButtonClicked === false) {
+      switchToAnnually();
+    } else {
+      switchToMonthly();
+    }
+  } else {
+    showAllCards();
   }
 }
 
-mediaQuery.addEventListener("change", handleChange);
+document.addEventListener("DOMContentLoaded", () => {
+  mediaQueryList.addEventListener("change", handleChange);
 
-handleChange(mediaQuery);
+  handleChange(mediaQueryList);
+});
 
 // END PriceCards
