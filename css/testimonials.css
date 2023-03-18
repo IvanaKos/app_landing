@@ -1,10 +1,6 @@
 #testimonials {
-  overflow: hidden;
-  background-image: url(../assets/images/people_map.jpg);
-  background-repeat: no-repeat;
+  background: left center / 50% url(../assets/images/people_map.jpg) no-repeat;
   border-top: 2px solid var(--neutral_light_variant);
-  background-size: 700px;
-  background-position-y: center;
   margin-bottom: 90px;
   padding: 150px 0 90px 0;
 }
@@ -15,6 +11,10 @@
 
 #text {
   height: 100px;
+}
+
+.slider_container {
+  margin-top: 15%;
 }
 
 .slider_arrows {
@@ -89,4 +89,52 @@
 
 #user_info p:first-child {
   font-weight: 600;
+}
+
+@media only screen and (max-width: 1200px) {
+  #testimonials {
+    background-size: 58%;
+    background-position: -30%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #testimonials {
+    background-size: 70%;
+    background-position: center top;
+    padding-top: 55%;
+  }
+
+  #testimonials .wraper {
+    justify-content: center;
+  }
+
+  #testimonials .col_50 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slider_footer {
+    margin-top: 15%;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .slider_container {
+    margin-top: 20%;
+  }
+
+  .slider_footer {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #user_info {
+    margin-left: 0;
+  }
+
+  #text {
+    height: auto;
+  }
 }
