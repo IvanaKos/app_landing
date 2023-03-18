@@ -1,5 +1,4 @@
 footer {
-  height: 525px;
   background-color: var(--background_dark);
   display: flex;
   justify-content: center;
@@ -8,8 +7,7 @@ footer {
 }
 
 footer .logo {
-  margin-right: 0;
-  margin-bottom: 50px;
+  margin: 80px auto 50px auto;
 }
 
 footer a {
@@ -24,4 +22,20 @@ footer a {
 
 .social img {
   height: 30px;
+}
+
+footer p {
+  margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+  footer nav ul {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  footer p {
+    width: 70%;
+    text-align: center;
+  }
 }
