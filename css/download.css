@@ -4,15 +4,18 @@
   background-size: contain;
   background-position: calc(100% + 150px) bottom;
   margin-top: 0;
-  padding: 90px 0 100px 0;
+  padding-bottom: 100px;
 }
 
 #download h2 {
+  margin-top: 90px;
   font-size: 48px;
 }
 
 #download a {
+  display: inline-block;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 #download a img {
