@@ -39,3 +39,12 @@ footer p {
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  #download a img:last-of-type {
+    margin-left: 15px;
+  }
+  #download a img:first-of-type {
+    margin-right: 15px;
+  }
+}
