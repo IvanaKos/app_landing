@@ -15,6 +15,19 @@
   </head>
 
   <body>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div class="overlay-content">
+        <a href="#header_nav" onclick="closeNav()">Home</a>
+        <a href="#features" onclick="closeNav()">Key Features</a>
+        <a href="#pricing" onclick="closeNav()">Pricing</a>
+        <a href="#testimonials" onclick="closeNav()">Testimonial</a>
+        <a href="#faq" onclick="closeNav()">FAQ</a>
+      </div>
+    </div>
+
     <header id="header_nav">
       <div class="logo">
         <a href="">
@@ -30,9 +43,9 @@
           <li><a href="#testimonials">Testimonial</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
-        <a class="menu-icon" href="">
+        <span onclick="openNav()" class="menu-icon" href="">
           <img src="assets/svg/menu-icon.svg" alt="Menu icon" />
-        </a>
+        </span>
       </nav>
 
       <button type="button">Try for free</button>
