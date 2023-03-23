@@ -24,7 +24,7 @@
   border-radius: 50px;
 }
 
-.period_selector button {
+.period_selector .pill_button {
   width: 135px;
   height: 48px;
 }
@@ -79,7 +79,7 @@
   padding: 60px 50px 35px 50px;
 }
 
-.pricing_card button {
+.pricing_card .pill_button {
   width: 200px;
   height: 50px;
   margin-bottom: 30px;

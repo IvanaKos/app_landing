@@ -16,9 +16,7 @@
 
   <body>
     <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      >
+      <button class="closebtn" onclick="closeNav()">&times;</button>
       <div class="overlay_content">
         <a href="#header_nav" onclick="closeNav()">Home</a>
         <a href="#features" onclick="closeNav()">Key Features</a>
@@ -44,12 +42,12 @@
             <li><a href="#testimonials">Testimonial</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
-          <span onclick="openNav()" class="menu-icon" href="">
+          <button class="menu_icon" type="button" onclick="openNav()">
             <img src="assets/svg/menu-icon.svg" alt="Menu icon" />
-          </span>
+          </button>
         </nav>
 
-        <button type="button">Try for free</button>
+        <button class="pill_button" type="button">Try for free</button>
       </div>
     </header>
 
@@ -63,7 +61,7 @@
             personal budgets.
           </p>
           <div class="hero-links">
-            <button type="button">Try for free</button>
+            <button class="pill_button" type="button">Try for free</button>
             <a id="video" href="">Watch demo video</a>
           </div>
         </div>
@@ -195,7 +193,7 @@
             The rise of mobile devices transforms the way we consume information
             entirely and the world's most elevant channels such as Facebook.
           </p>
-          <button type="button">Learn more</button>
+          <button class="pill_button" type="button">Learn more</button>
         </div>
       </div>
     </section>
@@ -374,7 +372,7 @@
               </div>
             </div>
           </div>
-          <button type="button">See all</button>
+          <button class="pill_button" type="button">See all</button>
         </div>
       </div>
     </section>
@@ -389,10 +387,12 @@
           </p>
         </div>
         <div class="period_selector">
-          <button id="monthly" class="ghost_button" type="button">
+          <button id="monthly" class="ghost_button pill_button" type="button">
             Monthly
           </button>
-          <button id="annually" type="button">Annually</button>
+          <button id="annually" class="pill_button" type="button">
+            Annually
+          </button>
         </div>
         <div class="pricing_card_container">
           <div id="monthly_card" class="pricing_card">
@@ -408,7 +408,9 @@
                 <li>Blog Support Tools</li>
                 <li>eCommerce Store</li>
               </ul>
-              <button type="button">Start free trial</button>
+              <button class="pill_button" type="button">
+                Start free trial
+              </button>
               <a class="trial_link hide" href="">Or Start 14 Days Trial</a>
             </div>
           </div>
@@ -425,7 +427,7 @@
                 <li>Blog Support Tools</li>
                 <li>eCommerce Store</li>
               </ul>
-              <button type="button">Subscribe Now</button>
+              <button class="pill_button" type="button">Subscribe Now</button>
               <a class="trial_link" href="">Or Start 14 Days Trial</a>
             </div>
           </div>
