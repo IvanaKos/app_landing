@@ -1,12 +1,15 @@
 #header_nav {
+  position: sticky;
+  top: -60px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 90px 0 20px 0;
+  background-color: var(--neutral_light);
+  z-index: 1;
+}
+
+#header_nav .wraper {
   align-items: center;
-  width: 1200px;
-  max-width: 90%;
-  margin: auto;
-  padding-top: 90px;
+  gap: 10px;
 }
 
 nav {
@@ -37,12 +40,14 @@ nav a {
 
 @media only screen and (max-width: 992px) {
   #header_nav {
+    top: -20px;
     padding-top: 7%;
   }
 
   #header_nav nav {
     width: 90%;
     margin: auto;
+    padding-bottom: 20px;
   }
 
   #header_nav nav ul {
@@ -52,6 +57,8 @@ nav a {
   #header_nav nav li {
     flex: 1;
     min-width: fit-content;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   #header_nav button {
@@ -59,7 +66,7 @@ nav a {
   }
 
   .logo {
-    margin: 0 auto 50px auto;
+    margin: 0 auto 40px auto;
   }
 }
 
@@ -71,20 +78,18 @@ nav a {
 
 @media only screen and (max-width: 576px) {
   #header_nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    flex-wrap: nowrap;
-    width: 100%;
-    max-width: 100%;
-    z-index: 1;
     padding: 10% 7% 7% 7%;
     background-color: var(--neutral_light);
   }
 
+  #header_nav .wraper {
+    flex-wrap: nowrap;
+    max-width: 95%;
+  }
+
   #header_nav nav {
     justify-content: flex-end;
+    padding-bottom: 0;
   }
 
   #header_nav nav ul {
@@ -96,9 +101,5 @@ nav a {
 
   .logo {
     margin: 0;
-  }
-
-  #hero {
-    padding-top: 125px;
   }
 }

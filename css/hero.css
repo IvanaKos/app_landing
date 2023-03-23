@@ -101,6 +101,10 @@
 }
 
 @media only screen and (max-width: 576px) {
+  #hero {
+    padding-top: 25px;
+  }
+
   .hero-links {
     flex-direction: column;
   }
