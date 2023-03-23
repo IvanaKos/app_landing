@@ -9,6 +9,7 @@
   background-color: rgba(9, 20, 46, 0.97);
   overflow-y: hidden;
   transition: 0.5s;
+  z-index: 2;
 }
 
 .overlay_content {
@@ -22,7 +23,7 @@
 .overlay a {
   padding: 12px;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 24px;
   color: var(--neutral_light_variant);
   display: block;
   transition: 0.3s;

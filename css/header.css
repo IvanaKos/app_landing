@@ -70,10 +70,35 @@ nav a {
 }
 
 @media only screen and (max-width: 576px) {
+  #header_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+    padding: 10% 7% 7% 7%;
+    background-color: var(--neutral_light);
+  }
+
+  #header_nav nav {
+    justify-content: flex-end;
+  }
+
   #header_nav nav ul {
     display: none;
   }
   .menu-icon {
     display: block;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  #hero {
+    padding-top: 125px;
   }
 }
