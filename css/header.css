@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   display: flex;
-  padding: 60px 0 20px 0;
+  padding: 40px 0 20px 0;
   background-color: var(--neutral_light);
   z-index: 1;
 }
