@@ -1,12 +1,15 @@
 #header_nav {
+  position: sticky;
+  top: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 40px 0 20px 0;
+  background-color: var(--neutral_light);
+  z-index: 1;
+}
+
+#header_nav .wraper {
   align-items: center;
-  width: 1200px;
-  max-width: 90%;
-  margin: auto;
-  padding-top: 90px;
+  gap: 10px;
 }
 
 nav {
@@ -27,7 +30,7 @@ nav a {
   color: var(--highlight_dark);
 }
 
-.menu-icon {
+.menu_icon {
   display: none;
 }
 
@@ -37,43 +40,40 @@ nav a {
 
 @media only screen and (max-width: 992px) {
   #header_nav {
-    padding-top: 7%;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  #header_nav .wraper {
+    flex-wrap: nowrap;
+    max-width: 95%;
   }
 
   #header_nav nav {
-    width: 90%;
-    margin: auto;
+    justify-content: flex-end;
+    padding-bottom: 0;
+    width: 100%;
   }
 
   #header_nav nav ul {
-    flex: 1;
-  }
-
-  #header_nav nav li {
-    flex: 1;
-    min-width: fit-content;
-  }
-
-  #header_nav button {
     display: none;
   }
 
-  .logo {
-    margin: 0 auto 50px auto;
+  #header_nav .pill_button {
+    display: none;
   }
-}
 
-@media only screen and (max-width: 768px) {
-  #header_nav nav {
-    width: 100%;
+  .menu_icon {
+    display: block;
+  }
+
+  .logo {
+    margin: 0;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  #header_nav nav ul {
-    display: none;
-  }
-  .menu-icon {
-    display: block;
+  #header_nav {
+    padding: 10% 7% 7% 7%;
   }
 }

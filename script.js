@@ -182,3 +182,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // END PriceCards
+
+//Responsive Menu
+
+const overlayMenu = document.getElementById("my_nav");
+const headerNav = document.getElementById("header_nav");
+const menuIcon = headerNav.querySelector(".menu_icon");
+const linksToClose = overlayMenu.querySelectorAll(".close");
+
+menuIcon.addEventListener("click", openNav);
+
+linksToClose.forEach((link) => {
+  link.addEventListener("click", closeNav);
+});
+
+function openNav() {
+  document.getElementById("my_nav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("my_nav").style.height = "0";
+}
+
+//END Responsive Menu

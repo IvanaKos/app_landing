@@ -15,27 +15,40 @@
   </head>
 
   <body>
-    <header id="header_nav">
-      <div class="logo">
-        <a href="">
-          <img src="assets/logos/main_logo.png" alt="Logo" />
-        </a>
+    <div id="my_nav" class="overlay">
+      <button class="closebtn close">&times;</button>
+      <div class="overlay_content">
+        <a class="close" href="#hero">Home</a>
+        <a class="close" href="#features">Key Features</a>
+        <a class="close" href="#pricing">Pricing</a>
+        <a class="close" href="#testimonials">Testimonial</a>
+        <a class="close" href="#faq">FAQ</a>
       </div>
+    </div>
 
-      <nav>
-        <ul>
-          <li><a href="#header_nav">Home</a></li>
-          <li><a href="#features">Key Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#testimonials">Testimonial</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-        <a class="menu-icon" href="">
-          <img src="assets/svg/menu-icon.svg" alt="Menu icon" />
-        </a>
-      </nav>
+    <header id="header_nav">
+      <div class="wraper">
+        <div class="logo">
+          <a href="">
+            <img src="assets/logos/main_logo.png" alt="Logo" />
+          </a>
+        </div>
 
-      <button type="button">Try for free</button>
+        <nav>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Key Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Testimonial</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+          <button class="menu_icon" type="button">
+            <img src="assets/svg/menu-icon.svg" alt="Menu icon" />
+          </button>
+        </nav>
+
+        <button class="pill_button" type="button">Try for free</button>
+      </div>
     </header>
 
     <section id="hero">
@@ -48,7 +61,7 @@
             personal budgets.
           </p>
           <div class="hero-links">
-            <button type="button">Try for free</button>
+            <button class="pill_button" type="button">Try for free</button>
             <a id="video" href="">Watch demo video</a>
           </div>
         </div>
@@ -180,7 +193,7 @@
             The rise of mobile devices transforms the way we consume information
             entirely and the world's most elevant channels such as Facebook.
           </p>
-          <button type="button">Learn more</button>
+          <button class="pill_button" type="button">Learn more</button>
         </div>
       </div>
     </section>
@@ -359,7 +372,7 @@
               </div>
             </div>
           </div>
-          <button type="button">See all</button>
+          <button class="pill_button" type="button">See all</button>
         </div>
       </div>
     </section>
@@ -374,10 +387,12 @@
           </p>
         </div>
         <div class="period_selector">
-          <button id="monthly" class="ghost_button" type="button">
+          <button id="monthly" class="ghost_button pill_button" type="button">
             Monthly
           </button>
-          <button id="annually" type="button">Annually</button>
+          <button id="annually" class="pill_button" type="button">
+            Annually
+          </button>
         </div>
         <div class="pricing_card_container">
           <div id="monthly_card" class="pricing_card">
@@ -393,7 +408,9 @@
                 <li>Blog Support Tools</li>
                 <li>eCommerce Store</li>
               </ul>
-              <button type="button">Start free trial</button>
+              <button class="pill_button" type="button">
+                Start free trial
+              </button>
               <a class="trial_link hide" href="">Or Start 14 Days Trial</a>
             </div>
           </div>
@@ -410,7 +427,7 @@
                 <li>Blog Support Tools</li>
                 <li>eCommerce Store</li>
               </ul>
-              <button type="button">Subscribe Now</button>
+              <button class="pill_button" type="button">Subscribe Now</button>
               <a class="trial_link" href="">Or Start 14 Days Trial</a>
             </div>
           </div>
