@@ -103,6 +103,14 @@ input[type="reset"] {
   border-radius: 35px;
   cursor: pointer;
   font-family: inherit;
+  transition: 0.5s;
+}
+
+.pill_button:hover {
+  background-color: transparent;
+  color: var(--highlight_dark);
+  border: 2px solid var(--highlight);
+  transition: 0.5s;
 }
 
 @media only screen and (max-width: 992px) {
