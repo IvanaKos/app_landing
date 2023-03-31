@@ -44,6 +44,37 @@
 
 #video {
   color: var(--highlight);
+  position: relative;
+  display: block;
+  overflow: hidden;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  height: 35px;
+  line-height: 35px;
+}
+
+#video span {
+  display: block;
+  transition: 0.4s;
+}
+
+#video:after {
+  content: url(../assets/svg/video_icon.svg);
+  display: inline;
+  position: absolute;
+  transition: 0.5s;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+#video:hover span {
+  transform: translateY(-100%);
+}
+
+#video:hover:after {
+  top: 0;
 }
 
 @media only screen and (max-width: 1400px) {
