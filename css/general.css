@@ -84,7 +84,6 @@ a {
   padding-bottom: 8px;
   display: inline-block;
   position: relative;
-  color: var(--highlight_dark);
 }
 
 .hover_underline_animation::after {

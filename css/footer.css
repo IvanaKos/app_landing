@@ -12,6 +12,11 @@ footer .logo {
 
 footer a {
   color: var(--neutral_light);
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: var(--neutral_main);
 }
 
 .social {
@@ -22,6 +27,18 @@ footer a {
 
 .social img {
   height: 30px;
+}
+
+.social svg {
+  height: 30px;
+}
+
+.social svg path {
+  transition: 0.3s;
+}
+
+.social svg:hover path {
+  fill: var(--neutral_light);
 }
 
 footer p {
