@@ -24,9 +24,10 @@
   border-radius: 50px;
 }
 
-.period_selector .pill_button {
+.switch_button {
   width: 135px;
   height: 48px;
+  transition: 0.3s;
 }
 
 .ghost_button {
@@ -79,10 +80,18 @@
   padding: 60px 50px 35px 50px;
 }
 
-.pricing_card .pill_button {
+.subscribe_button {
   width: 200px;
   height: 50px;
   margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.subscribe_button:hover {
+  color: var(--highloght_dark);
+  background-color: var(--neutral_light);
+  border: 2px solid var(--highlight_dark);
+  transition: 0.3s;
 }
 
 .trial_link {
