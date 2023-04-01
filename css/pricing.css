@@ -101,6 +101,11 @@
   margin-bottom: 30px;
 }
 
+.trial_link:hover {
+  color: var(--highlight_dark);
+  font-weight: 600;
+}
+
 .hide {
   display: none;
 }

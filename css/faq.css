@@ -17,18 +17,26 @@ details {
   background-color: #f5f7fa;
   cursor: pointer;
   box-sizing: border-box;
-  padding: 22px 30px;
   font-size: 20px;
   color: var(--highlight_dark);
+  max-height: 93px;
+  transition: max-height 0.4s ease-in;
+  overflow: hidden;
 }
 
 summary {
   list-style: none;
   display: flex;
   gap: 50px;
+  padding: 22px 30px;
   justify-content: space-between;
   align-items: center;
   line-height: 1.5;
+}
+
+summary:hover {
+  color: var(--neutral_light);
+  background-color: var(--highlight_dark);
 }
 
 summary:after {
@@ -37,16 +45,28 @@ summary:after {
   font-size: 26px;
 }
 
+summary:hover:after {
+  color: var(--neutral_light);
+}
+
 details p {
-  margin-top: 35px;
+  padding: 30px;
+  margin-bottom: 0;
 }
 
 details[open] summary:after {
   content: "-";
+  color: var(--neutral_light);
 }
 
 details[open] summary {
   font-weight: 600;
+  background-color: var(--highlight_dark);
+  color: var(--neutral_light);
+}
+
+details[open] {
+  max-height: 300px;
 }
 
 @media only screen and (max-width: 1200px) {
