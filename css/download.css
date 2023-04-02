@@ -19,10 +19,6 @@
   transition: 0.3s;
 }
 
-#download a:hover {
-  transform: scale(1.05);
-}
-
 #download a img {
   width: 185px;
   height: 55px;
