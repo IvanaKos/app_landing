@@ -136,7 +136,7 @@ input[type="reset"] {
 .pill_button:hover {
   background-color: transparent;
   color: var(--highlight);
-  border: 2px solid var(--highlight_dark);
+  border: 1px solid var(--highlight_dark);
   transition: 0.3s;
 }
 

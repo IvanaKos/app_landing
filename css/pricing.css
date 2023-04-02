@@ -90,7 +90,7 @@
 .subscribe_button:hover {
   color: var(--highloght_dark);
   background-color: var(--neutral_light);
-  border: 2px solid var(--highlight_dark);
+  border: 1px solid var(--highlight_dark);
   transition: 0.3s;
 }
 
