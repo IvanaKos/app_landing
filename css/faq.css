@@ -34,10 +34,10 @@ summary {
   line-height: 1.5;
 }
 
-summary:hover {
+/* summary:hover {
   color: var(--neutral_light);
   background-color: var(--highlight_dark);
-}
+} */
 
 summary:after {
   content: "+";
@@ -45,9 +45,9 @@ summary:after {
   font-size: 26px;
 }
 
-summary:hover:after {
+/* summary:hover:after {
   color: var(--neutral_light);
-}
+} */
 
 details p {
   padding: 30px;
@@ -56,13 +56,10 @@ details p {
 
 details[open] summary:after {
   content: "-";
-  color: var(--neutral_light);
 }
 
 details[open] summary {
   font-weight: 600;
-  background-color: var(--highlight_dark);
-  color: var(--neutral_light);
 }
 
 details[open] {
