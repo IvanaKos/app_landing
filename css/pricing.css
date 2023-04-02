@@ -95,15 +95,14 @@
 }
 
 .trial_link {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: var(--highlight);
   margin-bottom: 30px;
 }
 
-.trial_link:hover {
-  color: var(--highlight_dark);
-  font-weight: 600;
+.trial_link.hover_underline_animation::after {
+  background-color: var(--highlight);
 }
 
 .hide {
