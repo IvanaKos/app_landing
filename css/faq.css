@@ -1,3 +1,8 @@
+:root {
+  --accordion-min-height: 100px;
+  --accordion-max-height: 200px;
+}
+
 #faq {
   margin-top: 90px;
   padding-bottom: 110px;
@@ -19,9 +24,36 @@ details {
   box-sizing: border-box;
   font-size: 20px;
   color: var(--highlight_dark);
-  max-height: 150px;
-  transition: max-height 0.6s ease-in;
   overflow: hidden;
+  animation-name: accordion-close;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  transform-origin: top;
+}
+
+details[open] {
+  animation-name: accordion-master;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  transform-origin: top;
+}
+
+@keyframes accordion-master {
+  from {
+    max-height: var(--accordion-min-height);
+  }
+  to {
+    max-height: var(--accordion-max-height);
+  }
+}
+
+@keyframes accordion-close {
+  from {
+    min-height: var(--accordion-max-height);
+  }
+  to {
+    min-height: var(--accordion-min-height);
+  }
 }
 
 summary {
@@ -34,24 +66,50 @@ summary {
   line-height: 1.5;
 }
 
-/* summary:hover {
-  color: var(--neutral_light);
-  background-color: var(--highlight_dark);
-} */
-
 summary:after {
   content: "+";
   color: var(--highlight_dark);
   font-size: 26px;
 }
 
-/* summary:hover:after {
-  color: var(--neutral_light);
-} */
-
 details p {
   padding: 30px;
   margin-bottom: 0;
+  animation-name: accordion-content-close;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+  transition: 0.3s;
+  height: 0;
+}
+
+details[open] p {
+  opacity: 1;
+  height: auto;
+  animation-name: accordion;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  transform-origin: top;
+}
+
+@keyframes accordion {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-content-close {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -300px;
+  }
 }
 
 details[open] summary:after {
@@ -60,10 +118,6 @@ details[open] summary:after {
 
 details[open] summary {
   font-weight: 600;
-}
-
-details[open] {
-  max-height: 800px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -76,9 +130,25 @@ details[open] {
   }
 }
 
+@media only screen and (max-width: 992px) {
+  :root {
+    --accordion-max-height: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    --accordion-max-height: 360px;
+  }
+}
+
 @media only screen and (max-width: 567px) {
+  :root {
+    --accordion-max-height: 500px;
+  }
+
   details {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   summary:after {
