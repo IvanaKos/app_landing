@@ -36,6 +36,10 @@
   font-weight: 400;
 }
 
+.ghost_button:hover {
+  color: var(--highlight);
+}
+
 .pricing_card {
   width: 300px;
   text-align: center;
