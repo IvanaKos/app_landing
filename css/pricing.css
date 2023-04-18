@@ -27,13 +27,14 @@
 .switch_button {
   width: 135px;
   height: 48px;
-  transition: 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ghost_button {
   color: var(--neutral_medium);
   background: var(--neutral_light);
   font-weight: 400;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ghost_button:hover {
@@ -46,6 +47,9 @@
   -webkit-box-shadow: 0px 34px 31px 9px var(--background_neutral);
   box-shadow: 0px 34px 31px 9px var(--background_neutral);
   border-radius: 10px;
+  max-height: 620px;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
 }
 
 .subscription_period {
@@ -103,10 +107,35 @@
   text-decoration: none;
   color: var(--highlight);
   margin-bottom: 30px;
+  opacity: 0;
+  animation: fade-in 0.5s forwards;
 }
 
 .trial_link.hover_underline_animation::after {
   background-color: var(--highlight);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fade-out 0.5s forwards;
 }
 
 .hide {
@@ -116,6 +145,7 @@
 .active_card {
   box-shadow: none;
   border: 2px solid var(--neutral_medium_variant);
+  box-sizing: content-box;
 }
 
 .active_header {
