@@ -1,5 +1,5 @@
 :root {
-  --accordion-min-height: 100px;
+  --accordion-min-height: 75px;
   --accordion-max-height: 250px;
 }
 
@@ -67,32 +67,36 @@ summary {
 }
 
 summary:after {
-  content: "+";
+  content: "\2BC6";
   color: var(--highlight_dark);
-  font-size: 26px;
+  font-size: 16px;
+  transition: transform 0.4s ease;
 }
 
 details p {
   padding: 30px;
   margin-bottom: 0;
-  animation-name: accordion-content-close;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in-out;
-  opacity: 0;
-  transition: 0.3s;
-  height: 0;
 }
 
 details[open] p {
   opacity: 1;
   height: auto;
-  animation-name: accordion;
-  animation-duration: 0.3s;
+  animation-name: open-details;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   transform-origin: top;
 }
 
-@keyframes accordion {
+details:not([open]) p {
+  opacity: 1;
+  height: 0;
+  animation-name: close-details;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  transform-origin: top;
+}
+
+@keyframes open-details {
   from {
     transform: scaleY(0);
     opacity: 0;
@@ -103,17 +107,19 @@ details[open] p {
   }
 }
 
-@keyframes accordion-content-close {
+@keyframes close-details {
   from {
-    margin-top: 0;
+    transform: scaleY(1);
+    opacity: 1;
   }
   to {
-    margin-top: -300px;
+    transform: scaleY(0);
+    opacity: 0;
   }
 }
 
 details[open] summary:after {
-  content: "-";
+  transform: rotate(180deg);
 }
 
 details[open] summary {
