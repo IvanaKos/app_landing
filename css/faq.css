@@ -26,9 +26,7 @@ details {
   color: var(--highlight_dark);
   overflow: hidden;
   animation-name: accordion-close;
-  animation-duration: 0.4s;
-  animation-timing-function: ease-in-out;
-  transform-origin: top;
+  animation-duration: 0.3s;
 }
 
 details[open] {
@@ -78,22 +76,12 @@ details p {
   margin-bottom: 0;
 }
 
-details[open] p {
-  opacity: 1;
-  height: auto;
-  animation-name: open-details;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  transform-origin: top;
+details[open] summary ~ * {
+  animation: open-details 0.4s;
 }
 
-details:not([open]) p {
-  opacity: 1;
-  height: 0;
-  animation-name: close-details;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  transform-origin: top;
+details.closing summary ~ * {
+  animation: close-details 0.4s;
 }
 
 @keyframes open-details {
@@ -109,11 +97,11 @@ details:not([open]) p {
 
 @keyframes close-details {
   from {
-    transform: scaleY(1);
+    /* transform: scaleY(1); */
     opacity: 1;
   }
   to {
-    transform: scaleY(0);
+    /* transform: scaleY(0); */
     opacity: 0;
   }
 }

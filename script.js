@@ -211,3 +211,25 @@ function closeNav() {
 }
 
 //END Responsive Menu
+
+//START Accordion animation
+
+const detailsElements = document.querySelectorAll("details");
+
+detailsElements.forEach((details) => {
+  details.addEventListener("click", (e) => {
+    if (details.hasAttribute("open")) {
+      e.preventDefault();
+      details.classList.add("closing");
+    }
+  });
+});
+
+detailsElements.forEach((details) => {
+  details.addEventListener("animationend", (e) => {
+    if (e.animationName === "close-details") {
+      details.removeAttribute("open");
+      details.classList.remove("closing");
+    }
+  });
+});
