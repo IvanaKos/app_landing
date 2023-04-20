@@ -123,19 +123,22 @@ details[open] summary {
 
 @media only screen and (max-width: 992px) {
   :root {
-    --accordion-max-height: 300px;
+    --accordion-min-height: 70px;
+    --accordion-max-height: 275px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   :root {
-    --accordion-max-height: 360px;
+    --accordion-min-height: 98px;
+    --accordion-max-height: 350px;
   }
 }
 
 @media only screen and (max-width: 567px) {
   :root {
-    --accordion-max-height: 500px;
+    --accordion-min-height: 120px;
+    --accordion-max-height: 560px;
   }
 
   details {
