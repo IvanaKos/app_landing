@@ -26,12 +26,12 @@ details {
   color: var(--highlight_dark);
   overflow: hidden;
   animation-name: accordion-close;
-  animation-duration: 0.3s;
+  animation-duration: 0.2s;
 }
 
 details[open] {
   animation-name: accordion-master;
-  animation-duration: 0.4s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-in-out;
   transform-origin: top;
 }
@@ -74,34 +74,31 @@ summary:after {
 details p {
   padding: 30px;
   margin-bottom: 0;
+  opacity: 0;
 }
 
 details[open] summary ~ * {
-  animation: open-details 0.4s;
+  animation: open-details 0.5s forwards;
 }
 
 details.closing summary ~ * {
-  animation: close-details 0.4s;
+  animation: close-details 0.2s;
 }
 
 @keyframes open-details {
   from {
-    transform: scaleY(0);
     opacity: 0;
   }
   to {
-    transform: scaleY(1);
     opacity: 1;
   }
 }
 
 @keyframes close-details {
   from {
-    /* transform: scaleY(1); */
     opacity: 1;
   }
   to {
-    /* transform: scaleY(0); */
     opacity: 0;
   }
 }
