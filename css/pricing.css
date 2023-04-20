@@ -10,7 +10,6 @@
   display: flex;
   gap: 35px;
   justify-content: center;
-  align-items: flex-start;
   width: 100%;
 }
 
