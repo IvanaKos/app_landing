@@ -45,10 +45,11 @@
   text-align: center;
   -webkit-box-shadow: 0px 34px 31px 9px var(--background_neutral);
   box-shadow: 0px 34px 31px 9px var(--background_neutral);
+  border: 2px solid rgba(0, 0, 0, 0);
   border-radius: 10px;
-  max-height: 620px;
-  transition: max-height 0.5s ease-out;
+  transition: 0.4s ease-out;
   overflow: hidden;
+  box-sizing: content-box;
 }
 
 .subscription_period {
@@ -137,17 +138,11 @@
   animation: fade-out 0.5s forwards;
 }
 
-.hide {
-  display: none;
-}
-
 .active_card {
   box-shadow: none;
   border: 2px solid var(--neutral_medium_variant);
-  box-sizing: content-box;
 }
 
 .active_header {
   background: var(--background_neutral);
-  border-radius: 10px;
 }
