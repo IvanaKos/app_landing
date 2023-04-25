@@ -91,15 +91,15 @@ const ghostButtonStyle = "ghost_button";
 const activeCardStyle = "active_card";
 var monthlyButtonClicked = false;
 
-// function moveLink(trialLinkHide, trialLinkDisplay) {
-//   trialLinkHide.classList.add(fadeOutAnimation);
+function moveLink(trialLinkHide, trialLinkDisplay) {
+  trialLinkHide.classList.add(fadeOutAnimation);
 
-//   setTimeout(function () {
-//     trialLinkHide.classList.add(hideLink);
-//   }, 200);
+  setTimeout(function () {
+    trialLinkHide.classList.add(hideLink);
+  }, 200);
 
-//   trialLinkDisplay.classList.remove(hideLink, fadeOutAnimation);
-// }
+  trialLinkDisplay.classList.remove(hideLink, fadeOutAnimation);
+}
 
 function changeButtonStyle(activeButton, inactiveButton) {
   activeButton.classList.remove(ghostButtonStyle);
@@ -115,9 +115,11 @@ function selectCard(period) {
   if (period === monthly) {
     changeButtonStyle(monthly, annually);
     changeCardStyle(monthlyCard, annuallyCard);
+    moveLink(trialLinkAnnually, trialLinkMonthly);
   } else {
     changeButtonStyle(annually, monthly);
     changeCardStyle(annuallyCard, monthlyCard);
+    moveLink(trialLinkMonthly, trialLinkAnnually);
   }
 }
 

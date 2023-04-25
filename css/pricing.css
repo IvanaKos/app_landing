@@ -138,6 +138,10 @@
   animation: fade-out 0.5s forwards;
 }
 
+.hide {
+  display: none;
+}
+
 .active_card {
   box-shadow: none;
   border: 2px solid var(--neutral_medium_variant);
