@@ -10,7 +10,6 @@
   display: flex;
   gap: 35px;
   justify-content: center;
-  align-items: flex-start;
   width: 100%;
 }
 
@@ -24,15 +23,21 @@
   border-radius: 50px;
 }
 
-.period_selector .pill_button {
+.switch_button {
   width: 135px;
   height: 48px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ghost_button {
   color: var(--neutral_medium);
   background: var(--neutral_light);
   font-weight: 400;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ghost_button:hover {
+  color: var(--highlight);
 }
 
 .pricing_card {
@@ -40,7 +45,11 @@
   text-align: center;
   -webkit-box-shadow: 0px 34px 31px 9px var(--background_neutral);
   box-shadow: 0px 34px 31px 9px var(--background_neutral);
+  border: 2px solid rgba(0, 0, 0, 0);
   border-radius: 10px;
+  transition: 0.4s ease-out;
+  overflow: hidden;
+  box-sizing: content-box;
 }
 
 .subscription_period {
@@ -79,17 +88,54 @@
   padding: 60px 50px 35px 50px;
 }
 
-.pricing_card .pill_button {
+.subscribe_button {
   width: 200px;
   height: 50px;
   margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.subscribe_button:hover {
+  color: var(--highloght_dark);
+  background-color: var(--neutral_light);
+  border: 1px solid var(--highlight_dark);
+  transition: 0.3s;
 }
 
 .trial_link {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: var(--highlight);
   margin-bottom: 30px;
+  opacity: 0;
+  animation: fade-in 0.5s forwards;
+}
+
+.trial_link.hover_underline_animation::after {
+  background-color: var(--highlight);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fade-out 0.5s forwards;
 }
 
 .hide {
@@ -103,5 +149,4 @@
 
 .active_header {
   background: var(--background_neutral);
-  border-radius: 10px;
 }

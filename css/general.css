@@ -80,6 +80,30 @@ a {
   font-size: 16px;
 }
 
+.hover_underline_animation {
+  padding-bottom: 8px;
+  display: inline-block;
+  position: relative;
+}
+
+.hover_underline_animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--highlight_dark);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover_underline_animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -92,9 +116,7 @@ input[type="reset"] {
   outline: inherit;
 }
 
-.pill_button {
-  width: 165px;
-  height: 55px;
+.button_general {
   color: var(--neutral_light);
   font-size: 16px;
   font-weight: 800;
@@ -103,6 +125,19 @@ input[type="reset"] {
   border-radius: 35px;
   cursor: pointer;
   font-family: inherit;
+}
+
+.pill_button {
+  width: 165px;
+  height: 55px;
+  transition: 0.3s;
+}
+
+.pill_button:hover {
+  background-color: transparent;
+  color: var(--highlight);
+  border: 1px solid var(--highlight_dark);
+  transition: 0.3s;
 }
 
 @media only screen and (max-width: 992px) {

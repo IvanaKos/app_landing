@@ -34,6 +34,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid var(--background_neutral);
+  transition: 0.3s;
 }
 
 .arrow_right {

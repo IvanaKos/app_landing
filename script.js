@@ -86,13 +86,19 @@ const annuallyCard = pricing.querySelector("#annually_card");
 const trialLinkMonthly = pricing.querySelector("#monthly_card .hide");
 const trialLinkAnnually = pricing.querySelector("#annually_card .trial_link");
 const hideLink = "hide";
+const fadeOutAnimation = "fade-out";
 const ghostButtonStyle = "ghost_button";
 const activeCardStyle = "active_card";
 var monthlyButtonClicked = false;
 
 function moveLink(trialLinkHide, trialLinkDisplay) {
-  trialLinkHide.classList.add(hideLink);
-  trialLinkDisplay.classList.remove(hideLink);
+  trialLinkHide.classList.add(fadeOutAnimation);
+
+  setTimeout(function () {
+    trialLinkHide.classList.add(hideLink);
+  }, 200);
+
+  trialLinkDisplay.classList.remove(hideLink, fadeOutAnimation);
 }
 
 function changeButtonStyle(activeButton, inactiveButton) {
@@ -205,3 +211,25 @@ function closeNav() {
 }
 
 //END Responsive Menu
+
+//START Accordion animation
+
+const detailsElements = document.querySelectorAll("details");
+
+detailsElements.forEach((details) => {
+  details.addEventListener("click", (e) => {
+    if (details.hasAttribute("open")) {
+      e.preventDefault();
+      details.classList.add("closing");
+    }
+  });
+});
+
+detailsElements.forEach((details) => {
+  details.addEventListener("animationend", (e) => {
+    if (e.animationName === "close-details") {
+      details.removeAttribute("open");
+      details.classList.remove("closing");
+    }
+  });
+});
