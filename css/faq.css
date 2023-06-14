@@ -65,9 +65,12 @@ summary {
 }
 
 summary:after {
-  content: "\2BC6";
+  content: "";
+  flex-shrink: 0;
   color: var(--highlight_dark);
-  font-size: 16px;
+  background: center url(../assets/svg/angle-down-solid.svg) no-repeat;
+  width: 20px;
+  height: 20px;
   transition: transform 0.4s ease;
 }
 
@@ -115,10 +118,6 @@ details[open] summary {
   details {
     font-size: 18px;
   }
-
-  summary:after {
-    font-size: 18px;
-  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -133,6 +132,11 @@ details[open] summary {
     --accordion-min-height: 98px;
     --accordion-max-height: 350px;
   }
+
+  summary:after {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 @media only screen and (max-width: 567px) {
@@ -145,7 +149,7 @@ details[open] summary {
     font-size: 16px;
   }
 
-  summary:after {
-    font-size: 14px;
+  summary {
+    gap: 15px;
   }
 }
